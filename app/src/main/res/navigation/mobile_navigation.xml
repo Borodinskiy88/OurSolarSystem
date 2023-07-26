@@ -3,23 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@+id/nav_mercury">
 
     <fragment
-        android:id="@+id/nav_home"
-        android:name="ru.borodinskiy.aleksei.oursolarsystem.ui.home.HomeFragment"
-        android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        android:id="@+id/nav_mercury"
+        android:name="ru.borodinskiy.aleksei.oursolarsystem.ui.mercury.MercuryFragment"
+        android:label="@string/menu_mercury"
+        tools:layout="@layout/fragment_mercury" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="ru.borodinskiy.aleksei.oursolarsystem.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        android:id="@+id/nav_venus"
+        android:name="ru.borodinskiy.aleksei.oursolarsystem.ui.venus.VenusFragment"
+        android:label="@string/menu_venus"
+        tools:layout="@layout/fragment_venus" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="ru.borodinskiy.aleksei.oursolarsystem.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:id="@+id/nav_earth"
+        android:name="ru.borodinskiy.aleksei.oursolarsystem.ui.earth.EarthFragment"
+        android:label="@string/menu_earth"
+        tools:layout="@layout/fragment_earth" />
 </navigation>
