@@ -37,7 +37,8 @@ class MainActivity : AppCompatActivity() {
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.nav_mercury, R.id.nav_venus, R.id.nav_earth
+                R.id.nav_mercury, R.id.nav_venus, R.id.nav_earth, R.id.nav_mars, R.id.nav_jupiter,
+                R.id.nav_saturn, R.id.nav_uranus, R.id.nav_neptune
             ), drawerLayout
         )
         //Цветные иконки в меню

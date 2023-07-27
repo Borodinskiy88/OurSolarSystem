@@ -10,4 +10,11 @@
     <string name="menu_mercury">Mercury</string>
     <string name="menu_venus">Venus</string>
     <string name="menu_earth">Earth</string>
+    <string name="menu_mars">Mars</string>
+    <string name="menu_jupiter">Jupiter</string>
+    <string name="menu_saturn">Saturn</string>
+    <string name="menu_uranus">Uranus</string>
+    <string name="menu_neptune">Neptune</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

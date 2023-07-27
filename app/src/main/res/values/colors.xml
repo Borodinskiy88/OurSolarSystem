@@ -5,6 +5,14 @@
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
+
+    <color name="cosmos_200">#1A1A1A</color>
+    <color name="blue_500">#070987</color>
+    <color name="blue_200">#3494d5</color>
+    <color name="yellow_200">#e5f79f</color>
+    <color name="yellow_100">#f9fde8</color>
+
+
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 </resources>

@@ -22,14 +22,14 @@ class VenusFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val galleryViewModel =
+        val venusViewModel =
             ViewModelProvider(this).get(VenusViewModel::class.java)
 
         _binding = FragmentVenusBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textGallery
-        galleryViewModel.text.observe(viewLifecycleOwner) {
+        val textView: TextView = binding.textVenus
+        venusViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
         return root

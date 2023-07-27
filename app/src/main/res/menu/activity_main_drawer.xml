@@ -16,5 +16,25 @@
             android:id="@+id/nav_earth"
             android:icon="@drawable/ic_earth"
             android:title="@string/menu_earth" />
+        <item
+            android:id="@+id/nav_mars"
+            android:icon="@drawable/ic_mars"
+            android:title="@string/menu_mars" />
+        <item
+            android:id="@+id/nav_jupiter"
+            android:icon="@drawable/ic_jupiter"
+            android:title="@string/menu_jupiter" />
+        <item
+            android:id="@+id/nav_saturn"
+            android:icon="@drawable/ic_saturn"
+            android:title="@string/menu_saturn" />
+        <item
+            android:id="@+id/nav_uranus"
+            android:icon="@drawable/ic_uranus"
+            android:title="@string/menu_uranus" />
+        <item
+            android:id="@+id/nav_neptune"
+            android:icon="@drawable/ic_neptune"
+            android:title="@string/menu_neptune" />
     </group>
 </menu>

@@ -1,4 +1,4 @@
-package ru.borodinskiy.aleksei.oursolarsystem.ui.mercury
+package ru.borodinskiy.aleksei.oursolarsystem.ui.saturn
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,12 +7,11 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import ru.borodinskiy.aleksei.oursolarsystem.R
-import ru.borodinskiy.aleksei.oursolarsystem.databinding.FragmentMercuryBinding
+import ru.borodinskiy.aleksei.oursolarsystem.databinding.FragmentSaturnBinding
 
-class MercuryFragment : Fragment() {
+class SaturnFragment : Fragment() {
 
-    private var _binding: FragmentMercuryBinding? = null
+    private var _binding: FragmentSaturnBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -23,16 +22,14 @@ class MercuryFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val mercuryViewModel =
-            ViewModelProvider(this).get(MercuryViewModel::class.java)
+        val saturnViewModel =
+            ViewModelProvider(this).get(SaturnViewModel::class.java)
 
-        _binding = FragmentMercuryBinding.inflate(inflater, container, false)
+        _binding = FragmentSaturnBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        binding.imageSolarSystem.setImageResource(R.drawable.solar_system)
-
-        val textView: TextView = binding.textMercury
-        mercuryViewModel.text.observe(viewLifecycleOwner) {
+        val textView: TextView = binding.textSaturn
+        saturnViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
         return root

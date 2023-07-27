@@ -22,4 +22,34 @@
         android:name="ru.borodinskiy.aleksei.oursolarsystem.ui.earth.EarthFragment"
         android:label="@string/menu_earth"
         tools:layout="@layout/fragment_earth" />
+
+    <fragment
+        android:id="@+id/nav_mars"
+        android:name="ru.borodinskiy.aleksei.oursolarsystem.ui.mars.MarsFragment"
+        android:label="@string/menu_mars"
+        tools:layout="@layout/fragment_mars" />
+
+    <fragment
+        android:id="@+id/nav_jupiter"
+        android:name="ru.borodinskiy.aleksei.oursolarsystem.ui.jupiter.JupiterFragment"
+        android:label="@string/menu_jupiter"
+        tools:layout="@layout/fragment_jupiter" />
+
+    <fragment
+        android:id="@+id/nav_saturn"
+        android:name="ru.borodinskiy.aleksei.oursolarsystem.ui.saturn.SaturnFragment"
+        android:label="@string/menu_saturn"
+        tools:layout="@layout/fragment_saturn" />
+
+    <fragment
+        android:id="@+id/nav_uranus"
+        android:name="ru.borodinskiy.aleksei.oursolarsystem.ui.uranus.UranusFragment"
+        android:label="@string/menu_uranus"
+        tools:layout="@layout/fragment_uranus" />
+
+    <fragment
+        android:id="@+id/nav_neptune"
+        android:name="ru.borodinskiy.aleksei.oursolarsystem.ui.neptune.NeptuneFragment"
+        android:label="@string/menu_neptune"
+        tools:layout="@layout/fragment_neptune" />
 </navigation>

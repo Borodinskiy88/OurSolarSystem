@@ -22,14 +22,14 @@ class EarthFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val slideshowViewModel =
+        val earthViewModel =
             ViewModelProvider(this).get(EarthViewModel::class.java)
 
         _binding = FragmentEarthBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textSlideshow
-        slideshowViewModel.text.observe(viewLifecycleOwner) {
+        val textView: TextView = binding.textEarth
+        earthViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
         return root
