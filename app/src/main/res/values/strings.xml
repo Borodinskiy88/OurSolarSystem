@@ -2,19 +2,33 @@
     <string name="app_name">OurSolarSystem</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
-
-    <string name="menu_mercury">Mercury</string>
-    <string name="menu_venus">Venus</string>
+    <!-- Planet name -->
     <string name="menu_earth">Earth</string>
-    <string name="menu_mars">Mars</string>
     <string name="menu_jupiter">Jupiter</string>
-    <string name="menu_saturn">Saturn</string>
-    <string name="menu_uranus">Uranus</string>
+    <string name="menu_mars">Mars</string>
+    <string name="menu_mercury">Mercury</string>
     <string name="menu_neptune">Neptune</string>
-
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="menu_saturn">Saturn</string>
+    <string name="menu_venus">Venus</string>
+    <string name="menu_uranus">Uranus</string>
+    <!-- Headline -->
+    <string name="average_temperature">Average temperature ℃:</string>
+    <string name="brief_information">Brief information</string>
+    <string name="duration_day">Duration of the day (in Terrestrial):</string>
+    <string name="duration_year">Duration of the year (in Terrestrial):</string>
+    <string name="maximum_temperature">Maximum temperature ℃:</string>
+    <string name="minimum_temperature">Minimum temperature ℃:</string>
+    <string name="named_after">Named after:</string>
+    <string name="person_appearance">A person appearance:</string>
+    <string name="size_in_earth_diameters">Size in Earth diameters (D♁):</string>
+    <string name="solid_surface">Solid surface:</string>
+    <string name="surface_gravity">Gravity (g), (1g = 9.81 m/s2):</string>
+    <string name="was_opened">Was opened:</string>
+    <!-- Description -->
+    <string name="image_planet">Image planet</string>
+    <string name="yes">Yes</string>
+    <string name="interesting_fact">Interesting fact:</string>
 </resources>
