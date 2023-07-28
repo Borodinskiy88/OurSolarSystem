@@ -4,14 +4,14 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import ru.borodinskiy.aleksei.oursolarsystem.databinding.FragmentJupiterBinding
+import ru.borodinskiy.aleksei.oursolarsystem.R
+import ru.borodinskiy.aleksei.oursolarsystem.databinding.CardPlanetsBinding
 
 class JupiterFragment : Fragment() {
 
-    private var _binding: FragmentJupiterBinding? = null
+    private var _binding: CardPlanetsBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -25,14 +25,14 @@ class JupiterFragment : Fragment() {
         val jupiterViewModel =
             ViewModelProvider(this).get(JupiterViewModel::class.java)
 
-        _binding = FragmentJupiterBinding.inflate(inflater, container, false)
-        val root: View = binding.root
+        //       binding.planetImage.setImageResource(R.drawable.jupiter)
+        //       binding.planetRusName.text = "Юпитер"
 
-        val textView: TextView = binding.textJupiter
-        jupiterViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }
-        return root
+        _binding = CardPlanetsBinding.inflate(inflater, container, false)
+
+        binding.planetRusName.text = "Юпитер"
+        binding.planetImage.setImageResource(R.drawable.jupiter)
+        return binding.root
     }
 
     override fun onDestroyView() {

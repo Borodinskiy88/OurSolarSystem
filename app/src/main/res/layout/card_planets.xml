@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,375 +7,380 @@
     android:paddingStart="@dimen/padding_8"
     android:paddingEnd="@dimen/padding_8">
 
-    <ImageView
-        android:id="@+id/planet_image"
-        android:layout_width="@dimen/nav_header_height_176"
-        android:layout_height="@dimen/nav_header_height_176"
-        android:layout_marginTop="@dimen/padding_8"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/merkurij"
-        android:contentDescription="@string/image_planet" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/planet_rus_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="40sp"
-        android:text="@string/menu_mercury"
-        android:textColor="?attr/colorOnSecondary"
-        app:layout_constraintBottom_toTopOf="@id/planet_latin_name"
-        app:layout_constraintTop_toTopOf="@id/planet_image"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/planet_image" />
+        <ImageView
+            android:id="@+id/planet_image"
+            android:layout_width="@dimen/nav_header_height_176"
+            android:layout_height="@dimen/nav_header_height_176"
+            android:layout_marginTop="@dimen/padding_8"
+            android:contentDescription="@string/image_planet"
+            android:src="@drawable/merkurij"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/planet_latin_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="32sp"
-        android:text="@string/menu_mercury"
-        app:layout_constraintBottom_toBottomOf="@id/planet_image"
-        android:textColor="?attr/colorOnPrimaryFixed"
-        app:layout_constraintTop_toBottomOf="@id/planet_rus_name"
-        android:layout_marginStart="@dimen/padding_8"
-        app:layout_constraintEnd_toEndOf="@id/planet_rus_name"
-        app:layout_constraintStart_toStartOf="@id/planet_rus_name" />
+        <TextView
+            android:id="@+id/planet_rus_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/menu_mercury"
+            android:textColor="?attr/colorOnSecondary"
+            android:textSize="40sp"
+            app:layout_constraintBottom_toTopOf="@id/planet_latin_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/planet_image"
+            app:layout_constraintTop_toTopOf="@id/planet_image" />
 
-    <TextView
-        android:id="@+id/named_after_headline"
-        app:layout_constraintTop_toBottomOf="@id/planet_image"
-        app:layout_constraintStart_toStartOf="@id/planet_image"
-        android:layout_marginTop="@dimen/padding_8"
-        android:text="@string/named_after"
-        android:textSize="@dimen/string_head_20sp"
-        android:textStyle="bold"
-        android:textColor="?attr/colorOnSecondary"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/planet_latin_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_8"
+            android:text="@string/menu_mercury"
+            android:textColor="?attr/colorOnPrimaryFixed"
+            android:textSize="32sp"
+            app:layout_constraintBottom_toBottomOf="@id/planet_image"
+            app:layout_constraintEnd_toEndOf="@id/planet_rus_name"
+            app:layout_constraintStart_toStartOf="@id/planet_rus_name"
+            app:layout_constraintTop_toBottomOf="@id/planet_rus_name" />
 
-    <TextView
-        android:id="@+id/named_after"
-        app:layout_constraintTop_toTopOf="@id/named_after_headline"
-        app:layout_constraintStart_toEndOf="@id/named_after_headline"
-        android:text="@string/named_after"
-        android:layout_marginStart="@dimen/activity_margin_16"
-        android:layout_marginEnd="@dimen/padding_8"
-        android:textSize="@dimen/string_head_20sp"
-        android:textColor="?attr/colorOnPrimaryFixed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/named_after_headline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_margin_16"
+            android:text="@string/named_after"
+            android:textColor="?attr/colorOnSecondary"
+            android:textSize="@dimen/string_head_20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/planet_image"
+            app:layout_constraintTop_toBottomOf="@id/planet_image" />
 
-    <TextView
-        android:id="@+id/was_opened"
-        app:layout_constraintTop_toBottomOf="@id/named_after"
-        app:layout_constraintStart_toStartOf="@id/planet_image"
-        android:text="@string/was_opened"
-        android:layout_marginTop="@dimen/padding_8"
-        android:textSize="@dimen/string_head_20sp"
-        android:textStyle="bold"
-        android:textColor="?attr/colorOnSecondary"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/named_after"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_margin_16"
+            android:layout_marginEnd="@dimen/padding_8"
+            android:text="@string/named_after"
+            android:textColor="?attr/colorOnPrimaryFixed"
+            android:textSize="@dimen/string_head_20sp"
+            app:layout_constraintStart_toEndOf="@id/named_after_headline"
+            app:layout_constraintTop_toTopOf="@id/named_after_headline" />
 
-    <TextView
-        android:id="@+id/year_opening"
-        app:layout_constraintTop_toTopOf="@id/was_opened"
-        app:layout_constraintStart_toEndOf="@id/was_opened"
-        android:text="1557"
-        android:layout_marginStart="@dimen/activity_margin_16"
-        android:layout_marginEnd="@dimen/padding_8"
-        android:textSize="@dimen/string_head_20sp"
-        android:textColor="?attr/colorOnPrimaryFixed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/was_opened"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_8"
+            android:text="@string/was_opened"
+            android:textColor="?attr/colorOnSecondary"
+            android:textSize="@dimen/string_head_20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/planet_image"
+            app:layout_constraintTop_toBottomOf="@id/named_after" />
 
-    <TextView
-        android:id="@+id/who_opened"
-        app:layout_constraintTop_toTopOf="@id/was_opened"
-        app:layout_constraintStart_toEndOf="@id/year_opening"
-        android:text="Galileo Galilei"
-        android:layout_marginStart="@dimen/padding_8"
-        android:layout_marginEnd="@dimen/padding_8"
-        android:textSize="@dimen/string_head_20sp"
-        android:textColor="?attr/colorOnPrimaryFixed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/year_opening"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_margin_16"
+            android:layout_marginEnd="@dimen/padding_8"
+            android:text="1557"
+            android:textColor="?attr/colorOnPrimaryFixed"
+            android:textSize="@dimen/string_head_20sp"
+            app:layout_constraintStart_toEndOf="@id/was_opened"
+            app:layout_constraintTop_toTopOf="@id/was_opened" />
 
-    <TextView
-        android:id="@+id/solid_surface_headline"
-        app:layout_constraintTop_toBottomOf="@id/who_opened"
-        app:layout_constraintStart_toStartOf="@id/planet_image"
-        android:text="@string/solid_surface"
-        android:layout_marginTop="@dimen/padding_8"
-        android:textSize="@dimen/string_head_20sp"
-        android:textStyle="bold"
-        android:textColor="?attr/colorOnSecondary"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/who_opened"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_8"
+            android:layout_marginEnd="@dimen/padding_8"
+            android:text="Galileo Galilei"
+            android:textColor="?attr/colorOnPrimaryFixed"
+            android:textSize="@dimen/string_head_20sp"
+            app:layout_constraintStart_toEndOf="@id/year_opening"
+            app:layout_constraintTop_toTopOf="@id/was_opened" />
 
-    <TextView
-        android:id="@+id/solid_surface"
-        app:layout_constraintTop_toTopOf="@id/solid_surface_headline"
-        app:layout_constraintStart_toEndOf="@id/solid_surface_headline"
-        android:text="@string/yes"
-        android:layout_marginStart="@dimen/activity_margin_16"
-        android:layout_marginEnd="@dimen/padding_8"
-        android:textSize="@dimen/string_head_20sp"
-        android:textColor="?attr/colorOnPrimaryFixed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/solid_surface_headline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_8"
+            android:text="@string/solid_surface"
+            android:textColor="?attr/colorOnSecondary"
+            android:textSize="@dimen/string_head_20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/planet_image"
+            app:layout_constraintTop_toBottomOf="@id/who_opened" />
 
-    <TextView
-        android:id="@+id/min_temp_headline"
-        app:layout_constraintTop_toBottomOf="@id/solid_surface"
-        app:layout_constraintStart_toStartOf="@id/planet_image"
-        android:text="@string/minimum_temperature"
-        android:layout_marginTop="@dimen/padding_8"
-        android:textSize="@dimen/string_head_20sp"
-        android:textStyle="bold"
-        android:textColor="?attr/colorOnSecondary"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/solid_surface"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_margin_16"
+            android:layout_marginEnd="@dimen/padding_8"
+            android:text="@string/yes"
+            android:textColor="?attr/colorOnPrimaryFixed"
+            android:textSize="@dimen/string_head_20sp"
+            app:layout_constraintStart_toEndOf="@id/solid_surface_headline"
+            app:layout_constraintTop_toTopOf="@id/solid_surface_headline" />
 
-    <TextView
-        android:id="@+id/min_temp"
-        app:layout_constraintTop_toTopOf="@id/min_temp_headline"
-        app:layout_constraintStart_toEndOf="@id/min_temp_headline"
-        android:text="-200"
-        android:layout_marginStart="@dimen/activity_margin_16"
-        android:layout_marginEnd="@dimen/padding_8"
-        android:textSize="@dimen/string_head_20sp"
-        android:textColor="?attr/colorOnPrimaryFixed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/min_temp_headline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_8"
+            android:text="@string/minimum_temperature"
+            android:textColor="?attr/colorOnSecondary"
+            android:textSize="@dimen/string_head_20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/planet_image"
+            app:layout_constraintTop_toBottomOf="@id/solid_surface" />
 
-    <TextView
-        android:id="@+id/max_temp_headline"
-        app:layout_constraintTop_toBottomOf="@id/min_temp"
-        app:layout_constraintStart_toStartOf="@id/planet_image"
-        android:text="@string/maximum_temperature"
-        android:layout_marginTop="@dimen/padding_8"
-        android:textSize="@dimen/string_head_20sp"
-        android:textStyle="bold"
-        android:textColor="?attr/colorOnSecondary"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/min_temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_margin_16"
+            android:layout_marginEnd="@dimen/padding_8"
+            android:text="-200"
+            android:textColor="?attr/colorOnPrimaryFixed"
+            android:textSize="@dimen/string_head_20sp"
+            app:layout_constraintStart_toEndOf="@id/min_temp_headline"
+            app:layout_constraintTop_toTopOf="@id/min_temp_headline" />
 
-    <TextView
-        android:id="@+id/max_temp"
-        app:layout_constraintTop_toTopOf="@id/max_temp_headline"
-        app:layout_constraintStart_toEndOf="@id/max_temp_headline"
-        android:text="+200"
-        android:layout_marginStart="@dimen/activity_margin_16"
-        android:layout_marginEnd="@dimen/padding_8"
-        android:textSize="@dimen/string_head_20sp"
-        android:textColor="?attr/colorOnPrimaryFixed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/max_temp_headline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_8"
+            android:text="@string/maximum_temperature"
+            android:textColor="?attr/colorOnSecondary"
+            android:textSize="@dimen/string_head_20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/planet_image"
+            app:layout_constraintTop_toBottomOf="@id/min_temp" />
 
-    <TextView
-        android:id="@+id/average_temp_headline"
-        app:layout_constraintTop_toBottomOf="@id/max_temp"
-        app:layout_constraintStart_toStartOf="@id/planet_image"
-        android:text="@string/average_temperature"
-        android:layout_marginTop="@dimen/padding_8"
-        android:textSize="@dimen/string_head_20sp"
-        android:textStyle="bold"
-        android:textColor="?attr/colorOnSecondary"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/max_temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_margin_16"
+            android:layout_marginEnd="@dimen/padding_8"
+            android:text="+200"
+            android:textColor="?attr/colorOnPrimaryFixed"
+            android:textSize="@dimen/string_head_20sp"
+            app:layout_constraintStart_toEndOf="@id/max_temp_headline"
+            app:layout_constraintTop_toTopOf="@id/max_temp_headline" />
 
-    <TextView
-        android:id="@+id/average_temp"
-        app:layout_constraintTop_toTopOf="@id/average_temp_headline"
-        app:layout_constraintStart_toEndOf="@id/average_temp_headline"
-        android:text="+80"
-        android:layout_marginStart="@dimen/activity_margin_16"
-        android:layout_marginEnd="@dimen/padding_8"
-        android:textSize="@dimen/string_head_20sp"
-        android:textColor="?attr/colorOnPrimaryFixed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/average_temp_headline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_8"
+            android:text="@string/average_temperature"
+            android:textColor="?attr/colorOnSecondary"
+            android:textSize="@dimen/string_head_20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/planet_image"
+            app:layout_constraintTop_toBottomOf="@id/max_temp" />
 
-    <TextView
-        android:id="@+id/size_headline"
-        app:layout_constraintTop_toBottomOf="@id/average_temp"
-        app:layout_constraintStart_toStartOf="@id/planet_image"
-        android:text="@string/size_in_earth_diameters"
-        android:layout_marginTop="@dimen/padding_8"
-        android:textSize="@dimen/string_head_20sp"
-        android:textStyle="bold"
-        android:textColor="?attr/colorOnSecondary"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/average_temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_margin_16"
+            android:layout_marginEnd="@dimen/padding_8"
+            android:text="+80"
+            android:textColor="?attr/colorOnPrimaryFixed"
+            android:textSize="@dimen/string_head_20sp"
+            app:layout_constraintStart_toEndOf="@id/average_temp_headline"
+            app:layout_constraintTop_toTopOf="@id/average_temp_headline" />
 
-    <TextView
-        android:id="@+id/size"
-        app:layout_constraintTop_toTopOf="@id/size_headline"
-        app:layout_constraintStart_toEndOf="@id/size_headline"
-        android:text="0.3"
-        android:layout_marginStart="@dimen/activity_margin_16"
-        android:layout_marginEnd="@dimen/padding_8"
-        android:textSize="@dimen/string_head_20sp"
-        android:textColor="?attr/colorOnPrimaryFixed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/size_headline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_8"
+            android:text="@string/size_in_earth_diameters"
+            android:textColor="?attr/colorOnSecondary"
+            android:textSize="@dimen/string_head_20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/planet_image"
+            app:layout_constraintTop_toBottomOf="@id/average_temp" />
 
-    <TextView
-        android:id="@+id/gravity_headline"
-        app:layout_constraintTop_toBottomOf="@id/size"
-        app:layout_constraintStart_toStartOf="@id/planet_image"
-        android:text="@string/surface_gravity"
-        android:layout_marginTop="@dimen/padding_8"
-        android:textSize="@dimen/string_head_20sp"
-        android:textStyle="bold"
-        android:textColor="?attr/colorOnSecondary"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_margin_16"
+            android:layout_marginEnd="@dimen/padding_8"
+            android:text="0.3"
+            android:textColor="?attr/colorOnPrimaryFixed"
+            android:textSize="@dimen/string_head_20sp"
+            app:layout_constraintStart_toEndOf="@id/size_headline"
+            app:layout_constraintTop_toTopOf="@id/size_headline" />
 
-    <TextView
-        android:id="@+id/gravity"
-        app:layout_constraintTop_toTopOf="@id/gravity_headline"
-        app:layout_constraintStart_toEndOf="@id/gravity_headline"
-        android:text="0.3"
-        android:layout_marginStart="@dimen/activity_margin_16"
-        android:layout_marginEnd="@dimen/padding_8"
-        android:textSize="@dimen/string_head_20sp"
-        android:textColor="?attr/colorOnPrimaryFixed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/gravity_headline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_8"
+            android:text="@string/surface_gravity"
+            android:textColor="?attr/colorOnSecondary"
+            android:textSize="@dimen/string_head_20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/planet_image"
+            app:layout_constraintTop_toBottomOf="@id/size" />
 
-    <TextView
-        android:id="@+id/duration_year_headline"
-        app:layout_constraintTop_toBottomOf="@id/gravity"
-        app:layout_constraintStart_toStartOf="@id/planet_image"
-        android:text="@string/duration_year"
-        android:layout_marginTop="@dimen/padding_8"
-        android:textSize="@dimen/string_head_20sp"
-        android:textStyle="bold"
-        android:textColor="?attr/colorOnSecondary"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/gravity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_margin_16"
+            android:layout_marginEnd="@dimen/padding_8"
+            android:text="0.3"
+            android:textColor="?attr/colorOnPrimaryFixed"
+            android:textSize="@dimen/string_head_20sp"
+            app:layout_constraintStart_toEndOf="@id/gravity_headline"
+            app:layout_constraintTop_toTopOf="@id/gravity_headline" />
 
-    <TextView
-        android:id="@+id/duration_year"
-        app:layout_constraintTop_toTopOf="@id/duration_year_headline"
-        app:layout_constraintStart_toEndOf="@id/duration_year_headline"
-        android:text="1.3"
-        android:layout_marginStart="@dimen/activity_margin_16"
-        android:layout_marginEnd="@dimen/padding_8"
-        android:textSize="@dimen/string_head_20sp"
-        android:textColor="?attr/colorOnPrimaryFixed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/duration_year_headline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_8"
+            android:text="@string/duration_year"
+            android:textColor="?attr/colorOnSecondary"
+            android:textSize="@dimen/string_head_20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/planet_image"
+            app:layout_constraintTop_toBottomOf="@id/gravity" />
 
-    <TextView
-        android:id="@+id/duration_day_headline"
-        app:layout_constraintTop_toBottomOf="@id/duration_year"
-        app:layout_constraintStart_toStartOf="@id/planet_image"
-        android:text="@string/duration_day"
-        android:layout_marginTop="@dimen/padding_8"
-        android:textSize="@dimen/string_head_20sp"
-        android:textStyle="bold"
-        android:textColor="?attr/colorOnSecondary"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/duration_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_margin_16"
+            android:layout_marginEnd="@dimen/padding_8"
+            android:text="1.3"
+            android:textColor="?attr/colorOnPrimaryFixed"
+            android:textSize="@dimen/string_head_20sp"
+            app:layout_constraintStart_toEndOf="@id/duration_year_headline"
+            app:layout_constraintTop_toTopOf="@id/duration_year_headline" />
 
-    <TextView
-        android:id="@+id/duration_day"
-        app:layout_constraintTop_toTopOf="@id/duration_day_headline"
-        app:layout_constraintStart_toEndOf="@id/duration_day_headline"
-        android:text="0.3"
-        android:layout_marginStart="@dimen/activity_margin_16"
-        android:layout_marginEnd="@dimen/padding_8"
-        android:textSize="@dimen/string_head_20sp"
-        android:textColor="?attr/colorOnPrimaryFixed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/duration_day_headline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_8"
+            android:text="@string/duration_day"
+            android:textColor="?attr/colorOnSecondary"
+            android:textSize="@dimen/string_head_20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/planet_image"
+            app:layout_constraintTop_toBottomOf="@id/duration_year" />
 
-    <TextView
-        android:id="@+id/fact_headline"
-        app:layout_constraintTop_toBottomOf="@id/duration_day"
-        app:layout_constraintStart_toStartOf="@id/planet_image"
-        android:text="@string/interesting_fact"
-        android:layout_marginTop="@dimen/padding_8"
-        android:textSize="@dimen/string_head_20sp"
-        android:textStyle="bold"
-        android:textColor="?attr/colorOnSecondary"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/duration_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_margin_16"
+            android:layout_marginEnd="@dimen/padding_8"
+            android:text="0.3"
+            android:textColor="?attr/colorOnPrimaryFixed"
+            android:textSize="@dimen/string_head_20sp"
+            app:layout_constraintStart_toEndOf="@id/duration_day_headline"
+            app:layout_constraintTop_toTopOf="@id/duration_day_headline" />
 
-    <TextView
-        android:id="@+id/fact"
-        app:layout_constraintTop_toTopOf="@id/fact_headline"
-        app:layout_constraintStart_toEndOf="@id/fact_headline"
-        android:text="First planet from Sun"
-        android:layout_marginStart="@dimen/activity_margin_16"
-        android:layout_marginEnd="@dimen/padding_8"
-        android:textSize="@dimen/string_head_20sp"
-        android:textColor="?attr/colorOnPrimaryFixed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/fact_headline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_8"
+            android:text="@string/interesting_fact"
+            android:textColor="?attr/colorOnSecondary"
+            android:textSize="@dimen/string_head_20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/planet_image"
+            app:layout_constraintTop_toBottomOf="@id/duration_day" />
 
-    <TextView
-        android:id="@+id/info_headline"
-        app:layout_constraintTop_toBottomOf="@id/fact"
-        app:layout_constraintStart_toStartOf="@id/planet_image"
-        android:text="@string/brief_information"
-        android:layout_marginTop="@dimen/padding_8"
-        android:textSize="@dimen/string_head_20sp"
-        android:textStyle="bold"
-        android:textColor="?attr/colorOnSecondary"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/fact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_margin_16"
+            android:layout_marginEnd="@dimen/padding_8"
+            android:text="First planet from Sun"
+            android:textColor="?attr/colorOnPrimaryFixed"
+            android:textSize="@dimen/string_head_20sp"
+            app:layout_constraintStart_toEndOf="@id/fact_headline"
+            app:layout_constraintTop_toTopOf="@id/fact_headline" />
 
-    <TextView
-        android:id="@+id/info"
-        app:layout_constraintTop_toTopOf="@id/info_headline"
-        app:layout_constraintStart_toEndOf="@id/info_headline"
-        android:text="наименьшая"
-        android:layout_marginStart="@dimen/activity_margin_16"
-        android:layout_marginEnd="@dimen/padding_8"
-        android:textSize="@dimen/string_head_20sp"
-        android:textColor="?attr/colorOnPrimaryFixed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/info_headline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_8"
+            android:text="@string/brief_information"
+            android:textColor="?attr/colorOnSecondary"
+            android:textSize="@dimen/string_head_20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/planet_image"
+            app:layout_constraintTop_toBottomOf="@id/fact" />
 
-    <TextView
-        android:id="@+id/appearance_headline"
-        app:layout_constraintTop_toBottomOf="@id/info"
-        app:layout_constraintStart_toStartOf="@id/planet_image"
-        android:text="@string/person_appearance"
-        android:layout_marginTop="@dimen/padding_8"
-        android:textSize="@dimen/string_head_20sp"
-        android:textStyle="bold"
-        android:textColor="?attr/colorOnSecondary"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_margin_16"
+            android:layout_marginEnd="@dimen/padding_8"
+            android:text="наименьшая"
+            android:textColor="?attr/colorOnPrimaryFixed"
+            android:textSize="@dimen/string_head_20sp"
+            app:layout_constraintStart_toEndOf="@id/info_headline"
+            app:layout_constraintTop_toTopOf="@id/info_headline" />
 
-    <TextView
-        android:id="@+id/appearance"
-        app:layout_constraintTop_toTopOf="@id/appearance_headline"
-        app:layout_constraintStart_toEndOf="@id/appearance_headline"
-        android:text="наименьшая"
-        android:layout_marginStart="@dimen/activity_margin_16"
-        android:layout_marginEnd="@dimen/padding_8"
-        android:textSize="@dimen/string_head_20sp"
-        android:textColor="?attr/colorOnPrimaryFixed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/appearance_headline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_8"
+            android:text="@string/person_appearance"
+            android:textColor="?attr/colorOnSecondary"
+            android:textSize="@dimen/string_head_20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/planet_image"
+            app:layout_constraintTop_toBottomOf="@id/info" />
 
-    <ImageView
-        android:id="@+id/appearance_image"
-        app:layout_constraintTop_toBottomOf="@id/appearance"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginStart="@dimen/padding_8"
-        android:layout_marginEnd="@dimen/padding_8"
-        android:layout_marginTop="@dimen/padding_8"
-        android:layout_width="@dimen/nav_header_height_176"
-        android:layout_height="@dimen/nav_header_height_176"
-        android:src="@drawable/merkurij" />
+        <TextView
+            android:id="@+id/appearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_margin_16"
+            android:layout_marginEnd="@dimen/padding_8"
+            android:text="наименьшая"
+            android:textColor="?attr/colorOnPrimaryFixed"
+            android:textSize="@dimen/string_head_20sp"
+            app:layout_constraintStart_toEndOf="@id/appearance_headline"
+            app:layout_constraintTop_toTopOf="@id/appearance_headline" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageView
+            android:id="@+id/appearance_image"
+            android:layout_width="@dimen/nav_header_height_176"
+            android:layout_height="@dimen/nav_header_height_176"
+            android:layout_marginStart="@dimen/padding_8"
+            android:layout_marginTop="@dimen/padding_8"
+            android:layout_marginEnd="@dimen/padding_8"
+            android:src="@drawable/merkurij"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/appearance" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
