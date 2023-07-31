@@ -377,7 +377,6 @@
             android:layout_marginStart="@dimen/padding_8"
             android:layout_marginTop="@dimen/padding_8"
             android:layout_marginEnd="@dimen/padding_8"
-            android:src="@drawable/merkurij"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/appearance" />

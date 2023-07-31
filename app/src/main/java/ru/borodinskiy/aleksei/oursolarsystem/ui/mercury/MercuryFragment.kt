@@ -4,42 +4,64 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
+import androidx.fragment.app.commit
 import ru.borodinskiy.aleksei.oursolarsystem.R
 import ru.borodinskiy.aleksei.oursolarsystem.databinding.FragmentMercuryBinding
 
 class MercuryFragment : Fragment() {
 
-    private var _binding: FragmentMercuryBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
-    private val binding get() = _binding!!
+    private companion object {
+        const val INFO_TAG = "INFO_TAG"
+        const val GALLERY_TAG = "GALLERY_TAG"
+    }
 
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
+        inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val mercuryViewModel =
-            ViewModelProvider(this).get(MercuryViewModel::class.java)
+        val binding = FragmentMercuryBinding.inflate(inflater, container, false)
 
-        _binding = FragmentMercuryBinding.inflate(inflater, container, false)
-        val root: View = binding.root
-
-        binding.imageSolarSystem.setImageResource(R.drawable.solar_system)
-
-        val textView: TextView = binding.textMercury
-        mercuryViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
+        if (childFragmentManager.findFragmentById(R.id.container) == null) {
+            loadFragment(INFO_TAG) { MercuryInfoFragment() }
         }
-        return root
+
+        binding.bottomNav.setOnItemSelectedListener {
+            when (it.itemId) {
+                R.id.info_menu -> {
+                    loadFragment(INFO_TAG) { MercuryInfoFragment() }
+                    true
+                }
+
+                R.id.gallery_menu -> {
+                    loadFragment(GALLERY_TAG) { MercuryGalleryFragment() }
+                    true
+                }
+
+                else -> false
+            }
+        }
+
+
+        return binding.root
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
+    private fun loadFragment(tag: String, fragmentFactory: () -> Fragment) {
+        val cachedFragment = childFragmentManager.findFragmentByTag(tag)
+        val currentFragment = childFragmentManager.findFragmentById(R.id.container)
+
+        if (currentFragment?.tag == tag) return
+
+        childFragmentManager.commit {
+            if (currentFragment != null) {
+                detach(currentFragment)
+            }
+            if (cachedFragment != null) {
+                attach(cachedFragment)
+            } else {
+                replace(R.id.container, fragmentFactory(), tag)
+            }
+        }
     }
 }
+

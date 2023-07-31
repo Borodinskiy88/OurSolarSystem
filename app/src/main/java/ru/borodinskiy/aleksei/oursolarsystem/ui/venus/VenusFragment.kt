@@ -4,39 +4,71 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
+import androidx.fragment.app.commit
+import ru.borodinskiy.aleksei.oursolarsystem.R
 import ru.borodinskiy.aleksei.oursolarsystem.databinding.FragmentVenusBinding
 
 class VenusFragment : Fragment() {
 
-    private var _binding: FragmentVenusBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
-    private val binding get() = _binding!!
-
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        val venusViewModel =
-            ViewModelProvider(this).get(VenusViewModel::class.java)
-
-        _binding = FragmentVenusBinding.inflate(inflater, container, false)
-        val root: View = binding.root
-
-        val textView: TextView = binding.textVenus
-        venusViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }
-        return root
+    private companion object {
+        const val INFO_TAG = "INFO_TAG"
+        const val GALLERY_TAG = "GALLERY_TAG"
+        const val TERRAFORM_TAG = "TERRAFORM_TAG"
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        val binding = FragmentVenusBinding.inflate(inflater, container, false)
+
+        if (childFragmentManager.findFragmentById(R.id.container) == null) {
+            loadFragment(INFO_TAG) { VenusInfoFragment() }
+        }
+
+        binding.bottomNav.menu.removeItem(R.id.terraform_menu)
+
+        binding.bottomNav.setOnItemSelectedListener {
+            when (it.itemId) {
+                R.id.info_menu -> {
+                    loadFragment(INFO_TAG) { VenusInfoFragment() }
+                    true
+                }
+
+                R.id.gallery_menu -> {
+                    loadFragment(GALLERY_TAG) { VenusGalleryFragment() }
+                    true
+                }
+
+                R.id.terraform_menu -> {
+                    loadFragment(TERRAFORM_TAG) { VenusTerraformFragment() }
+                    true
+                }
+
+                else -> false
+            }
+        }
+
+
+        return binding.root
+    }
+
+    private fun loadFragment(tag: String, fragmentFactory: () -> Fragment) {
+        val cachedFragment = childFragmentManager.findFragmentByTag(tag)
+        val currentFragment = childFragmentManager.findFragmentById(R.id.container)
+
+        if (currentFragment?.tag == tag) return
+
+        childFragmentManager.commit {
+            if (currentFragment != null) {
+                detach(currentFragment)
+            }
+            if (cachedFragment != null) {
+                attach(cachedFragment)
+            } else {
+                replace(R.id.container, fragmentFactory(), tag)
+            }
+        }
     }
 }

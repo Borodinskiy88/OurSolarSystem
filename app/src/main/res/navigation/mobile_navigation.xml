@@ -9,7 +9,14 @@
         android:id="@+id/nav_mercury"
         android:name="ru.borodinskiy.aleksei.oursolarsystem.ui.mercury.MercuryFragment"
         android:label="@string/menu_mercury"
-        tools:layout="@layout/fragment_mercury" />
+        tools:layout="@layout/fragment_mercury">
+        <action
+            android:id="@+id/action_nav_mercury_to_mercury_gallery"
+            app:destination="@id/mercury_gallery" />
+        <action
+            android:id="@+id/action_nav_mercury_to_mercury_info"
+            app:destination="@id/mercury_info" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_venus"
@@ -52,4 +59,13 @@
         android:name="ru.borodinskiy.aleksei.oursolarsystem.ui.neptune.NeptuneFragment"
         android:label="@string/menu_neptune"
         tools:layout="@layout/fragment_neptune" />
+    <fragment
+        android:id="@+id/mercury_gallery"
+        android:name="ru.borodinskiy.aleksei.oursolarsystem.ui.mercury.MercuryGalleryFragment"
+        android:label="@string/menu_mercury"
+        tools:layout="@layout/card_gallery" />
+    <fragment
+        android:id="@+id/mercury_info"
+        android:name="ru.borodinskiy.aleksei.oursolarsystem.ui.mercury.MercuryInfoFragment"
+        android:label="@string/menu_mercury" />
 </navigation>
