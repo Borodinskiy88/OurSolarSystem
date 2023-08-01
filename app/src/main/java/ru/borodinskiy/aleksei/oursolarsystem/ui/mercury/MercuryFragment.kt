@@ -26,6 +26,11 @@ class MercuryFragment : Fragment() {
             loadFragment(INFO_TAG) { MercuryInfoFragment() }
         }
 
+        //Скрыть значок меню
+//        binding.bottomNav.menu.apply {
+//            removeItem(R.id.info_menu)
+//        }
+
         binding.bottomNav.setOnItemSelectedListener {
             when (it.itemId) {
                 R.id.info_menu -> {

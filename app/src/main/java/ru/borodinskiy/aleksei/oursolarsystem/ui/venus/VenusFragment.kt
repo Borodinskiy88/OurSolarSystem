@@ -27,8 +27,6 @@ class VenusFragment : Fragment() {
             loadFragment(INFO_TAG) { VenusInfoFragment() }
         }
 
-        binding.bottomNav.menu.removeItem(R.id.terraform_menu)
-
         binding.bottomNav.setOnItemSelectedListener {
             when (it.itemId) {
                 R.id.info_menu -> {

@@ -32,7 +32,12 @@
     <string name="image_planet">Image planet</string>
     <string name="yes">Yes</string>
     <!-- Menu -->
+    <string name="astronautics">Astronautics</string>
     <string name="gallery">Gallery</string>
     <string name="information">Information</string>
+    <string name="mars_rover">Mars rover</string>
+    <string name="moon">Moon</string>
+    <string name="rings">Rings</string>
+    <string name="satellites">Satellites</string>
     <string name="terraform">Terraform</string>
 </resources>

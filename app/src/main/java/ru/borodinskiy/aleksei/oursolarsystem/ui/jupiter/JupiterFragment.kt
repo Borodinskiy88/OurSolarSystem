@@ -5,37 +5,68 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.commit
 import ru.borodinskiy.aleksei.oursolarsystem.R
-import ru.borodinskiy.aleksei.oursolarsystem.databinding.CardPlanetsBinding
+import ru.borodinskiy.aleksei.oursolarsystem.databinding.FragmentJupiterBinding
 
 class JupiterFragment : Fragment() {
 
-//    private var _binding: CardPlanetsBinding? = null
-//
-//    // This property is only valid between onCreateView and
-//    // onDestroyView.
-//    private val binding get() = _binding!!
+    private companion object {
+        const val INFO_TAG = "INFO_TAG"
+        const val GALLERY_TAG = "GALLERY_TAG"
+        const val SATELLITES_TAG = "SATELLITES_TAG"
+    }
 
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
+        inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-//        val jupiterViewModel =
-//            ViewModelProvider(this).get(JupiterViewModel::class.java)
+        val binding = FragmentJupiterBinding.inflate(inflater, container, false)
 
-        //       binding.planetImage.setImageResource(R.drawable.jupiter)
-        //       binding.planetRusName.text = "Юпитер"
+        if (childFragmentManager.findFragmentById(R.id.container) == null) {
+            loadFragment(INFO_TAG) { JupiterInfoFragment() }
+        }
 
-        val binding = CardPlanetsBinding.inflate(inflater, container, false)
+        binding.bottomNav.setOnItemSelectedListener {
+            when (it.itemId) {
+                R.id.info_menu -> {
+                    loadFragment(INFO_TAG) { JupiterInfoFragment() }
+                    true
+                }
 
-        binding.planetRusName.text = "Юпитер"
-        binding.planetImage.setImageResource(R.drawable.jupiter)
+                R.id.gallery_menu -> {
+                    loadFragment(GALLERY_TAG) { JupiterGalleryFragment() }
+                    true
+                }
+
+                R.id.satellites_menu -> {
+                    loadFragment(SATELLITES_TAG) { JupiterSatellitesFragment() }
+                    true
+                }
+
+                else -> false
+            }
+        }
+
+
         return binding.root
     }
 
-//    override fun onDestroyView() {
-//        super.onDestroyView()
-//        _binding = null
-//    }
+    private fun loadFragment(tag: String, fragmentFactory: () -> Fragment) {
+        val cachedFragment = childFragmentManager.findFragmentByTag(tag)
+        val currentFragment = childFragmentManager.findFragmentById(R.id.container)
+
+        if (currentFragment?.tag == tag) return
+
+        childFragmentManager.commit {
+            if (currentFragment != null) {
+                detach(currentFragment)
+            }
+            if (cachedFragment != null) {
+                attach(cachedFragment)
+            } else {
+                replace(R.id.container, fragmentFactory(), tag)
+            }
+        }
+    }
 }

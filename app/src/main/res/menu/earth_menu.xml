@@ -12,11 +12,11 @@
     <item
         android:id="@+id/astronautics_menu"
         android:enabled="true"
-        android:icon="@drawable/ic_cosmos_24"
-        android:title="@string/information" />
+        android:icon="@drawable/ic_cosmo_24"
+        android:title="@string/astronautics" />
     <item
         android:id="@+id/moon_menu"
         android:enabled="true"
-        android:icon="@drawable/ic_moon_24_2"
-        android:title="@string/gallery" />
+        android:icon="@drawable/ic_moon_24"
+        android:title="@string/moon" />
 </menu>

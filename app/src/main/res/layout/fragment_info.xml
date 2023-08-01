@@ -71,42 +71,6 @@
             app:layout_constraintTop_toTopOf="@id/named_after_headline" />
 
         <TextView
-            android:id="@+id/was_opened"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/padding_8"
-            android:text="@string/was_opened"
-            android:textColor="?attr/colorOnSecondary"
-            android:textSize="@dimen/string_head_20sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@id/planet_image"
-            app:layout_constraintTop_toBottomOf="@id/named_after" />
-
-        <TextView
-            android:id="@+id/year_opening"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/activity_margin_16"
-            android:layout_marginEnd="@dimen/padding_8"
-            android:text="1557"
-            android:textColor="?attr/colorOnPrimaryFixed"
-            android:textSize="@dimen/string_head_20sp"
-            app:layout_constraintStart_toEndOf="@id/was_opened"
-            app:layout_constraintTop_toTopOf="@id/was_opened" />
-
-        <TextView
-            android:id="@+id/who_opened"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/padding_8"
-            android:layout_marginEnd="@dimen/padding_8"
-            android:text="Galileo Galilei"
-            android:textColor="?attr/colorOnPrimaryFixed"
-            android:textSize="@dimen/string_head_20sp"
-            app:layout_constraintStart_toEndOf="@id/year_opening"
-            app:layout_constraintTop_toTopOf="@id/was_opened" />
-
-        <TextView
             android:id="@+id/solid_surface_headline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -116,7 +80,7 @@
             android:textSize="@dimen/string_head_20sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@id/planet_image"
-            app:layout_constraintTop_toBottomOf="@id/who_opened" />
+            app:layout_constraintTop_toBottomOf="@id/named_after" />
 
         <TextView
             android:id="@+id/solid_surface"

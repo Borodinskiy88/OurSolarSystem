@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import ru.borodinskiy.aleksei.oursolarsystem.R
-import ru.borodinskiy.aleksei.oursolarsystem.databinding.CardPlanetsBinding
+import ru.borodinskiy.aleksei.oursolarsystem.databinding.FragmentInfoBinding
 
 class VenusInfoFragment : Fragment() {
     override fun onCreateView(
@@ -14,7 +14,7 @@ class VenusInfoFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val binding = CardPlanetsBinding.inflate(inflater, container, false)
+        val binding = FragmentInfoBinding.inflate(inflater, container, false)
 
         //TODO заглушка
         binding.apply {
