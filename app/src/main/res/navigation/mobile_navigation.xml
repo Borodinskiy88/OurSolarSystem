@@ -3,20 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_mercury">
+    app:startDestination="@+id/nav_sun">
+
+    <fragment
+        android:id="@+id/nav_sun"
+        android:name="ru.borodinskiy.aleksei.oursolarsystem.ui.sun.SunFragment"
+        android:label="@string/sun"
+        tools:layout="@layout/fragment_sun" />
 
     <fragment
         android:id="@+id/nav_mercury"
         android:name="ru.borodinskiy.aleksei.oursolarsystem.ui.mercury.MercuryFragment"
         android:label="@string/menu_mercury"
-        tools:layout="@layout/fragment_mercury">
-        <action
-            android:id="@+id/action_nav_mercury_to_mercury_gallery"
-            app:destination="@id/mercury_gallery" />
-        <action
-            android:id="@+id/action_nav_mercury_to_mercury_info"
-            app:destination="@id/mercury_info" />
-    </fragment>
+        tools:layout="@layout/fragment_mercury" />
 
     <fragment
         android:id="@+id/nav_venus"

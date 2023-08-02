@@ -16,9 +16,9 @@
     <string name="menu_uranus">Uranus</string>
     <!-- Headline -->
     <string name="average_temperature">Average temperature ℃:</string>
-    <string name="brief_information">Brief information</string>
-    <string name="duration_day">Duration of the day (in Terrestrial):</string>
-    <string name="duration_year">Duration of the year (in Terrestrial):</string>
+    <string name="brief_information">Brief information:</string>
+    <string name="duration_day">Day length (hrs.min):</string>
+    <string name="duration_year">Year length (days/years):</string>
     <string name="interesting_fact">Interesting fact:</string>
     <string name="maximum_temperature">Maximum temperature ℃:</string>
     <string name="minimum_temperature">Minimum temperature ℃:</string>
@@ -40,4 +40,6 @@
     <string name="rings">Rings</string>
     <string name="satellites">Satellites</string>
     <string name="terraform">Terraform</string>
+    <string name="count_of_satellites">Count of satellites</string>
+    <string name="sun">Sun</string>
 </resources>
