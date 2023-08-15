@@ -12,6 +12,7 @@
     <string name="menu_mercury">Mercury</string>
     <string name="menu_neptune">Neptune</string>
     <string name="menu_saturn">Saturn</string>
+    <string name="sun">Sun</string>
     <string name="menu_venus">Venus</string>
     <string name="menu_uranus">Uranus</string>
     <!-- Headline -->
@@ -41,5 +42,4 @@
     <string name="satellites">Satellites</string>
     <string name="terraform">Terraform</string>
     <string name="count_of_satellites">Count of satellites</string>
-    <string name="sun">Sun</string>
 </resources>

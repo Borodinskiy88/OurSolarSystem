@@ -1,6 +1,6 @@
 package ru.borodinskiy.aleksei.oursolarsystem.dto
 
-data class Planet(
+data class PlanetDto(
     val id: Int,
     val rusName: String,
     val latinName: String,

@@ -5,10 +5,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import ru.borodinskiy.aleksei.oursolarsystem.R
+import dagger.hilt.android.AndroidEntryPoint
 import ru.borodinskiy.aleksei.oursolarsystem.databinding.FragmentGalleryBinding
 
+@AndroidEntryPoint
 class MarsGalleryFragment : Fragment() {
+
+    companion object {
+        const val IMAGE = "image"
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -17,9 +22,11 @@ class MarsGalleryFragment : Fragment() {
     ): View {
         val binding = FragmentGalleryBinding.inflate(inflater, container, false)
 
+        val image = arguments?.getString(IMAGE)?.toInt()
         //TODO заглушка
-        binding.fullscreenImage.setImageResource(R.drawable.mars)
+        image?.let { binding.fullscreenImage.setImageResource(it) }
 
         return binding.root
     }
 }
+

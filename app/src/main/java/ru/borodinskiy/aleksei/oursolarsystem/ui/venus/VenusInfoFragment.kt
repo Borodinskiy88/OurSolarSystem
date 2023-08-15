@@ -5,9 +5,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import ru.borodinskiy.aleksei.oursolarsystem.R
+import dagger.hilt.android.AndroidEntryPoint
 import ru.borodinskiy.aleksei.oursolarsystem.databinding.FragmentInfoBinding
+import ru.borodinskiy.aleksei.oursolarsystem.enumeration.PlanetImage
 
+@AndroidEntryPoint
 class VenusInfoFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -18,7 +20,9 @@ class VenusInfoFragment : Fragment() {
 
         //TODO заглушка
         binding.apply {
-            planetImage.setImageResource(R.drawable.venus)
+            val image: PlanetImage = PlanetImage.VENUS
+            planetImage.setImageResource(image.image)
+//            planetImage.setImageResource(R.drawable.venus)
             planetRusName.text = "Венера"
             planetLatinName.text = "Venus"
         }
