@@ -31,5 +31,4 @@ interface PlanetDao {
     @Upsert
     suspend fun save(planet: Planet)
 
-
 }

@@ -1,22 +1,19 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="?attr/colorPrimary"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:paddingStart="@dimen/padding_8"
+    android:paddingEnd="@dimen/padding_8">
 
-    <ImageView
-        android:id="@+id/terraform_image"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:maxHeight="@dimen/planet_card_size_200"
-        android:maxWidth="@dimen/planet_card_size_200"
-        android:layout_gravity="center"
-        android:contentDescription="@string/image_planet"
-        android:scaleType="centerInside"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="0dp"
+        android:scrollbars="vertical"
         app:layout_constraintTop_toTopOf="parent"
-        tools:src="@tools:sample/avatars[11]" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:listitem="@layout/card_terraform" />
 
-</FrameLayout>
+</ScrollView>
