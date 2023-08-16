@@ -18,6 +18,7 @@
     <!-- Headline -->
     <string name="average_temperature">Average temperature ℃:</string>
     <string name="brief_information">Brief information:</string>
+    <string name="count_of_satellites">Count of satellites</string>
     <string name="duration_day">Day length (hrs.min):</string>
     <string name="duration_year">Year length (days/years):</string>
     <string name="interesting_fact">Interesting fact:</string>
@@ -32,6 +33,7 @@
     <!-- Description -->
     <string name="image_planet">Image planet</string>
     <string name="yes">Yes</string>
+    <string name="no">No</string>
     <!-- Menu -->
     <string name="astronautics">Astronautics</string>
     <string name="gallery">Gallery</string>
@@ -41,5 +43,4 @@
     <string name="rings">Rings</string>
     <string name="satellites">Satellites</string>
     <string name="terraform">Terraform</string>
-    <string name="count_of_satellites">Count of satellites</string>
 </resources>

@@ -12,5 +12,4 @@ enum class PlanetImage(val image: Int) {
     SATURN(R.drawable.saturn),
     URANUS(R.drawable.uranus),
     NEPTUNE(R.drawable.neptun)
-
 }

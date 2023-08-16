@@ -4,15 +4,21 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import dagger.hilt.android.AndroidEntryPoint
+import ru.borodinskiy.aleksei.oursolarsystem.adapter.PlanetAdapter
 import ru.borodinskiy.aleksei.oursolarsystem.databinding.FragmentInfoBinding
-import ru.borodinskiy.aleksei.oursolarsystem.enumeration.PlanetImage
+import ru.borodinskiy.aleksei.oursolarsystem.viewmodel.PlanetViewModel
 
 @AndroidEntryPoint
 class SunInfoFragment : Fragment() {
 
+    private val viewModel: PlanetViewModel by activityViewModels()
+
+    private lateinit var recyclerView: RecyclerView
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -20,22 +26,26 @@ class SunInfoFragment : Fragment() {
     ): View {
         val binding = FragmentInfoBinding.inflate(inflater, container, false)
 
-        binding.apply {
-            val image: PlanetImage = PlanetImage.SUN
-            planetImage.setImageResource(image.image)
-//            planetImage.setImageResource(R.drawable.sun)
-            planetRusName.text = "Солнце"
-            planetLatinName.text = "Sol"
+        recyclerView = binding.recyclerView
+        recyclerView.layoutManager = LinearLayoutManager(requireContext())
+        val adapter = PlanetAdapter()
+
+        recyclerView.adapter = adapter
+
+        viewModel.getPlanetFromLatinName("Sol").observe(this.viewLifecycleOwner) { planets ->
+            planets.let {
+                adapter.submitList(it)
+            }
         }
 
         //TODO объединить в группу
         binding.apply {
-            durationDayHeadline.isVisible = false
-            durationDay.isVisible = false
-            durationYearHeadline.isVisible = false
-            durationYear.isVisible = false
-            appearanceHeadline.isVisible = false
-            appearance.isVisible = false
+//            durationDayHeadline.isVisible = false
+//            durationDay.isVisible = false
+//            durationYearHeadline.isVisible = false
+//            durationYear.isVisible = false
+//            appearanceHeadline.isVisible = false
+//            appearance.isVisible = false
         }
 
 

@@ -6,18 +6,19 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import dagger.hilt.android.AndroidEntryPoint
-import ru.borodinskiy.aleksei.oursolarsystem.R
 import ru.borodinskiy.aleksei.oursolarsystem.adapter.PlanetAdapter
 import ru.borodinskiy.aleksei.oursolarsystem.databinding.FragmentInfoBinding
-import ru.borodinskiy.aleksei.oursolarsystem.enumeration.PlanetImage
 import ru.borodinskiy.aleksei.oursolarsystem.viewmodel.PlanetViewModel
 
 @AndroidEntryPoint
 class EarthInfoFragment : Fragment() {
 
     private val viewModel: PlanetViewModel by activityViewModels()
+
+    private lateinit var recyclerView: RecyclerView
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -25,9 +26,11 @@ class EarthInfoFragment : Fragment() {
     ): View {
         val binding = FragmentInfoBinding.inflate(inflater, container, false)
 
+        recyclerView = binding.recyclerView
+        recyclerView.layoutManager = LinearLayoutManager(requireContext())
         val adapter = PlanetAdapter()
 
-        val planet = viewModel.getPlanetFromLatinName("Terra")
+        recyclerView.adapter = adapter
 
         viewModel.getPlanetFromLatinName("Terra").observe(this.viewLifecycleOwner) { planets ->
             planets.let {
@@ -36,8 +39,8 @@ class EarthInfoFragment : Fragment() {
         }
 
         binding.apply {
-            val image: PlanetImage = PlanetImage.EARTH
-            planetImage.setImageResource(image.image)
+//            val image: PlanetImage = PlanetImage.EARTH
+//            planetImage.setImageResource(image.image)
 
 //            planetRusName.text = planet.value?.rusName
 //            planetLatinName.text = planet.value?.latinName
@@ -55,9 +58,9 @@ class EarthInfoFragment : Fragment() {
 //            appearance.text = planet.value?.appearance
         }
 
-        binding.planetImage.setOnClickListener {
-            findNavController().navigate(R.id.earthGalleryFragment)
-        }
+//        binding.planetImage.setOnClickListener {
+//            findNavController().navigate(R.id.earthGalleryFragment)
+//        }
 
         return binding.root
     }

@@ -4,16 +4,21 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
+import androidx.fragment.app.activityViewModels
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import dagger.hilt.android.AndroidEntryPoint
-import ru.borodinskiy.aleksei.oursolarsystem.R
+import ru.borodinskiy.aleksei.oursolarsystem.adapter.PlanetAdapter
 import ru.borodinskiy.aleksei.oursolarsystem.databinding.FragmentInfoBinding
-import ru.borodinskiy.aleksei.oursolarsystem.enumeration.PlanetImage
+import ru.borodinskiy.aleksei.oursolarsystem.viewmodel.PlanetViewModel
 
 @AndroidEntryPoint
 class MarsInfoFragment : Fragment() {
+
+    private lateinit var recyclerView: RecyclerView
+
+    private val viewModel: PlanetViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -22,20 +27,16 @@ class MarsInfoFragment : Fragment() {
     ): View {
         val binding = FragmentInfoBinding.inflate(inflater, container, false)
 
+        recyclerView = binding.recyclerView
+        recyclerView.layoutManager = LinearLayoutManager(requireContext())
+        val adapter = PlanetAdapter()
 
-        binding.apply {
-            val image: PlanetImage = PlanetImage.MARS
-            planetImage.setImageResource(image.image)
-            //           planetImage.setImageResource(R.drawable.mars)
-            planetLatinName.text = "Mars"
-            planetRusName.text = "Марс"
-        }
+        recyclerView.adapter = adapter
 
-        binding.planetImage.setOnClickListener {
-            val bundle = bundleOf(
-                "image" to R.drawable.mars
-            )
-            findNavController().navigate(R.id.marsGalleryFragment, bundle)
+        viewModel.getPlanetFromLatinName("Mars").observe(this.viewLifecycleOwner) { planets ->
+            planets.let {
+                adapter.submitList(it)
+            }
         }
 
         return binding.root

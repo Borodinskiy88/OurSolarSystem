@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import dagger.hilt.android.AndroidEntryPoint
 import ru.borodinskiy.aleksei.oursolarsystem.databinding.FragmentGalleryBinding
+import ru.borodinskiy.aleksei.oursolarsystem.enumeration.PlanetImage
 
 @AndroidEntryPoint
 class MarsGalleryFragment : Fragment() {
@@ -24,7 +25,7 @@ class MarsGalleryFragment : Fragment() {
 
         val image = arguments?.getString(IMAGE)?.toInt()
         //TODO заглушка
-        image?.let { binding.fullscreenImage.setImageResource(it) }
+        binding.fullscreenImage.setImageResource(PlanetImage.MARS.image)
 
         return binding.root
     }
