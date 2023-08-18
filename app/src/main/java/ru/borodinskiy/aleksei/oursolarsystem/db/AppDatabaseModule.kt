@@ -18,7 +18,7 @@ class AppDatabaseModule {
     fun provideDb(
         @ApplicationContext
         context: Context
-    ): AppDatabase = Room.databaseBuilder(context, AppDatabase::class.java, "planets_db")
+    ): AppDatabase = Room.databaseBuilder(context, AppDatabase::class.java, "planet")
         .createFromAsset("database/planets_db.db")
         .build()
 
