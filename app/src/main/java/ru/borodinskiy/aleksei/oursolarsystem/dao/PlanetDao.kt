@@ -13,13 +13,13 @@ import ru.borodinskiy.aleksei.oursolarsystem.entity.Planet
 @Dao
 interface PlanetDao {
 
-    @Query("SELECT * FROM planets_db ORDER BY id DESC")
+    @Query("SELECT * FROM planet ORDER BY id DESC")
     fun getPlanets(): Flow<List<Planet>>
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun insert(planet: Planet)
 
-    @Query("SELECT * FROM planets_db WHERE latin_name = :latinName")
+    @Query("SELECT * FROM planet WHERE latin_name = :latinName")
     fun getPlanetFromLatinName(latinName: String): Flow<List<Planet>>
 
     @Update

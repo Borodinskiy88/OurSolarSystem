@@ -4,7 +4,7 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "planets_db")
+@Entity(tableName = "planet")
 data class Planet(
     @PrimaryKey val id: Int,
     @ColumnInfo(name = "name") val rusName: String,
