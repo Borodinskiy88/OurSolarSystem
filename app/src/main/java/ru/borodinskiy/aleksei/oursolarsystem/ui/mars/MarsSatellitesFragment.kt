@@ -19,7 +19,7 @@ class MarsSatellitesFragment : Fragment() {
         val binding = FragmentSatellitesBinding.inflate(inflater, container, false)
 
         //TODO заглушка
-        binding.satellitesImage.setImageResource(R.drawable.fobos_daemos)
+//        binding.satellitesImage.setImageResource(R.drawable.fobos_daemos)
 
         return binding.root
     }

@@ -20,7 +20,7 @@ class NeptuneSatellitesFragment : Fragment() {
         val binding = FragmentSatellitesBinding.inflate(inflater, container, false)
 
         //TODO заглушка
-        binding.satellitesImage.setImageResource(R.drawable.satellites_neptun)
+//        binding.satellitesImage.setImageResource(R.drawable.satellites_neptun)
 
         return binding.root
     }

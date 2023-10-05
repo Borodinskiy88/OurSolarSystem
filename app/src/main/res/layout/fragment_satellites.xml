@@ -1,23 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="?attr/colorPrimary"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.mars.MarsSatellitesFragment">
+    android:background="?attr/colorPrimarySurface">
 
-    <ImageView
-        android:id="@+id/satellites_image"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:maxHeight="@dimen/planet_card_size_200"
-        android:maxWidth="@dimen/planet_card_size_200"
-        android:layout_gravity="center"
-        android:contentDescription="@string/image_planet"
-        android:scaleType="centerInside"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
         app:layout_constraintTop_toTopOf="parent"
-        tools:src="@tools:sample/avatars[11]" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:listitem="@layout/card_satellite" />
 
-</FrameLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

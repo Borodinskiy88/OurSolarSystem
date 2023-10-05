@@ -2,7 +2,6 @@
     <string name="app_name">OurSolarSystem</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
     <!-- Planet name -->
@@ -43,5 +42,6 @@
     <string name="moon">Moon</string>
     <string name="rings">Rings</string>
     <string name="satellites">Satellites</string>
+    <string name="show_more"><u>Show more</u></string>
     <string name="terraform">Terraform</string>
 </resources>

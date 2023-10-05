@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Наша Солнечная Система</string>
+    <string name="navigation_drawer_open">Открыть навигацию</string>
+    <string name="navigation_drawer_close">Закрыть навигацию</string>
+    <string name="nav_header_desc">Заголовок навигации</string>
+    <string name="action_settings">Настройки</string>
+    <string name="menu_earth">Земля</string>
+    <string name="menu_jupiter">Юпитер</string>
+    <string name="menu_mars">Марс</string>
+    <string name="menu_mercury">Меркурий</string>
+    <string name="menu_neptune">Нептун</string>
+    <string name="menu_saturn">Сатурн</string>
+    <string name="sun">Солнце</string>
+    <string name="menu_venus">Венера</string>
+    <string name="menu_uranus">Уран</string>
+    <string name="average_temperature">Ср. температура ℃:</string>
+    <string name="brief_information">Краткая информация:</string>
+    <string name="count_of_satellites">Спутники:</string>
+    <string name="duration_day">Длина дня (ч.мин):</string>
+    <string name="duration_year">Длина года (день/год):</string>
+    <string name="interesting_fact">Интересеный факт:</string>
+    <string name="maximum_temperature">Макс. температура ℃:</string>
+    <string name="minimum_temperature">Мин. температура ℃:</string>
+    <string name="named_after">Названа в честь:</string>
+    <string name="person_appearance">Вероятная внешность людей:</string>
+    <string name="rings_of_saturn">Кольца Сатурна</string>
+    <string name="size_in_earth_diameters">Диаметр к земному:</string>
+    <string name="solid_surface">Твердая поверхность:</string>
+    <string name="surface_gravity">Гравитация(g):</string>
+    <string name="was_opened">Кто открыл:</string>
+    <string name="image_planet">Изображение планеты</string>
+    <string name="yes">Да</string>
+    <string name="no">Нет</string>
+    <string name="astronautics">Космонавтика</string>
+    <string name="gallery">Галерея</string>
+    <string name="information">Информация</string>
+    <string name="mars_rover">Марсоход</string>
+    <string name="moon">Луна</string>
+    <string name="rings">Кольца</string>
+    <string name="satellites">Спутники</string>
+    <string name="terraform">Терраформирование</string>
+    <string name="show_more"><u>Узнать больше</u></string>
+</resources>

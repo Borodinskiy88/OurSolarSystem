@@ -1,5 +1,9 @@
 package ru.borodinskiy.aleksei.oursolarsystem.utils
 
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.commit
+import ru.borodinskiy.aleksei.oursolarsystem.R
+
 object ReformatValues {
 
     fun reformatCount(count: Int): String {
@@ -20,4 +24,6 @@ object ReformatValues {
         }
         return formatCount
     }
+
+
 }

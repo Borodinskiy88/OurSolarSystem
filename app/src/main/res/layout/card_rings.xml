@@ -5,6 +5,7 @@
     android:layout_height="wrap_content"
     xmlns:tools="http://schemas.android.com/tools"
     android:background="?attr/colorPrimary"
+    android:paddingBottom="@dimen/activity_margin_16"
     android:paddingStart="@dimen/padding_8"
     android:paddingEnd="@dimen/padding_8">
 
@@ -15,7 +16,7 @@
             android:gravity="center"
             android:textColor="?attr/colorOnSecondary"
             android:textSize="40sp"
-            android:text="Rings of Saturn"
+            tools:text="Rings of Saturn"
             tools:ignore="MissingConstraints" />
 
         <ImageView
@@ -24,6 +25,7 @@
             android:layout_height="@dimen/planet_card_size_200"
             android:contentDescription="@string/image_planet"
             android:scaleType="centerInside"
+            android:layout_marginTop="@dimen/padding_8"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/rings_name"
@@ -38,9 +40,9 @@
             android:layout_marginStart="@dimen/padding_8"
             android:layout_marginEnd="16dp"
             app:layout_constraintTop_toBottomOf="@id/rings_image"
-            android:text="Кольца Сатурна они такие кольца прям кольца"
+            tools:text="Кольца Сатурна они такие кольца прям кольца"
             android:textColor="?attr/colorOnPrimaryFixed"
-            android:textSize="@dimen/string_head_20sp" />
+            android:textSize="@dimen/text_18" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

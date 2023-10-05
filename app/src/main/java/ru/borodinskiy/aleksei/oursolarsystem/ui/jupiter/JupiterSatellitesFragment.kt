@@ -20,7 +20,7 @@ class JupiterSatellitesFragment : Fragment() {
         val binding = FragmentSatellitesBinding.inflate(inflater, container, false)
 
         //TODO заглушка
-        binding.satellitesImage.setImageResource(R.drawable.satellites_jupiter)
+        //binding.satellitesImage.setImageResource(R.drawable.satellites_jupiter)
 
         return binding.root
     }

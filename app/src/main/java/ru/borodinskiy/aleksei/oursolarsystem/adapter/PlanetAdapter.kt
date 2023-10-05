@@ -10,6 +10,7 @@ import ru.borodinskiy.aleksei.oursolarsystem.R
 import ru.borodinskiy.aleksei.oursolarsystem.databinding.CardPlanetBinding
 import ru.borodinskiy.aleksei.oursolarsystem.entity.Planet
 import ru.borodinskiy.aleksei.oursolarsystem.enumeration.PlanetImage
+import ru.borodinskiy.aleksei.oursolarsystem.utils.ImageObject.imagePlanet
 import ru.borodinskiy.aleksei.oursolarsystem.utils.ReformatValues.reformatCount
 
 class PlanetAdapter :
@@ -33,17 +34,19 @@ class PlanetAdapter :
 
             binding.apply {
 
-                when (planet.latinName) {
-                    "Mercurius" -> planetImage.setImageResource(PlanetImage.MERCURY.image)
-                    "Venus" -> planetImage.setImageResource(PlanetImage.VENUS.image)
-                    "Terra" -> planetImage.setImageResource(PlanetImage.EARTH.image)
-                    "Mars" -> planetImage.setImageResource(PlanetImage.MARS.image)
-                    "Jupiter" -> planetImage.setImageResource(PlanetImage.JUPITER.image)
-                    "Saturnus" -> planetImage.setImageResource(PlanetImage.SATURN.image)
-                    "Uranus" -> planetImage.setImageResource(PlanetImage.URANUS.image)
-                    "Neptunus" -> planetImage.setImageResource(PlanetImage.NEPTUNE.image)
-                    "Sol" -> planetImage.setImageResource(PlanetImage.SUN.image)
-                }
+                imagePlanet(planet.latinName, planetImage)
+
+//                when (planet.latinName) {
+//                    "Mercurius" -> planetImage.setImageResource(PlanetImage.MERCURY.image)
+//                    "Venus" -> planetImage.setImageResource(PlanetImage.VENUS.image)
+//                    "Terra" -> planetImage.setImageResource(PlanetImage.EARTH.image)
+//                    "Mars" -> planetImage.setImageResource(PlanetImage.MARS.image)
+//                    "Jupiter" -> planetImage.setImageResource(PlanetImage.JUPITER.image)
+//                    "Saturnus" -> planetImage.setImageResource(PlanetImage.SATURN.image)
+//                    "Uranus" -> planetImage.setImageResource(PlanetImage.URANUS.image)
+//                    "Neptunus" -> planetImage.setImageResource(PlanetImage.NEPTUNE.image)
+//                    "Sol" -> planetImage.setImageResource(PlanetImage.SUN.image)
+//                }
 
                 planetRusName.text = planet.rusName
                 planetLatinName.text = planet.latinName
