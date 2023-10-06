@@ -39,7 +39,7 @@ class MarsSatellitesFragment : Fragment() {
             override fun onShowDetail(satellite: Satellite) {
                 val bundle = bundleOf(
                     Pair("satelliteId", satellite.id),
-                    Pair("planet", satellite.engPlanet)
+                    Pair("planet", satellite.planet)
                 )
 
                 findNavController().navigate(R.id.action_nav_mars_to_singleSatelliteFragment, bundle)

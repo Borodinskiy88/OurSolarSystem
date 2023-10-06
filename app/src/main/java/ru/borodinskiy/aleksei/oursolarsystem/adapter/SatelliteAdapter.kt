@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import ru.borodinskiy.aleksei.oursolarsystem.databinding.CardSatelliteBinding
+import ru.borodinskiy.aleksei.oursolarsystem.entity.Planet
 import ru.borodinskiy.aleksei.oursolarsystem.entity.Satellite
 import ru.borodinskiy.aleksei.oursolarsystem.enumeration.SatelliteImage
 import ru.borodinskiy.aleksei.oursolarsystem.utils.ImageObject.imageSatellite
@@ -49,8 +50,8 @@ class SatelliteAdapter(
 
                 namedAfter.text = satellite.namedAfter
                 fact.text = satellite.fact
-                minTemp.text = reformatCount(satellite.minTemp)
-                maxTemp.text = reformatCount(satellite.maxTemp)
+                minTemp.text = satellite.minTemp
+                maxTemp.text = satellite.maxTemp
                 size.text = satellite.size
                 info.text = satellite.info
 

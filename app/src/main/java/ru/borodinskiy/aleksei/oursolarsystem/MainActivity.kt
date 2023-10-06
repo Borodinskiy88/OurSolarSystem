@@ -48,11 +48,11 @@ class MainActivity : AppCompatActivity() {
 //        window.statusBarColor = ContextCompat.getColor(this, R.color.black)
     }
 
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        // Раздуть меню; это добавляет элементы на панель действий, если она присутствует.
-        menuInflater.inflate(R.menu.main, menu)
-        return true
-    }
+//    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+//        // Раздуть меню; это добавляет элементы на панель действий, если она присутствует.
+//        menuInflater.inflate(R.menu.main, menu)
+//        return true
+//    }
 
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.nav_host_fragment_content_main)

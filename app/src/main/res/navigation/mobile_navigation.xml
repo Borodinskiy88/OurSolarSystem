@@ -31,6 +31,9 @@
         <action
             android:id="@+id/action_nav_earth_to_singleSatelliteFragment"
             app:destination="@id/singleSatelliteFragment" />
+        <action
+            android:id="@+id/action_nav_earth_to_fullImageFragment"
+            app:destination="@id/fullImageFragment" />
     </fragment>
 
     <fragment
@@ -208,4 +211,8 @@
         android:id="@+id/singleSatelliteFragment"
         android:name="ru.borodinskiy.aleksei.oursolarsystem.ui.fullscreen.SingleSatelliteFragment"
         android:label="SingleSatelliteFragment" />
+    <fragment
+        android:id="@+id/fullImageFragment"
+        android:name="ru.borodinskiy.aleksei.oursolarsystem.ui.fullscreen.FullImageFragment"
+        android:label="FullImageFragment" />
 </navigation>

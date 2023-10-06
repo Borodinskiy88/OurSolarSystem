@@ -1,6 +1,7 @@
 package ru.borodinskiy.aleksei.oursolarsystem.adapter
 
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.DiffUtil
@@ -9,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import ru.borodinskiy.aleksei.oursolarsystem.R
 import ru.borodinskiy.aleksei.oursolarsystem.databinding.CardPlanetBinding
 import ru.borodinskiy.aleksei.oursolarsystem.entity.Planet
+import ru.borodinskiy.aleksei.oursolarsystem.entity.Satellite
 import ru.borodinskiy.aleksei.oursolarsystem.utils.ImageObject.imagePlanet
 import ru.borodinskiy.aleksei.oursolarsystem.utils.ReformatValues.reformatCount
 
@@ -65,6 +67,7 @@ class PlanetAdapter :
                     planetRusName.textSize = 32F
                     planetLatinName.textSize = 28F
                 }
+
             }
         }
     }

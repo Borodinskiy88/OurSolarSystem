@@ -43,12 +43,6 @@ class JupiterInfoFragment : Fragment() {
             }
         }
 
-//        viewModel.getPlanetFromLatinName("Jupiter").observe(this.viewLifecycleOwner) { planets ->
-//            planets.let {
-//                adapter.submitList(it)
-//            }
-//        }
-
         return binding.root
     }
 }
