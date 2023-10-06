@@ -14,7 +14,7 @@ import androidx.recyclerview.widget.RecyclerView
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 import ru.borodinskiy.aleksei.oursolarsystem.R
-import ru.borodinskiy.aleksei.oursolarsystem.adapter.Listener
+import ru.borodinskiy.aleksei.oursolarsystem.adapter.SatelliteListener
 import ru.borodinskiy.aleksei.oursolarsystem.adapter.SatelliteAdapter
 import ru.borodinskiy.aleksei.oursolarsystem.databinding.FragmentSatellitesBinding
 import ru.borodinskiy.aleksei.oursolarsystem.entity.Satellite
@@ -35,7 +35,7 @@ class SaturnSatellitesFragment : Fragment() {
 
         recyclerView = binding.recyclerView
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
-        val adapter = SatelliteAdapter(object : Listener {
+        val adapter = SatelliteAdapter(object : SatelliteListener {
 
             override fun onShowDetail(satellite: Satellite) {
                 val bundle = bundleOf(
@@ -44,6 +44,15 @@ class SaturnSatellitesFragment : Fragment() {
                 )
 
                 findNavController().navigate(R.id.action_nav_saturn_to_singleSatelliteFragment, bundle)
+            }
+
+            override fun onFullImage(satellite: Satellite) {
+                val bundle = bundleOf(
+                    Pair("name", satellite.engName),
+                    Pair("nameRus", satellite.rusName)
+                )
+
+                findNavController().navigate(R.id.action_nav_saturn_to_fullImageFragment, bundle)
             }
 
         })

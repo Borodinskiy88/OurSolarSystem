@@ -9,19 +9,31 @@
         android:id="@+id/nav_sun"
         android:name="ru.borodinskiy.aleksei.oursolarsystem.ui.sun.SunFragment"
         android:label="@string/sun"
-        tools:layout="@layout/fragment_sun" />
+        tools:layout="@layout/fragment_sun" >
+        <action
+            android:id="@+id/action_nav_sun_to_fullImageFragment"
+            app:destination="@id/fullImageFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_mercury"
         android:name="ru.borodinskiy.aleksei.oursolarsystem.ui.mercury.MercuryFragment"
         android:label="@string/menu_mercury"
-        tools:layout="@layout/fragment_mercury" />
+        tools:layout="@layout/fragment_mercury" >
+        <action
+            android:id="@+id/action_nav_mercury_to_fullImageFragment"
+            app:destination="@id/fullImageFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_venus"
         android:name="ru.borodinskiy.aleksei.oursolarsystem.ui.venus.VenusFragment"
         android:label="@string/menu_venus"
-        tools:layout="@layout/fragment_venus" />
+        tools:layout="@layout/fragment_venus" >
+        <action
+            android:id="@+id/action_nav_venus_to_fullImageFragment"
+            app:destination="@id/fullImageFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_earth"
@@ -44,6 +56,9 @@
         <action
             android:id="@+id/action_nav_mars_to_singleSatelliteFragment"
             app:destination="@id/singleSatelliteFragment" />
+        <action
+            android:id="@+id/action_nav_mars_to_fullImageFragment"
+            app:destination="@id/fullImageFragment" />
     </fragment>
 
     <fragment
@@ -54,6 +69,9 @@
         <action
             android:id="@+id/action_nav_jupiter_to_singleSatelliteFragment"
             app:destination="@id/singleSatelliteFragment" />
+        <action
+            android:id="@+id/action_nav_jupiter_to_fullImageFragment"
+            app:destination="@id/fullImageFragment" />
     </fragment>
 
     <fragment
@@ -64,6 +82,9 @@
         <action
             android:id="@+id/action_nav_saturn_to_singleSatelliteFragment"
             app:destination="@id/singleSatelliteFragment" />
+        <action
+            android:id="@+id/action_nav_saturn_to_fullImageFragment"
+            app:destination="@id/fullImageFragment" />
     </fragment>
 
     <fragment
@@ -74,6 +95,9 @@
         <action
             android:id="@+id/action_nav_uranus_to_singleSatelliteFragment"
             app:destination="@id/singleSatelliteFragment" />
+        <action
+            android:id="@+id/action_nav_uranus_to_fullImageFragment"
+            app:destination="@id/fullImageFragment" />
     </fragment>
 
     <fragment
@@ -84,6 +108,9 @@
         <action
             android:id="@+id/action_nav_neptune_to_singleSatelliteFragment"
             app:destination="@id/singleSatelliteFragment" />
+        <action
+            android:id="@+id/action_nav_neptune_to_fullImageFragment"
+            app:destination="@id/fullImageFragment" />
     </fragment>
 
     <fragment
@@ -210,7 +237,11 @@
     <fragment
         android:id="@+id/singleSatelliteFragment"
         android:name="ru.borodinskiy.aleksei.oursolarsystem.ui.fullscreen.SingleSatelliteFragment"
-        android:label="SingleSatelliteFragment" />
+        android:label="SingleSatelliteFragment" >
+        <action
+            android:id="@+id/action_singleSatelliteFragment_to_fullImageFragment"
+            app:destination="@id/fullImageFragment" />
+    </fragment>
     <fragment
         android:id="@+id/fullImageFragment"
         android:name="ru.borodinskiy.aleksei.oursolarsystem.ui.fullscreen.FullImageFragment"

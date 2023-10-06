@@ -9,11 +9,13 @@ import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
-import ru.borodinskiy.aleksei.oursolarsystem.adapter.Listener
+import ru.borodinskiy.aleksei.oursolarsystem.R
+import ru.borodinskiy.aleksei.oursolarsystem.adapter.SatelliteListener
 import ru.borodinskiy.aleksei.oursolarsystem.adapter.SatelliteAdapter
 import ru.borodinskiy.aleksei.oursolarsystem.databinding.FragmentSatellitesBinding
 import ru.borodinskiy.aleksei.oursolarsystem.entity.Satellite
@@ -39,10 +41,19 @@ class SingleSatelliteFragment : Fragment() {
 
         recyclerView = binding.recyclerView
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
-        val adapter = SatelliteAdapter(object : Listener {
+        val adapter = SatelliteAdapter(object : SatelliteListener {
 
             override fun onShowDetail(satellite: Satellite) {
                 return
+            }
+
+            override fun onFullImage(satellite: Satellite) {
+                val bundle = bundleOf(
+                    Pair("name", satellite.engName),
+                    Pair("nameRus", satellite.rusName)
+                )
+
+                findNavController().navigate(R.id.action_singleSatelliteFragment_to_fullImageFragment, bundle)
             }
 
         })

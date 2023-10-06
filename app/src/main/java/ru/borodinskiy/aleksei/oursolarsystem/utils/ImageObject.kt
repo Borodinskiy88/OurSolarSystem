@@ -6,39 +6,35 @@ import ru.borodinskiy.aleksei.oursolarsystem.enumeration.SatelliteImage
 
 object ImageObject {
 
-    fun imagePlanet(name: String, planetImage: ImageView) {
-        when (name) {
-            "Mercurius" -> planetImage.setImageResource(PlanetImage.MERCURY.image)
-            "Venus" -> planetImage.setImageResource(PlanetImage.VENUS.image)
-            "Terra" -> planetImage.setImageResource(PlanetImage.EARTH.image)
-            "Mars" -> planetImage.setImageResource(PlanetImage.MARS.image)
-            "Jupiter" -> planetImage.setImageResource(PlanetImage.JUPITER.image)
-            "Saturnus" -> planetImage.setImageResource(PlanetImage.SATURN.image)
-            "Uranus" -> planetImage.setImageResource(PlanetImage.URANUS.image)
-            "Neptunus" -> planetImage.setImageResource(PlanetImage.NEPTUNE.image)
-            "Sol" -> planetImage.setImageResource(PlanetImage.SUN.image)
-        }
-    }
-    fun imageSatellite(name: String, satelliteImage: ImageView) {
+    fun imagePlanetSatellite(name: String, image: ImageView) {
         when(name) {
-            "Moon" -> satelliteImage.setImageResource(SatelliteImage.MOON.image)
-            "Phobos & Deimos" -> satelliteImage.setImageResource(SatelliteImage.PHOBOS.image)
-            "Io" -> satelliteImage.setImageResource(SatelliteImage.IO.image)
-            "Europa" -> satelliteImage.setImageResource(SatelliteImage.EUROPA.image)
-            "Ganymede" -> satelliteImage.setImageResource(SatelliteImage.GANYMEDE.image)
-            "Callisto" -> satelliteImage.setImageResource(SatelliteImage.CALLISTO.image)
-            "Titan" -> satelliteImage.setImageResource(SatelliteImage.TITAN.image)
-            "Rhea" -> satelliteImage.setImageResource(SatelliteImage.RHEA.image)
-            "Iapetus" -> satelliteImage.setImageResource(SatelliteImage.IAPETUS.image)
-            "Dione" -> satelliteImage.setImageResource(SatelliteImage.DIONE.image)
-            "Tethys" -> satelliteImage.setImageResource(SatelliteImage.TETHYS.image)
-            "Enceladus" -> satelliteImage.setImageResource(SatelliteImage.ENCELADUS.image)
-            "Titania" -> satelliteImage.setImageResource(SatelliteImage.TITANIA.image)
-            "Oberon" -> satelliteImage.setImageResource(SatelliteImage.OBERON.image)
-            "Ariel" -> satelliteImage.setImageResource(SatelliteImage.ARIEL.image)
-            "Umbriel" -> satelliteImage.setImageResource(SatelliteImage.UMBRIEL.image)
-            "Miranda" -> satelliteImage.setImageResource(SatelliteImage.MIRANDA.image)
-            "Triton" -> satelliteImage.setImageResource(SatelliteImage.TRITON.image)
+            "Mercurius" -> image.setImageResource(PlanetImage.MERCURY.image)
+            "Venus" -> image.setImageResource(PlanetImage.VENUS.image)
+            "Terra" -> image.setImageResource(PlanetImage.EARTH.image)
+            "Mars" -> image.setImageResource(PlanetImage.MARS.image)
+            "Jupiter" -> image.setImageResource(PlanetImage.JUPITER.image)
+            "Saturnus" -> image.setImageResource(PlanetImage.SATURN.image)
+            "Uranus" -> image.setImageResource(PlanetImage.URANUS.image)
+            "Neptunus" -> image.setImageResource(PlanetImage.NEPTUNE.image)
+            "Sol" -> image.setImageResource(PlanetImage.SUN.image)
+            "Moon" -> image.setImageResource(SatelliteImage.MOON.image)
+            "Phobos & Deimos" -> image.setImageResource(SatelliteImage.PHOBOS.image)
+            "Io" -> image.setImageResource(SatelliteImage.IO.image)
+            "Europa" -> image.setImageResource(SatelliteImage.EUROPA.image)
+            "Ganymede" -> image.setImageResource(SatelliteImage.GANYMEDE.image)
+            "Callisto" -> image.setImageResource(SatelliteImage.CALLISTO.image)
+            "Titan" -> image.setImageResource(SatelliteImage.TITAN.image)
+            "Rhea" -> image.setImageResource(SatelliteImage.RHEA.image)
+            "Iapetus" -> image.setImageResource(SatelliteImage.IAPETUS.image)
+            "Dione" -> image.setImageResource(SatelliteImage.DIONE.image)
+            "Tethys" -> image.setImageResource(SatelliteImage.TETHYS.image)
+            "Enceladus" -> image.setImageResource(SatelliteImage.ENCELADUS.image)
+            "Titania" -> image.setImageResource(SatelliteImage.TITANIA.image)
+            "Oberon" -> image.setImageResource(SatelliteImage.OBERON.image)
+            "Ariel" -> image.setImageResource(SatelliteImage.ARIEL.image)
+            "Umbriel" -> image.setImageResource(SatelliteImage.UMBRIEL.image)
+            "Miranda" -> image.setImageResource(SatelliteImage.MIRANDA.image)
+            "Triton" -> image.setImageResource(SatelliteImage.TRITON.image)
         }
     }
 }

@@ -1,7 +1,6 @@
 package ru.borodinskiy.aleksei.oursolarsystem.adapter
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.DiffUtil
@@ -11,16 +10,23 @@ import ru.borodinskiy.aleksei.oursolarsystem.R
 import ru.borodinskiy.aleksei.oursolarsystem.databinding.CardPlanetBinding
 import ru.borodinskiy.aleksei.oursolarsystem.entity.Planet
 import ru.borodinskiy.aleksei.oursolarsystem.entity.Satellite
-import ru.borodinskiy.aleksei.oursolarsystem.utils.ImageObject.imagePlanet
+import ru.borodinskiy.aleksei.oursolarsystem.utils.ImageObject.imagePlanetSatellite
 import ru.borodinskiy.aleksei.oursolarsystem.utils.ReformatValues.reformatCount
 
-class PlanetAdapter :
+interface PlanetListener {
+
+    fun onFullImage(planet: Planet)
+}
+class PlanetAdapter(
+    private val planetListener: PlanetListener
+) :
     ListAdapter<Planet, PlanetAdapter.PlanetViewHolder>(DiffCallback) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PlanetViewHolder {
 
         return PlanetViewHolder(
-            CardPlanetBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+            CardPlanetBinding.inflate(LayoutInflater.from(parent.context), parent, false),
+            planetListener
         )
     }
 
@@ -29,13 +35,14 @@ class PlanetAdapter :
     }
 
     class PlanetViewHolder(
-        private val binding: CardPlanetBinding
+        private val binding: CardPlanetBinding,
+        private val planetListener: PlanetListener
     ) : RecyclerView.ViewHolder(binding.root) {
         fun bind(planet: Planet) {
 
             binding.apply {
 
-                imagePlanet(planet.latinName, planetImage)
+                imagePlanetSatellite(planet.latinName, planetImage)
 
                 planetRusName.text = planet.rusName
                 planetLatinName.text = planet.latinName
@@ -66,6 +73,10 @@ class PlanetAdapter :
                 if (planet.latinName == "Mercurius") {
                     planetRusName.textSize = 32F
                     planetLatinName.textSize = 28F
+                }
+
+                planetImage.setOnClickListener {
+                    planetListener.onFullImage(planet)
                 }
 
             }

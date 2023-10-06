@@ -14,12 +14,10 @@ import androidx.recyclerview.widget.RecyclerView
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 import ru.borodinskiy.aleksei.oursolarsystem.R
-import ru.borodinskiy.aleksei.oursolarsystem.adapter.Listener
-import ru.borodinskiy.aleksei.oursolarsystem.adapter.PlanetAdapter
+import ru.borodinskiy.aleksei.oursolarsystem.adapter.SatelliteListener
 import ru.borodinskiy.aleksei.oursolarsystem.adapter.SatelliteAdapter
 import ru.borodinskiy.aleksei.oursolarsystem.databinding.FragmentSatellitesBinding
 import ru.borodinskiy.aleksei.oursolarsystem.entity.Satellite
-import ru.borodinskiy.aleksei.oursolarsystem.viewmodel.PlanetViewModel
 import ru.borodinskiy.aleksei.oursolarsystem.viewmodel.SatelliteViewModel
 
 @AndroidEntryPoint
@@ -36,7 +34,7 @@ class EarthMoonFragment : Fragment() {
 
         recyclerView = binding.recyclerView
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
-        val adapter = SatelliteAdapter(object : Listener {
+        val adapter = SatelliteAdapter(object : SatelliteListener {
 
             override fun onShowDetail(satellite: Satellite) {
                 val bundle = bundleOf(
@@ -45,6 +43,15 @@ class EarthMoonFragment : Fragment() {
                 )
 
                 findNavController().navigate(R.id.action_nav_earth_to_singleSatelliteFragment, bundle)
+            }
+
+            override fun onFullImage(satellite: Satellite) {
+                val bundle = bundleOf(
+                    Pair("name", satellite.engName),
+                    Pair("nameRus", satellite.rusName)
+                )
+
+                findNavController().navigate(R.id.action_nav_earth_to_fullImageFragment, bundle)
             }
 
         })

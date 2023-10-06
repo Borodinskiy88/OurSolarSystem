@@ -3,25 +3,22 @@ package ru.borodinskiy.aleksei.oursolarsystem.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.view.isVisible
-import androidx.core.view.marginEnd
-import androidx.core.view.marginTop
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import ru.borodinskiy.aleksei.oursolarsystem.databinding.CardSatelliteBinding
-import ru.borodinskiy.aleksei.oursolarsystem.entity.Planet
 import ru.borodinskiy.aleksei.oursolarsystem.entity.Satellite
-import ru.borodinskiy.aleksei.oursolarsystem.enumeration.SatelliteImage
-import ru.borodinskiy.aleksei.oursolarsystem.utils.ImageObject.imageSatellite
-import ru.borodinskiy.aleksei.oursolarsystem.utils.ReformatValues.reformatCount
+import ru.borodinskiy.aleksei.oursolarsystem.utils.ImageObject.imagePlanetSatellite
 
-interface Listener {
+interface SatelliteListener {
     fun onShowDetail(satellite: Satellite)
+
+    fun onFullImage(satellite: Satellite)
 }
 
 var flag = false
 class SatelliteAdapter(
-    private val listener: Listener
+    private val satelliteListener: SatelliteListener
 ) :
     ListAdapter<Satellite, SatelliteAdapter.SatelliteViewHolder>(DiffCallback) {
 
@@ -29,7 +26,7 @@ class SatelliteAdapter(
 
         return SatelliteViewHolder(
             CardSatelliteBinding.inflate(LayoutInflater.from(parent.context), parent, false),
-            listener
+            satelliteListener
         )
     }
 
@@ -39,7 +36,7 @@ class SatelliteAdapter(
 
     class SatelliteViewHolder(
         private val binding: CardSatelliteBinding,
-        private val listener: Listener
+        private val satelliteListener: SatelliteListener
     ) : RecyclerView.ViewHolder(binding.root) {
         fun bind(satellite: Satellite) {
 
@@ -62,11 +59,15 @@ class SatelliteAdapter(
                 }
 
                 showMore.setOnClickListener {
-                    listener.onShowDetail(satellite)
+                    satelliteListener.onShowDetail(satellite)
                     flag = true
                 }
 
-                imageSatellite(satellite.engName, satelliteImage)
+                satelliteImage.setOnClickListener {
+                    satelliteListener.onFullImage(satellite)
+                }
+
+                imagePlanetSatellite(satellite.engName, satelliteImage)
 
                 if (flag) {
 
