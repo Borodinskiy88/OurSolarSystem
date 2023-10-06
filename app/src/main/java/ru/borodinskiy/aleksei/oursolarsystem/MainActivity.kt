@@ -3,6 +3,7 @@ package ru.borodinskiy.aleksei.oursolarsystem
 import android.os.Bundle
 import android.view.Menu
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
@@ -28,8 +29,8 @@ class MainActivity : AppCompatActivity() {
         val drawerLayout = binding.drawerLayout
         val navView = binding.navView
         val navController = findNavController(R.id.nav_host_fragment_content_main)
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
+        // Передача каждого идентификатора меню как набора идентификаторов, поскольку каждый
+        // меню следует рассматривать как пункты назначения верхнего уровня.
         appBarConfiguration = AppBarConfiguration(
             setOf(
                 R.id.nav_sun, R.id.nav_mercury, R.id.nav_venus, R.id.nav_earth, R.id.nav_mars,
@@ -40,10 +41,15 @@ class MainActivity : AppCompatActivity() {
         navView.itemIconTintList = null
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+        //Цвет нижней панели
+        window.navigationBarColor = ContextCompat.getColor(this, R.color.black)
+        //Цвет верхней панели
+//        window.statusBarColor = ContextCompat.getColor(this, R.color.black)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        // Inflate the menu; this adds items to the action bar if it is present.
+        // Раздуть меню; это добавляет элементы на панель действий, если она присутствует.
         menuInflater.inflate(R.menu.main, menu)
         return true
     }

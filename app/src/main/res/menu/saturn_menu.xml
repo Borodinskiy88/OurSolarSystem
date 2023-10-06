@@ -10,14 +10,14 @@
         android:icon="@drawable/ic_telescope_24"
         android:title="@string/gallery" />
     <item
-        android:id="@+id/satellites_menu"
-        android:enabled="true"
-        android:visible="false"
-        android:icon="@drawable/ic_satellite_24"
-        android:title="@string/satellites" />
-    <item
         android:id="@+id/rings_menu"
         android:enabled="true"
         android:icon="@drawable/ic_rings_24"
         android:title="@string/rings" />
+    <item
+        android:id="@+id/satellites_menu"
+        android:enabled="true"
+        android:visible="true"
+        android:icon="@drawable/ic_satellite_24"
+        android:title="@string/satellites" />
 </menu>

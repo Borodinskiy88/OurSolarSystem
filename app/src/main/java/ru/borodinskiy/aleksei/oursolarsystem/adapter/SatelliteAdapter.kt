@@ -2,6 +2,9 @@ package ru.borodinskiy.aleksei.oursolarsystem.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.view.isVisible
+import androidx.core.view.marginEnd
+import androidx.core.view.marginTop
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
@@ -9,10 +12,13 @@ import ru.borodinskiy.aleksei.oursolarsystem.databinding.CardSatelliteBinding
 import ru.borodinskiy.aleksei.oursolarsystem.entity.Satellite
 import ru.borodinskiy.aleksei.oursolarsystem.enumeration.SatelliteImage
 import ru.borodinskiy.aleksei.oursolarsystem.utils.ImageObject.imageSatellite
+import ru.borodinskiy.aleksei.oursolarsystem.utils.ReformatValues.reformatCount
 
 interface Listener {
     fun onShowDetail(satellite: Satellite)
 }
+
+var flag = false
 class SatelliteAdapter(
     private val listener: Listener
 ) :
@@ -41,33 +47,34 @@ class SatelliteAdapter(
                 satelliteRusName.text = satellite.rusName
                 satelliteLatinName.text = satellite.engName
 
+                namedAfter.text = satellite.namedAfter
+                fact.text = satellite.fact
+                minTemp.text = reformatCount(satellite.minTemp)
+                maxTemp.text = reformatCount(satellite.maxTemp)
+                size.text = satellite.size
+                info.text = satellite.info
+
+                if (satellite.engPlanet == "Mars") {
+                    satelliteRusName.textSize = 20F
+                    satelliteLatinName.textSize = 18F
+                    showMore.textSize = 15F
+                }
+
                 showMore.setOnClickListener {
                     listener.onShowDetail(satellite)
+                    flag = true
                 }
 
                 imageSatellite(satellite.engName, satelliteImage)
 
-//                when(satellite.engName) {
-//                    "Moon" -> satelliteImage.setImageResource(SatelliteImage.MOON.image)
-//                    "Phobos & Deimos" -> satelliteImage.setImageResource(SatelliteImage.PHOBOS.image)
-//                    "Io" -> satelliteImage.setImageResource(SatelliteImage.IO.image)
-//                    "Europa" -> satelliteImage.setImageResource(SatelliteImage.EUROPA.image)
-//                    "Ganymede" -> satelliteImage.setImageResource(SatelliteImage.GANYMEDE.image)
-//                    "Callisto" -> satelliteImage.setImageResource(SatelliteImage.CALLISTO.image)
-//                    "Titan" -> satelliteImage.setImageResource(SatelliteImage.TITAN.image)
-//                    "Rhea" -> satelliteImage.setImageResource(SatelliteImage.RHEA.image)
-//                    "Iapetus" -> satelliteImage.setImageResource(SatelliteImage.IAPETUS.image)
-//                    "Dione" -> satelliteImage.setImageResource(SatelliteImage.DIONE.image)
-//                    "Tethys" -> satelliteImage.setImageResource(SatelliteImage.TETHYS.image)
-//                    "Enceladus" -> satelliteImage.setImageResource(SatelliteImage.ENCELADUS.image)
-//                    "Titania" -> satelliteImage.setImageResource(SatelliteImage.TITANIA.image)
-//                    "Oberon" -> satelliteImage.setImageResource(SatelliteImage.OBERON.image)
-//                    "Ariel" -> satelliteImage.setImageResource(SatelliteImage.ARIEL.image)
-//                    "Umbriel" -> satelliteImage.setImageResource(SatelliteImage.UMBRIEL.image)
-//                    "Miranda" -> satelliteImage.setImageResource(SatelliteImage.MIRANDA.image)
-//                    "Triton" -> satelliteImage.setImageResource(SatelliteImage.TRITON.image)
-//                }
+                if (flag) {
+
+                    showMore.isVisible = false
+                    moreInfo.isVisible = true
+                }
             }
+
+            flag = false
         }
     }
 

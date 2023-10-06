@@ -11,6 +11,6 @@ class PlanetRepositoryImpl @Inject constructor(private val planetDao: PlanetDao)
 
     override val allPlanets: LiveData<List<Planet>> = planetDao.getPlanets().asLiveData()
 
-    override fun getPlanetFromLatinName(latinName: String): LiveData<List<Planet>> =
+    override suspend fun getPlanetFromLatinName(latinName: String): LiveData<List<Planet>> =
         planetDao.getPlanetFromLatinName(latinName).asLiveData()
 }

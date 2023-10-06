@@ -4,15 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="?attr/colorPrimarySurface">
+
+    android:background="?attr/colorPrimaryVariant">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/padding_4"
+        android:layout_marginBottom="@dimen/padding_4"
         android:scrollbars="vertical"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        tools:itemCount="1"
         tools:listitem="@layout/card_satellite" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

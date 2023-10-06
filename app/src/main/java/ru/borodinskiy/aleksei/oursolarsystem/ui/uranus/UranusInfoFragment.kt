@@ -6,9 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.launch
 import ru.borodinskiy.aleksei.oursolarsystem.adapter.PlanetAdapter
 import ru.borodinskiy.aleksei.oursolarsystem.databinding.FragmentInfoBinding
 import ru.borodinskiy.aleksei.oursolarsystem.viewmodel.PlanetViewModel
@@ -33,11 +35,19 @@ class UranusInfoFragment : Fragment() {
 
         recyclerView.adapter = adapter
 
-        viewModel.getPlanetFromLatinName("Uranus").observe(this.viewLifecycleOwner) { planets ->
-            planets.let {
-                adapter.submitList(it)
+        viewLifecycleOwner.lifecycleScope.launch {
+            viewModel.getPlanetFromLatinName("Uranus").observe(viewLifecycleOwner) { planets ->
+                planets.let {
+                    adapter.submitList(it)
+                }
             }
         }
+
+//        viewModel.getPlanetFromLatinName("Uranus").observe(this.viewLifecycleOwner) { planets ->
+//            planets.let {
+//                adapter.submitList(it)
+//            }
+//        }
 
         return binding.root
     }

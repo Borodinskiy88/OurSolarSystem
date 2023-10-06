@@ -12,7 +12,7 @@ data class Satellite(
     @ColumnInfo(name = "eng_name") val engName: String,
     @ColumnInfo(name = "min_temp") val minTemp: Int,
     @ColumnInfo(name = "max_temp") val maxTemp: Int,
-    @ColumnInfo(name = "size") val size: Int,
+    @ColumnInfo(name = "size") val size: String,
     @ColumnInfo(name = "interesting_fact") val fact: String,
     @ColumnInfo(name = "info") val info: String,
     @ColumnInfo(name = "named_after_whom") val namedAfter: String,

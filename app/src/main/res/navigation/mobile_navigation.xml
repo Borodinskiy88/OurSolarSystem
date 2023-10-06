@@ -27,52 +27,71 @@
         android:id="@+id/nav_earth"
         android:name="ru.borodinskiy.aleksei.oursolarsystem.ui.earth.EarthFragment"
         android:label="@string/menu_earth"
-        tools:layout="@layout/fragment_earth" />
+        tools:layout="@layout/fragment_earth" >
+        <action
+            android:id="@+id/action_nav_earth_to_singleSatelliteFragment"
+            app:destination="@id/singleSatelliteFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_mars"
         android:name="ru.borodinskiy.aleksei.oursolarsystem.ui.mars.MarsFragment"
         android:label="@string/menu_mars"
-        tools:layout="@layout/fragment_mars" />
+        tools:layout="@layout/fragment_mars" >
+        <action
+            android:id="@+id/action_nav_mars_to_singleSatelliteFragment"
+            app:destination="@id/singleSatelliteFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_jupiter"
         android:name="ru.borodinskiy.aleksei.oursolarsystem.ui.jupiter.JupiterFragment"
         android:label="@string/menu_jupiter"
-        tools:layout="@layout/fragment_jupiter" />
+        tools:layout="@layout/fragment_jupiter" >
+        <action
+            android:id="@+id/action_nav_jupiter_to_singleSatelliteFragment"
+            app:destination="@id/singleSatelliteFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_saturn"
         android:name="ru.borodinskiy.aleksei.oursolarsystem.ui.saturn.SaturnFragment"
         android:label="@string/menu_saturn"
-        tools:layout="@layout/fragment_saturn" />
+        tools:layout="@layout/fragment_saturn" >
+        <action
+            android:id="@+id/action_nav_saturn_to_singleSatelliteFragment"
+            app:destination="@id/singleSatelliteFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_uranus"
         android:name="ru.borodinskiy.aleksei.oursolarsystem.ui.uranus.UranusFragment"
         android:label="@string/menu_uranus"
-        tools:layout="@layout/fragment_uranus" />
+        tools:layout="@layout/fragment_uranus" >
+        <action
+            android:id="@+id/action_nav_uranus_to_singleSatelliteFragment"
+            app:destination="@id/singleSatelliteFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_neptune"
         android:name="ru.borodinskiy.aleksei.oursolarsystem.ui.neptune.NeptuneFragment"
         android:label="@string/menu_neptune"
-        tools:layout="@layout/fragment_neptune" />
+        tools:layout="@layout/fragment_neptune" >
+        <action
+            android:id="@+id/action_nav_neptune_to_singleSatelliteFragment"
+            app:destination="@id/singleSatelliteFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/mercury_gallery"
         android:name="ru.borodinskiy.aleksei.oursolarsystem.ui.mercury.MercuryGalleryFragment"
         android:label="@string/menu_mercury"
         tools:layout="@layout/fragment_gallery" />
-
     <fragment
         android:id="@+id/mercury_info"
         android:name="ru.borodinskiy.aleksei.oursolarsystem.ui.mercury.MercuryInfoFragment"
-        android:label="@string/menu_mercury">
-        <action
-            android:id="@+id/action_mercury_info_to_mercury_gallery"
-            app:destination="@id/mercury_gallery" />
-    </fragment>
+        android:label="@string/menu_mercury"/>
     <fragment
         android:id="@+id/earthGalleryFragment"
         android:name="ru.borodinskiy.aleksei.oursolarsystem.ui.earth.EarthGalleryFragment"
@@ -89,8 +108,7 @@
     <fragment
         android:id="@+id/earthMoonFragment"
         android:name="ru.borodinskiy.aleksei.oursolarsystem.ui.earth.EarthMoonFragment"
-        android:label="fragment_earth_moon"
-        tools:layout="@layout/fragment_earth_moon" />
+        android:label="fragment_earth_moon" />
     <fragment
         android:id="@+id/jupiterGalleryFragment"
         android:name="ru.borodinskiy.aleksei.oursolarsystem.ui.jupiter.JupiterGalleryFragment"
@@ -186,4 +204,8 @@
         android:name="ru.borodinskiy.aleksei.oursolarsystem.ui.saturn.SaturnRingsFragment"
         android:label="fragment_saturn_rings"
         tools:layout="@layout/fragment_saturn_rings" />
+    <fragment
+        android:id="@+id/singleSatelliteFragment"
+        android:name="ru.borodinskiy.aleksei.oursolarsystem.ui.fullscreen.SingleSatelliteFragment"
+        android:label="SingleSatelliteFragment" />
 </navigation>

@@ -10,5 +10,7 @@ import ru.borodinskiy.aleksei.oursolarsystem.db.AppDatabase
 @Module
 object DaoModule {
     @Provides
-    fun provideCarDao(db: AppDatabase): PlanetDao = db.planetDao()
+    fun providePlanetDao(db: AppDatabase): PlanetDao = db.planetDao()
+    @Provides
+    fun provideSatelliteDao(db: AppDatabase): SatelliteDao = db.satelliteDao()
 }
