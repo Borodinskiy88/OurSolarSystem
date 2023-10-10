@@ -15,14 +15,14 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:textColor="?attr/colorOnSecondary"
-            android:textSize="40sp"
+            android:textSize="@dimen/text_32"
             tools:text="Rings of Saturn"
             tools:ignore="MissingConstraints" />
 
         <ImageView
             android:id="@+id/rings_image"
-            android:layout_width="@dimen/planet_card_size_200"
-            android:layout_height="@dimen/planet_card_size_200"
+            android:layout_width="@dimen/nav_header_height_176"
+            android:layout_height="@dimen/nav_header_height_176"
             android:contentDescription="@string/image_planet"
             android:scaleType="centerInside"
             android:layout_marginTop="@dimen/padding_8"

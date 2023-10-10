@@ -1,11 +1,13 @@
 package ru.borodinskiy.aleksei.oursolarsystem.adapter
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import ru.borodinskiy.aleksei.oursolarsystem.R
 import ru.borodinskiy.aleksei.oursolarsystem.databinding.CardSatelliteBinding
 import ru.borodinskiy.aleksei.oursolarsystem.entity.Satellite
 import ru.borodinskiy.aleksei.oursolarsystem.utils.ImageObject.imagePlanetSatellite
@@ -38,6 +40,7 @@ class SatelliteAdapter(
         private val binding: CardSatelliteBinding,
         private val satelliteListener: SatelliteListener
     ) : RecyclerView.ViewHolder(binding.root) {
+        @SuppressLint("ResourceAsColor")
         fun bind(satellite: Satellite) {
 
             binding.apply {
@@ -53,8 +56,8 @@ class SatelliteAdapter(
                 info.text = satellite.info
 
                 if (satellite.engPlanet == "Mars") {
-                    satelliteRusName.textSize = 20F
-                    satelliteLatinName.textSize = 18F
+                    satelliteRusName.textSize = 19F
+                    satelliteLatinName.textSize = 17F
                     showMore.textSize = 15F
                 }
 
@@ -73,6 +76,7 @@ class SatelliteAdapter(
 
                     showMore.isVisible = false
                     moreInfo.isVisible = true
+                    constraint.setBackgroundResource(R.drawable.background_black)
                 }
             }
 

@@ -5,6 +5,7 @@
     <dimen name="string_head_20sp">20sp</dimen>
     <dimen name="activity_margin_32">32dp</dimen>
     <dimen name="headline_latin_size_32sp">32sp</dimen>
+    <dimen name="planet_image_148dp">148dp</dimen>
     <dimen name="planet_image_160dp">160dp</dimen>
     <dimen name="nav_header_height_176">176dp</dimen>
     <dimen name="planet_card_size_200">200dp</dimen>

@@ -1,25 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    app:cardElevation="0dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:layout_marginStart="@dimen/padding_8"
+    android:layout_marginTop="@dimen/padding_4"
     android:layout_marginEnd="@dimen/padding_8"
     android:layout_marginBottom="@dimen/padding_4"
-    android:layout_marginTop="@dimen/padding_4">
+    app:cardCornerRadius="@dimen/padding_8"
+    app:cardElevation="0dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
+        android:background="@drawable/background_black_yellow"
         android:padding="@dimen/padding_8">
 
         <ImageView
             android:id="@+id/satellite_image"
-            android:layout_width="@dimen/planet_image_160dp"
-            android:layout_height="@dimen/planet_image_160dp"
+            android:layout_width="@dimen/planet_image_148dp"
+            android:layout_height="@dimen/planet_image_148dp"
             android:contentDescription="@string/image_planet"
             android:src="@drawable/merkurij"
             app:layout_constraintStart_toStartOf="parent"
@@ -64,165 +66,165 @@
             app:layout_constraintStart_toStartOf="@id/satellite_rus_name"
             app:layout_constraintTop_toBottomOf="@id/satellite_latin_name" />
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/more_info"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:visibility="gone"
-        app:layout_constraintStart_toStartOf="@id/satellite_image"
-        app:layout_constraintTop_toBottomOf="@id/satellite_image">
-
-        <TextView
-            android:id="@+id/named_after_headline"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_margin_16"
-            android:text="@string/named_after"
-            android:textColor="?attr/colorOnSecondary"
-            android:textSize="@dimen/text_20"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/named_after"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/more_info"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/padding_8"
-            android:layout_marginTop="@dimen/padding_8"
-            android:layout_marginEnd="@dimen/padding_8"
-            android:textColor="?attr/colorOnPrimaryFixed"
-            android:textSize="@dimen/text_18"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/named_after_headline"
-            tools:text="Бог торговли, воровства и посланий Меркурий. Название планеты отражает быстроту этой планеты, так как Меркурий является самой быстрой планетой в Солнечной системе." />
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@id/satellite_image"
+            app:layout_constraintTop_toBottomOf="@id/satellite_image">
 
-        <TextView
-            android:id="@+id/fact_headline"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/padding_8"
-            android:text="@string/interesting_fact"
-            android:textColor="?attr/colorOnSecondary"
-            android:textSize="@dimen/string_head_20sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/named_after" />
+            <TextView
+                android:id="@+id/named_after_headline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_margin_16"
+                android:text="@string/named_after"
+                android:textColor="?attr/colorOnSecondary"
+                android:textSize="@dimen/text_18"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/fact"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/padding_8"
-            android:layout_marginTop="@dimen/padding_8"
-            android:layout_marginEnd="@dimen/padding_8"
-            android:textColor="?attr/colorOnPrimaryFixed"
-            android:textSize="@dimen/text_18"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/fact_headline"
-            tools:text="Привычные нам вещи весили бы на Меркурии значительно меньше, чем они же на Земле. А все потому, что сила тяжести на нем значительно меньше из-за размеров самой планеты. А если бы здесь была жизнь, то ее жители могли наблюдать рассвет и закат Солнца до 4 раз в сутки." />
+            <TextView
+                android:id="@+id/named_after"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/padding_8"
+                android:layout_marginTop="@dimen/padding_8"
+                android:layout_marginEnd="@dimen/padding_8"
+                android:textColor="?attr/colorOnPrimaryFixed"
+                android:textSize="@dimen/text_16"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/named_after_headline"
+                tools:text="Бог торговли, воровства и посланий Меркурий. Название планеты отражает быстроту этой планеты, так как Меркурий является самой быстрой планетой в Солнечной системе." />
 
-        <TextView
-            android:id="@+id/min_temp_headline"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/padding_8"
-            android:text="@string/minimum_temperature"
-            android:textColor="?attr/colorOnSecondary"
-            android:textSize="@dimen/string_head_20sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/fact" />
+            <TextView
+                android:id="@+id/fact_headline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_8"
+                android:text="@string/interesting_fact"
+                android:textColor="?attr/colorOnSecondary"
+                android:textSize="@dimen/text_18"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/named_after" />
 
-        <TextView
-            android:id="@+id/min_temp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/activity_margin_16"
-            android:layout_marginEnd="@dimen/padding_8"
-            tools:text="-173"
-            android:textColor="?attr/colorOnPrimaryFixed"
-            android:textSize="@dimen/text_18"
-            app:layout_constraintBottom_toBottomOf="@id/min_temp_headline"
-            app:layout_constraintStart_toEndOf="@id/min_temp_headline"
-            app:layout_constraintTop_toTopOf="@id/min_temp_headline" />
+            <TextView
+                android:id="@+id/fact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/padding_8"
+                android:layout_marginTop="@dimen/padding_8"
+                android:layout_marginEnd="@dimen/padding_8"
+                android:textColor="?attr/colorOnPrimaryFixed"
+                android:textSize="@dimen/text_16"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fact_headline"
+                tools:text="Привычные нам вещи весили бы на Меркурии значительно меньше, чем они же на Земле. А все потому, что сила тяжести на нем значительно меньше из-за размеров самой планеты. А если бы здесь была жизнь, то ее жители могли наблюдать рассвет и закат Солнца до 4 раз в сутки." />
 
-        <TextView
-            android:id="@+id/max_temp_headline"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/padding_8"
-            android:text="@string/maximum_temperature"
-            android:textColor="?attr/colorOnSecondary"
-            android:textSize="@dimen/string_head_20sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/min_temp" />
+            <TextView
+                android:id="@+id/min_temp_headline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_8"
+                android:text="@string/minimum_temperature"
+                android:textColor="?attr/colorOnSecondary"
+                android:textSize="@dimen/text_18"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fact" />
 
-        <TextView
-            android:id="@+id/max_temp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/activity_margin_16"
-            android:layout_marginEnd="@dimen/padding_8"
-            tools:text="427"
-            android:textColor="?attr/colorOnPrimaryFixed"
-            android:textSize="@dimen/text_18"
-            app:layout_constraintStart_toEndOf="@id/max_temp_headline"
-            app:layout_constraintBottom_toBottomOf="@id/max_temp_headline"
-            app:layout_constraintTop_toTopOf="@id/max_temp_headline" />
+            <TextView
+                android:id="@+id/min_temp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_margin_16"
+                android:layout_marginEnd="@dimen/padding_8"
+                android:textColor="?attr/colorOnPrimaryFixed"
+                android:textSize="@dimen/text_16"
+                app:layout_constraintBottom_toBottomOf="@id/min_temp_headline"
+                app:layout_constraintStart_toEndOf="@id/min_temp_headline"
+                app:layout_constraintTop_toTopOf="@id/min_temp_headline"
+                tools:text="-173" />
 
-        <TextView
-            android:id="@+id/size_headline"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/padding_8"
-            android:text="@string/size_in_earth_diameters"
-            android:textColor="?attr/colorOnSecondary"
-            android:textSize="@dimen/string_head_20sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/max_temp" />
+            <TextView
+                android:id="@+id/max_temp_headline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_8"
+                android:text="@string/maximum_temperature"
+                android:textColor="?attr/colorOnSecondary"
+                android:textSize="@dimen/text_18"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/min_temp" />
 
-        <TextView
-            android:id="@+id/size"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/activity_margin_16"
-            android:layout_marginEnd="@dimen/padding_8"
-            tools:text="0,383"
-            android:textColor="?attr/colorOnPrimaryFixed"
-            android:textSize="@dimen/text_18"
-            app:layout_constraintBottom_toBottomOf="@id/size_headline"
-            app:layout_constraintStart_toEndOf="@id/size_headline"
-            app:layout_constraintTop_toTopOf="@id/size_headline" />
+            <TextView
+                android:id="@+id/max_temp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_margin_16"
+                android:layout_marginEnd="@dimen/padding_8"
+                android:textColor="?attr/colorOnPrimaryFixed"
+                android:textSize="@dimen/text_16"
+                app:layout_constraintBottom_toBottomOf="@id/max_temp_headline"
+                app:layout_constraintStart_toEndOf="@id/max_temp_headline"
+                app:layout_constraintTop_toTopOf="@id/max_temp_headline"
+                tools:text="427" />
 
-        <TextView
-            android:id="@+id/info_headline"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/padding_8"
-            android:text="@string/brief_information"
-            android:textColor="?attr/colorOnSecondary"
-            android:textSize="@dimen/string_head_20sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/size" />
+            <TextView
+                android:id="@+id/size_headline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_8"
+                android:text="@string/size_in_earth_diameters"
+                android:textColor="?attr/colorOnSecondary"
+                android:textSize="@dimen/text_18"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/max_temp" />
 
-        <TextView
-            android:id="@+id/info"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/padding_8"
-            android:layout_marginStart="@dimen/padding_8"
-            android:layout_marginEnd="@dimen/padding_8"
-            tools:text="Меркурий — самая маленькая планета в нашей Солнечной системе и ближайшая к Солнцу — лишь немного больше земной Луны. Меркурий — самая быстрая планета, совершающая оборот вокруг Солнца каждые 88 земных суток. С поверхности Меркурия Солнце будет казаться более чем в три раза больше, чем если смотреть с Земли, а солнечный свет будет в семь раз ярче. Несмотря на свою близость к Солнцу, Меркурий не является самой горячей планетой в нашей Солнечной системе — этот титул принадлежит соседней Венере благодаря ее плотной атмосфере. Из-за эллиптической орбиты Меркурия и медленного вращения кажется, что Солнце ненадолго восходит, заходит и снова восходит с некоторых участков поверхности планеты. То же самое происходит в обратном порядке на закате."
-            android:textColor="?attr/colorOnPrimaryFixed"
-            android:textSize="@dimen/text_18"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/info_headline" />
+            <TextView
+                android:id="@+id/size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_margin_16"
+                android:layout_marginEnd="@dimen/padding_8"
+                android:textColor="?attr/colorOnPrimaryFixed"
+                android:textSize="@dimen/text_16"
+                app:layout_constraintBottom_toBottomOf="@id/size_headline"
+                app:layout_constraintStart_toEndOf="@id/size_headline"
+                app:layout_constraintTop_toTopOf="@id/size_headline"
+                tools:text="0,383" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:id="@+id/info_headline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_8"
+                android:text="@string/brief_information"
+                android:textColor="?attr/colorOnSecondary"
+                android:textSize="@dimen/text_18"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/size" />
+
+            <TextView
+                android:id="@+id/info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/padding_8"
+                android:layout_marginTop="@dimen/padding_8"
+                android:layout_marginEnd="@dimen/padding_8"
+                android:textColor="?attr/colorOnPrimaryFixed"
+                android:textSize="@dimen/text_16"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/info_headline"
+                tools:text="Меркурий — самая маленькая планета в нашей Солнечной системе и ближайшая к Солнцу — лишь немного больше земной Луны. Меркурий — самая быстрая планета, совершающая оборот вокруг Солнца каждые 88 земных суток. С поверхности Меркурия Солнце будет казаться более чем в три раза больше, чем если смотреть с Земли, а солнечный свет будет в семь раз ярче. Несмотря на свою близость к Солнцу, Меркурий не является самой горячей планетой в нашей Солнечной системе — этот титул принадлежит соседней Венере благодаря ее плотной атмосфере. Из-за эллиптической орбиты Меркурия и медленного вращения кажется, что Солнце ненадолго восходит, заходит и снова восходит с некоторых участков поверхности планеты. То же самое происходит в обратном порядке на закате." />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

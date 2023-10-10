@@ -70,11 +70,6 @@ class PlanetAdapter(
                     appearance.isVisible = false
                 }
 
-                if (planet.latinName == "Mercurius") {
-                    planetRusName.textSize = 32F
-                    planetLatinName.textSize = 28F
-                }
-
                 planetImage.setOnClickListener {
                     planetListener.onFullImage(planet)
                 }
