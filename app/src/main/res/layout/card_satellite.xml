@@ -7,9 +7,7 @@
     android:layout_marginStart="@dimen/padding_8"
     android:layout_marginTop="@dimen/padding_4"
     android:layout_marginEnd="@dimen/padding_8"
-    android:layout_marginBottom="@dimen/padding_4"
-    app:cardCornerRadius="@dimen/padding_8"
-    app:cardElevation="0dp">
+    android:layout_marginBottom="@dimen/padding_4">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraint"
@@ -90,11 +88,11 @@
                 android:id="@+id/named_after"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="?attr/colorOnPrimaryFixed"
+                android:textSize="@dimen/text_16"
                 android:layout_marginStart="@dimen/padding_8"
                 android:layout_marginTop="@dimen/padding_8"
                 android:layout_marginEnd="@dimen/padding_8"
-                android:textColor="?attr/colorOnPrimaryFixed"
-                android:textSize="@dimen/text_16"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/named_after_headline"
                 tools:text="Бог торговли, воровства и посланий Меркурий. Название планеты отражает быстроту этой планеты, так как Меркурий является самой быстрой планетой в Солнечной системе." />
@@ -140,13 +138,13 @@
                 android:id="@+id/min_temp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/activity_margin_16"
-                android:layout_marginEnd="@dimen/padding_8"
                 android:textColor="?attr/colorOnPrimaryFixed"
                 android:textSize="@dimen/text_16"
-                app:layout_constraintBottom_toBottomOf="@id/min_temp_headline"
-                app:layout_constraintStart_toEndOf="@id/min_temp_headline"
-                app:layout_constraintTop_toTopOf="@id/min_temp_headline"
+                android:layout_marginStart="@dimen/padding_8"
+                android:layout_marginTop="@dimen/padding_8"
+                android:layout_marginEnd="@dimen/padding_8"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/min_temp_headline"
                 tools:text="-173" />
 
             <TextView
@@ -165,13 +163,13 @@
                 android:id="@+id/max_temp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/activity_margin_16"
-                android:layout_marginEnd="@dimen/padding_8"
                 android:textColor="?attr/colorOnPrimaryFixed"
                 android:textSize="@dimen/text_16"
-                app:layout_constraintBottom_toBottomOf="@id/max_temp_headline"
-                app:layout_constraintStart_toEndOf="@id/max_temp_headline"
-                app:layout_constraintTop_toTopOf="@id/max_temp_headline"
+                android:layout_marginStart="@dimen/padding_8"
+                android:layout_marginTop="@dimen/padding_8"
+                android:layout_marginEnd="@dimen/padding_8"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/max_temp_headline"
                 tools:text="427" />
 
             <TextView
@@ -190,13 +188,13 @@
                 android:id="@+id/size"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/activity_margin_16"
-                android:layout_marginEnd="@dimen/padding_8"
                 android:textColor="?attr/colorOnPrimaryFixed"
                 android:textSize="@dimen/text_16"
-                app:layout_constraintBottom_toBottomOf="@id/size_headline"
-                app:layout_constraintStart_toEndOf="@id/size_headline"
-                app:layout_constraintTop_toTopOf="@id/size_headline"
+                android:layout_marginStart="@dimen/padding_8"
+                android:layout_marginTop="@dimen/padding_8"
+                android:layout_marginEnd="@dimen/padding_8"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/size_headline"
                 tools:text="0,383" />
 
             <TextView
