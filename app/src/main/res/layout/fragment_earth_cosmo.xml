@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="?attr/colorPrimary"
-    android:padding="@dimen/padding_8"
+    android:padding="@dimen/size_8"
     tools:context=".ui.planets.earth.EarthCosmoFragment">
 
     <ImageView

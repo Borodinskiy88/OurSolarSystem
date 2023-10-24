@@ -1,15 +1,13 @@
 <resources>
-    <dimen name="padding_4">4dp</dimen>
-    <dimen name="padding_8">8dp</dimen>
-    <dimen name="activity_margin_16">16dp</dimen>
-    <dimen name="string_head_20sp">20sp</dimen>
-    <dimen name="activity_margin_32">32dp</dimen>
-    <dimen name="headline_latin_size_32sp">32sp</dimen>
-    <dimen name="planet_image_148dp">148dp</dimen>
-    <dimen name="planet_image_160dp">160dp</dimen>
-    <dimen name="nav_header_height_176">176dp</dimen>
-    <dimen name="planet_card_size_200">200dp</dimen>
-    <dimen name="image_size_400">400dp</dimen>
+    <dimen name="size_4">4dp</dimen>
+    <dimen name="size_8">8dp</dimen>
+    <dimen name="size_16">16dp</dimen>
+    <dimen name="size_32">32dp</dimen>
+    <dimen name="size_148">148dp</dimen>
+    <dimen name="size_160">160dp</dimen>
+    <dimen name="size_176">176dp</dimen>
+    <dimen name="size_200">200dp</dimen>
+    <dimen name="size_400">400dp</dimen>
 
     <!--text size-->
     <dimen name="text_13">13sp</dimen>
