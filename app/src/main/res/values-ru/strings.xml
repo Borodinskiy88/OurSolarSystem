@@ -41,4 +41,5 @@
     <string name="satellites">Спутники</string>
     <string name="terraform">Терраформирование</string>
     <string name="show_more"><u>Узнать больше</u></string>
+    <string name="photo_day">Фото дня</string>
 </resources>

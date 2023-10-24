@@ -246,4 +246,9 @@
         android:id="@+id/fullImageFragment"
         android:name="ru.borodinskiy.aleksei.oursolarsystem.ui.fullscreen.FullImageFragment"
         android:label="FullImageFragment" />
+    <fragment
+        android:id="@+id/nav_photo_day"
+        android:name="ru.borodinskiy.aleksei.oursolarsystem.ui.fullscreen.PhotoDayFragment"
+        android:label="Photo day"
+        tools:layout="@layout/fragment_photo_day" />
 </navigation>

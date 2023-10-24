@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="?attr/colorPrimary"
     android:padding="@dimen/padding_8"
-    tools:context=".ui.earth.EarthCosmoFragment">
+    tools:context=".ui.planets.earth.EarthCosmoFragment">
 
     <ImageView
         android:id="@+id/fullscreen_image"
