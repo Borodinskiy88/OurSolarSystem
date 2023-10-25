@@ -9,4 +9,5 @@ import javax.inject.Inject
 class PhotoDayRepository @Inject constructor(private val apiServices: ApiService) {
 
     suspend fun getPhotoDay() : PhotoDay = apiServices.getPhotoDay(apiKey = API_KEY)
+
 }

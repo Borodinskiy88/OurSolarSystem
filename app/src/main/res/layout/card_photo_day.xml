@@ -3,17 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="match_parent">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:background="?attr/colorPrimary"
         android:padding="@dimen/size_4"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
         <ImageView
             android:id="@+id/photo_day_image"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:scaleType="centerInside"
             android:visibility="visible"
@@ -25,33 +25,16 @@
             tools:src="@drawable/earth" />
 
         <VideoView
-            android:id="@+id/video_attachment"
-            android:layout_width="wrap_content"
+            android:id="@+id/video"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:scaleType="centerInside"
+            android:layout_gravity="center"
+            android:scaleType="center"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-            android:id="@+id/play_video"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:accessibilityTraversalAfter="@id/video_attachment"
-            android:src="@drawable/ic_play_48"
-            app:layout_constraintBottom_toBottomOf="@id/video_attachment"
-            app:layout_constraintEnd_toEndOf="@id/video_attachment"
-            app:layout_constraintStart_toStartOf="@id/video_attachment"
-            app:layout_constraintTop_toTopOf="@id/video_attachment"
-            android:contentDescription="@string/video" />
-
-        <androidx.constraintlayout.widget.Group
-            android:id="@+id/video_group"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:visibility="gone"
-            app:constraint_referenced_ids="play_video, video_attachment" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_centerInParent="true" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

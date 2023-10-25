@@ -13,4 +13,6 @@ object DaoModule {
     fun providePlanetDao(db: AppDatabase): PlanetDao = db.planetDao()
     @Provides
     fun provideSatelliteDao(db: AppDatabase): SatelliteDao = db.satelliteDao()
+    @Provides
+    fun providePhotoDayDao(db: AppDatabase): PhotoDayDao = db.photoDayDao()
 }

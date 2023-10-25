@@ -33,9 +33,12 @@ class PhotoDayFragment : Fragment() {
 
         recyclerView.adapter = adapter
 
-        viewModel.getPhotoDay().observe(viewLifecycleOwner) {
+        viewModel.getPhotoDay().observe(viewLifecycleOwner) {}
 
-            adapter.submitList(listOf(it))
+
+        viewModel.allPhotoDay.observe(viewLifecycleOwner) {
+
+            adapter.submitList(it)
         }
 
 

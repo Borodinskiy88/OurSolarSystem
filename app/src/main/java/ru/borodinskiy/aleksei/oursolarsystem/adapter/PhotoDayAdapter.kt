@@ -4,16 +4,12 @@ import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Adapter
-import android.widget.Toast
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import ru.borodinskiy.aleksei.oursolarsystem.R
 import ru.borodinskiy.aleksei.oursolarsystem.databinding.CardPhotoDayBinding
 import ru.borodinskiy.aleksei.oursolarsystem.entity.PhotoDay
-import ru.borodinskiy.aleksei.oursolarsystem.enumeration.RingsTerraformImage
 import ru.borodinskiy.aleksei.oursolarsystem.utils.load
 
 class PhotoDayAdapter :
@@ -33,6 +29,7 @@ class PhotoDayAdapter :
     class PhotoDayViewHolder(
         private val binding: CardPhotoDayBinding
     ) : RecyclerView.ViewHolder(binding.root) {
+
         fun bind(photoDay: PhotoDay) {
 
             binding.apply {
@@ -45,17 +42,32 @@ class PhotoDayAdapter :
 
                 else if (photoDay.mediaType == "video") {
                     photoDayImage.isVisible = false
-                    videoGroup.visibility = View.VISIBLE
+                    video.visibility = View.VISIBLE
 
                     photoDay.url.let { url ->
                         val uri = Uri.parse(url)
-                        videoAttachment.setVideoURI(uri)
-                        videoAttachment.setOnPreparedListener { mp ->
+                        video.setVideoURI(uri)
+                        video.setOnPreparedListener { mp ->
                             mp?.setVolume(0F, 0F)
                             mp?.isLooping = true
-                            videoAttachment.start()
+                            video.start()
                         }
                     }
+//                    val uri = Uri.parse(photoDay.url)
+//                    video.setVideoURI(uri)
+//                    video.start()
+//                    video.setOnPreparedListener { mp ->
+//                        mp?.setVolume(0F, 0F)
+//                        mp?.isLooping = true
+//                        video.start()
+//                    }
+
+//                    video.setVideoURI(Uri.parse(photoDay.url))
+//                    val mediaController = MediaController(requireContext())
+//                    mediaController.setAnchorView(video)
+//                    mediaController.setMediaPlayer(video)
+//                    video.setMediaController(mediaController)
+//                    video.start()
                 }
             }
         }
@@ -64,7 +76,7 @@ class PhotoDayAdapter :
     companion object {
         private val DiffCallback = object : DiffUtil.ItemCallback<PhotoDay>() {
             override fun areItemsTheSame(oldItem: PhotoDay, newItem: PhotoDay): Boolean {
-                return oldItem.id == newItem.id
+                return oldItem == newItem
             }
 
             override fun areContentsTheSame(oldItem: PhotoDay, newItem: PhotoDay): Boolean {

@@ -1,14 +1,15 @@
 package ru.borodinskiy.aleksei.oursolarsystem.entity
 
+import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 
+@Entity
 data class PhotoDay(
-    @PrimaryKey(autoGenerate = true)
-    val id: Int = 0,
     @SerializedName("copyright")
     val copyright: String,
     @SerializedName("date")
+    @PrimaryKey
     val date: String,
     @SerializedName("explanation")
     val explanation: String,
