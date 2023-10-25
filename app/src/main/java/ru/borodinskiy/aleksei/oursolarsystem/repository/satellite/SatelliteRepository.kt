@@ -1,4 +1,4 @@
-package ru.borodinskiy.aleksei.oursolarsystem.repository
+package ru.borodinskiy.aleksei.oursolarsystem.repository.satellite
 
 import androidx.lifecycle.LiveData
 import kotlinx.coroutines.flow.Flow

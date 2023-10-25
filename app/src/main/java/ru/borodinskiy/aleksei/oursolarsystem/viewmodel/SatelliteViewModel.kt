@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import ru.borodinskiy.aleksei.oursolarsystem.entity.Satellite
-import ru.borodinskiy.aleksei.oursolarsystem.repository.SatelliteRepositoryImpl
+import ru.borodinskiy.aleksei.oursolarsystem.repository.satellite.SatelliteRepositoryImpl
 import javax.inject.Inject
 
 @HiltViewModel

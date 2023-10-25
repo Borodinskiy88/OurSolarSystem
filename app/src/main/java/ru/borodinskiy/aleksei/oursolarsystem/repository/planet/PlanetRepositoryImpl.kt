@@ -1,9 +1,10 @@
-package ru.borodinskiy.aleksei.oursolarsystem.repository
+package ru.borodinskiy.aleksei.oursolarsystem.repository.planet
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.asLiveData
 import ru.borodinskiy.aleksei.oursolarsystem.dao.PlanetDao
 import ru.borodinskiy.aleksei.oursolarsystem.entity.Planet
+import ru.borodinskiy.aleksei.oursolarsystem.repository.planet.PlanetRepository
 import javax.inject.Inject
 
 class PlanetRepositoryImpl @Inject constructor(private val planetDao: PlanetDao) :

@@ -2,11 +2,9 @@ package ru.borodinskiy.aleksei.oursolarsystem.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.launch
 import ru.borodinskiy.aleksei.oursolarsystem.entity.Planet
-import ru.borodinskiy.aleksei.oursolarsystem.repository.PlanetRepositoryImpl
+import ru.borodinskiy.aleksei.oursolarsystem.repository.planet.PlanetRepositoryImpl
 import javax.inject.Inject
 
 @HiltViewModel

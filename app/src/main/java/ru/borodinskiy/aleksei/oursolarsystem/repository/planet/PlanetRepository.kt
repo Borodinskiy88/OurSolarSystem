@@ -1,4 +1,4 @@
-package ru.borodinskiy.aleksei.oursolarsystem.repository
+package ru.borodinskiy.aleksei.oursolarsystem.repository.planet
 
 import androidx.lifecycle.LiveData
 import ru.borodinskiy.aleksei.oursolarsystem.entity.Planet
