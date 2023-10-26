@@ -41,7 +41,14 @@ class PhotoDayFragment : Fragment() {
             adapter.submitList(it)
         }
 
-
+        //Скрыть тулбар при клике. Не работает
+//        recyclerView.setOnClickListener {
+//            activity?.actionBar?.hide()
+//        }
+//
+//        recyclerView.setOnClickListener {
+//            activity?.actionBar?.show()
+//        }
 
 
         return binding.root

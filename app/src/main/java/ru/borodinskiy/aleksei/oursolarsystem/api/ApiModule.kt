@@ -16,6 +16,7 @@ import javax.inject.Singleton
 class ApiModule {
 
     companion object {
+        const val NASA_URL = "https://images-api.nasa.gov/search"
         private const val BASE_URL = "https://api.nasa.gov/"
         const val API_KEY = "q8H5GAWvUAMPXcmstY0wWtdXL6o6t0Dx3lDvYfVc"
     }
