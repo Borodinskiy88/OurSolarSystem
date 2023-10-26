@@ -20,5 +20,7 @@ data class PhotoDay(
     @SerializedName("title")
     val title: String,
     @SerializedName("url")
-    val url: String
+    val url: String,
+    //todo
+//    val favorite: Boolean
 )

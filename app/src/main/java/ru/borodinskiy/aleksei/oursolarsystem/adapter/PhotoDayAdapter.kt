@@ -37,12 +37,12 @@ class PhotoDayAdapter :
 
                 if (photoDay.mediaType == "image") {
                     photoDay.url.let { url ->
-                        photoDayImage.load(url)
+                        image.load(url)
                     }
                 }
 
                 else if (photoDay.mediaType == "video") {
-                    photoDayImage.visibility = View.INVISIBLE
+                    image.visibility = View.INVISIBLE
                     video.visibility = View.VISIBLE
 
                     photoDay.url.let { url ->
@@ -54,6 +54,10 @@ class PhotoDayAdapter :
                             video.start()
                         }
                     }
+
+                    //todo
+//                    favor.isChecked = photoDay.favorite
+
 //                    val uri = Uri.parse(photoDay.url)
 //                    video.setVideoURI(uri)
 //                    video.start()

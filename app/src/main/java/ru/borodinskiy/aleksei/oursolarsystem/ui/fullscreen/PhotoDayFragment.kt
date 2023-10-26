@@ -33,6 +33,7 @@ class PhotoDayFragment : Fragment() {
 
         recyclerView.adapter = adapter
 
+        //TODO спрятать куда-нибудь, чтоб траффик не расходовать
         viewModel.getPhotoDay().observe(viewLifecycleOwner) {}
 
 

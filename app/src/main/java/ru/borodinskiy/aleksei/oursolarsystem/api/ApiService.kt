@@ -15,7 +15,7 @@ interface ApiService {
     ): PhotoDay
 
     //TODO API_KEY не нужен для библиотеки изображений, BUILD_URL другой
-    @GET()
+    @GET
     suspend fun getPhotoPlanet(
         @Url url : String,
         @Query("q") namePlanet: String,
