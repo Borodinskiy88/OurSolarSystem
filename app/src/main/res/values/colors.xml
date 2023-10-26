@@ -6,6 +6,7 @@
     <color name="blue">#070987</color>
     <color name="blue_light">#3494d5</color>
     <color name="yellow">#e5f79f</color>
+    <color name="yellow_transparent">#80E5F79F</color>
     <color name="yellow_light">#f9fde8</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>

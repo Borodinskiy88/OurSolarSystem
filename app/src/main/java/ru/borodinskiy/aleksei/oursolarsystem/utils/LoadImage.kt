@@ -7,7 +7,7 @@ import ru.borodinskiy.aleksei.oursolarsystem.R
 
 fun ImageView.load(url: String, vararg transforms: BitmapTransformation = emptyArray()) =
     Glide.with(this)
-        .load("https:$url")
+        .load(url)
         .error(R.drawable.ic_error_24)
 //        .timeout(10_000)
         .transform(*transforms)

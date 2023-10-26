@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import ru.borodinskiy.aleksei.oursolarsystem.databinding.CardPhotoDayBinding
 import ru.borodinskiy.aleksei.oursolarsystem.entity.PhotoDay
+import ru.borodinskiy.aleksei.oursolarsystem.utils.ReformatValues.reformatDate
 import ru.borodinskiy.aleksei.oursolarsystem.utils.load
 
 class PhotoDayAdapter :
@@ -41,7 +42,7 @@ class PhotoDayAdapter :
                 }
 
                 else if (photoDay.mediaType == "video") {
-                    photoDayImage.isVisible = false
+                    photoDayImage.visibility = View.INVISIBLE
                     video.visibility = View.VISIBLE
 
                     photoDay.url.let { url ->
@@ -69,6 +70,9 @@ class PhotoDayAdapter :
 //                    video.setMediaController(mediaController)
 //                    video.start()
                 }
+
+                date.text = reformatDate(photoDay.date)
+                title.text = photoDay.title
             }
         }
     }
