@@ -15,7 +15,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:textColor="?attr/colorOnSecondary"
-            android:textSize="@dimen/text_32"
+            android:textSize="@dimen/text_28"
             tools:text="Rings of Saturn"
             tools:ignore="MissingConstraints" />
 
@@ -42,6 +42,6 @@
             app:layout_constraintTop_toBottomOf="@id/terraform_image"
             tools:text="Кольца Сатурна они такие кольца прям кольца"
             android:textColor="?attr/colorOnPrimaryFixed"
-            android:textSize="@dimen/text_18" />
+            android:textSize="@dimen/text_16" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
