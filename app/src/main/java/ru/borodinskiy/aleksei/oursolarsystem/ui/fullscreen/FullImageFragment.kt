@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import dagger.hilt.android.AndroidEntryPoint
 import ru.borodinskiy.aleksei.oursolarsystem.databinding.FragmentGalleryBinding
 import ru.borodinskiy.aleksei.oursolarsystem.utils.ImageObject.imagePlanetSatellite
+import ru.borodinskiy.aleksei.oursolarsystem.utils.load
 
 @AndroidEntryPoint
 class FullImageFragment : Fragment() {
@@ -16,6 +17,7 @@ class FullImageFragment : Fragment() {
     companion object {
         const val NAME = "name"
         const val RUS_NAME = "nameRus"
+        const val URL = "url"
     }
 
     override fun onCreateView(
@@ -27,10 +29,15 @@ class FullImageFragment : Fragment() {
 
         val image = arguments?.getString(NAME)
         val rusName = arguments?.getString(RUS_NAME)
+        val url = arguments?.getString(URL)
 
         (activity as AppCompatActivity).supportActionBar?.title = rusName
 
-        image?.let { imagePlanetSatellite(it, binding.fullscreenImage) }
+        if (url != null) {
+            binding.fullscreenImage.load(url)
+        } else {
+            image?.let { imagePlanetSatellite(it, binding.fullscreenImage) }
+        }
 
         return binding.root
     }

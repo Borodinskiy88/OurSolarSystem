@@ -10,16 +10,24 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import ru.borodinskiy.aleksei.oursolarsystem.databinding.CardPhotoDayBinding
 import ru.borodinskiy.aleksei.oursolarsystem.entity.PhotoDay
+import ru.borodinskiy.aleksei.oursolarsystem.entity.Satellite
 import ru.borodinskiy.aleksei.oursolarsystem.utils.ReformatValues.reformatDate
 import ru.borodinskiy.aleksei.oursolarsystem.utils.load
 
-class PhotoDayAdapter :
+interface PhotoListener {
+    fun onShowSmall(photoDay: PhotoDay)
+
+}
+class PhotoDayAdapter(
+    private val photoListener: PhotoListener
+) :
     ListAdapter<PhotoDay, PhotoDayAdapter.PhotoDayViewHolder>(DiffCallback) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PhotoDayViewHolder {
 
         return PhotoDayViewHolder(
-            CardPhotoDayBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+            CardPhotoDayBinding.inflate(LayoutInflater.from(parent.context), parent, false),
+            photoListener
         )
     }
 
@@ -28,7 +36,8 @@ class PhotoDayAdapter :
     }
 
     class PhotoDayViewHolder(
-        private val binding: CardPhotoDayBinding
+        private val binding: CardPhotoDayBinding,
+        private val photoListener: PhotoListener
     ) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(photoDay: PhotoDay) {
@@ -36,8 +45,8 @@ class PhotoDayAdapter :
             binding.apply {
 
                 if (photoDay.mediaType == "image") {
-                    photoDay.url.let { url ->
-                        image.load(url)
+                        photoDay.url.let { url ->
+                            image.load(url)
                     }
                 }
 
@@ -66,7 +75,7 @@ class PhotoDayAdapter :
 //                        mp?.isLooping = true
 //                        video.start()
 //                    }
-
+//
 //                    video.setVideoURI(Uri.parse(photoDay.url))
 //                    val mediaController = MediaController(requireContext())
 //                    mediaController.setAnchorView(video)
@@ -77,6 +86,11 @@ class PhotoDayAdapter :
 
                 date.text = reformatDate(photoDay.date)
                 title.text = photoDay.title
+
+                show.setOnClickListener {
+
+                    photoListener.onShowSmall(photoDay)
+                }
             }
         }
     }
