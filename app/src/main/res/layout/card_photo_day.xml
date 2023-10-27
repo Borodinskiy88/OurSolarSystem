@@ -2,6 +2,8 @@
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="?attr/colorPrimary"
+    app:cardCornerRadius="0dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -41,7 +43,6 @@
             style="@style/Widget.AppTheme.IconButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/size_8"
             android:checkable="true"
             app:icon="@drawable/selector_favorite"
             app:iconTint="@color/yellow_transparent"
