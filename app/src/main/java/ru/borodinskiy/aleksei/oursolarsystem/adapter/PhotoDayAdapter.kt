@@ -87,10 +87,11 @@ class PhotoDayAdapter(
                 date.text = reformatDate(photoDay.date)
                 title.text = photoDay.title
 
-                show.setOnClickListener {
+                image.setOnClickListener {
 
                     photoListener.onShowSmall(photoDay)
                 }
+
             }
         }
     }

@@ -38,36 +38,56 @@
             app:layout_constraintTop_toTopOf="parent"
             android:layout_centerInParent="true" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/favor"
-            style="@style/Widget.AppTheme.IconButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:checkable="true"
-            app:icon="@drawable/selector_favorite"
-            app:iconTint="?attr/colorOnSecondary"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"/>
+<!--        <com.google.android.material.button.MaterialButton-->
+<!--            android:id="@+id/favor"-->
+<!--            style="@style/Widget.AppTheme.IconButton"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:checkable="true"-->
+<!--            app:icon="@drawable/selector_favorite"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"/>-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/swipe"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            android:layout_marginEnd="@dimen/size_8"-->
+<!--            android:src="@drawable/ic_up_and_down_24"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"/>-->
+
+<!--        <com.google.android.material.button.MaterialButton-->
+<!--            android:id="@+id/show"-->
+<!--            style="@style/Widget.AppTheme.IconButton"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:icon="@drawable/ic_zoom_out_24"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"/>-->
 
         <ImageView
-            android:id="@+id/swipe"
+            android:id="@+id/touch"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="@dimen/size_8"
-            android:src="@drawable/ic_up_and_down_24"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/show"
-            style="@style/Widget.AppTheme.IconButton"
+            android:layout_margin="@dimen/size_8"
+            android:src="@drawable/ic_touch_24"
+            app:tint="@color/yellow_transparent_40"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:icon="@drawable/ic_zoom_out_24"
-            app:iconTint="@color/yellow_transparent"
+            android:contentDescription="@string/touch" />
+
+        <ImageView
+            android:id="@+id/leaf"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintEnd_toStartOf="@id/touch"
+            android:layout_margin="@dimen/size_8"
+            android:src="@drawable/ic_leaf_24"
+            app:tint="@color/yellow_transparent_40"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/leaf" />
 
         <TextView
             android:id="@+id/date"
@@ -75,7 +95,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             tools:text="23.01.04"
             android:textSize="@dimen/text_14"
-            android:textColor="@color/yellow_transparent"
+            android:textColor="@color/yellow_transparent_60"
             android:layout_margin="@dimen/size_8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
@@ -86,7 +106,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             tools:text="Комета Галлея"
             android:textSize="@dimen/text_14"
-            android:textColor="@color/yellow_transparent"
+            android:textColor="@color/yellow_transparent_60"
             android:layout_margin="@dimen/size_8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>

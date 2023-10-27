@@ -7,16 +7,24 @@
     android:background="?attr/colorPrimary"
     tools:context=".ui.mercury.MercuryGalleryFragment">
 
-    <ImageView
+    <com.github.chrisbanes.photoview.PhotoView
         android:id="@+id/fullscreen_image"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_gravity="center"
-        android:contentDescription="@string/image_planet"
-        android:scaleType="centerInside"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:src="@drawable/merkurij" />
+
+            <ImageView
+                android:id="@+id/swipe"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_margin="@dimen/size_8"
+                android:src="@drawable/ic_expand_24"
+                app:tint="@color/yellow_transparent_40"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/expand" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
