@@ -43,4 +43,9 @@
     <string name="show_more"><u>Узнать больше</u></string>
     <string name="photo_day">Фото дня</string>
     <string name="video">Видео</string>
+    <string name="touch">Касание</string>
+    <string name="leaf">Листать</string>
+    <string name="expand">Раздвинуть</string>
+    <string name="solar_system_scheme">Схема солнечной системы</string>
+    <string name="solar_system">Солнечная система</string>
 </resources>

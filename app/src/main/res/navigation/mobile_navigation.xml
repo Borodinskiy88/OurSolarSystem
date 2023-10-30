@@ -248,11 +248,44 @@
         android:label="FullImageFragment" />
     <fragment
         android:id="@+id/nav_photo_day"
-        android:name="ru.borodinskiy.aleksei.oursolarsystem.ui.fullscreen.PhotoDayFragment"
+        android:name="ru.borodinskiy.aleksei.oursolarsystem.ui.photoday.PhotoDayFragment"
         android:label="@string/photo_day"
         tools:layout="@layout/fragment_photo_day" >
         <action
             android:id="@+id/action_nav_photo_day_to_fullImageFragment"
             app:destination="@id/fullImageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_system_scheme"
+        android:name="ru.borodinskiy.aleksei.oursolarsystem.ui.scheme.SolarSystemSchemeFragment"
+        android:label="@string/solar_system"
+        tools:layout="@layout/fragment_solar_system_scheme" >
+        <action
+            android:id="@+id/action_nav_system_scheme_to_nav_sun"
+            app:destination="@id/nav_sun" />
+        <action
+            android:id="@+id/action_nav_system_scheme_to_nav_mercury"
+            app:destination="@id/nav_mercury" />
+        <action
+            android:id="@+id/action_nav_system_scheme_to_nav_venus"
+            app:destination="@id/nav_venus" />
+        <action
+            android:id="@+id/action_nav_system_scheme_to_nav_earth"
+            app:destination="@id/nav_earth" />
+        <action
+            android:id="@+id/action_nav_system_scheme_to_nav_mars"
+            app:destination="@id/nav_mars" />
+        <action
+            android:id="@+id/action_nav_system_scheme_to_nav_jupiter"
+            app:destination="@id/nav_jupiter" />
+        <action
+            android:id="@+id/action_nav_system_scheme_to_nav_saturn"
+            app:destination="@id/nav_saturn" />
+        <action
+            android:id="@+id/action_nav_system_scheme_to_nav_uranus"
+            app:destination="@id/nav_uranus" />
+        <action
+            android:id="@+id/action_nav_system_scheme_to_nav_neptune"
+            app:destination="@id/nav_neptune" />
     </fragment>
 </navigation>

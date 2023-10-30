@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="?attr/colorPrimary"
-    tools:context=".ui.fullscreen.PhotoDayFragment">
+    tools:context=".ui.photoday.PhotoDayFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/vertical_recycler_view"

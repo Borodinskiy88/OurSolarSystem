@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
         // меню следует рассматривать как пункты назначения верхнего уровня.
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.nav_photo_day,
+                R.id.nav_photo_day, R.id.nav_system_scheme,
                 R.id.nav_sun, R.id.nav_mercury, R.id.nav_venus, R.id.nav_earth, R.id.nav_mars,
                 R.id.nav_jupiter, R.id.nav_saturn, R.id.nav_uranus, R.id.nav_neptune
             ), drawerLayout

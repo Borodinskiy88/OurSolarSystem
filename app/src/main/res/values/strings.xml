@@ -27,13 +27,17 @@
     <string name="person_appearance">A person appearance:</string>
     <string name="rings_of_saturn">Rings of Saturn</string>
     <string name="size_in_earth_diameters">Size in Earth diameters (D♁):</string>
+    <string name="solar_system">Solar system</string>
     <string name="solid_surface">Solid surface:</string>
     <string name="surface_gravity">Gravity (g), (1g = 9.81 m/s2):</string>
     <string name="was_opened">Was opened:</string>
     <!-- Description -->
+    <string name="expand">Expand</string>
     <string name="image_planet">Image planet</string>
-    <string name="yes">Yes</string>
+    <string name="leaf">Leaf</string>
+    <string name="touch">Touch</string>
     <string name="no">No</string>
+    <string name="yes">Yes</string>
     <string name="video">Video</string>
     <!-- Menu -->
     <string name="astronautics">Astronautics</string>
@@ -44,13 +48,8 @@
     <string name="photo_day">Photo of the day</string>
     <string name="rings">Rings</string>
     <string name="satellites">Satellites</string>
+    <string name="solar_system_scheme">Solar system scheme</string>
     <string name="show_more"><u>Show more</u></string>
     <string name="terraform">Terraform</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="touch">Touch</string>
-    <string name="leaf">Leaf</string>
-    <string name="expand">Expand</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
 </resources>

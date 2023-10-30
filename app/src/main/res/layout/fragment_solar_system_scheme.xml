@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?attr/colorPrimary"
+    tools:context=".ui.scheme.SolarSystemSchemeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="?attr/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/touch"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/ic_touch_24"
+        android:padding="@dimen/size_16"
+        app:tint="@color/yellow_transparent_40"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/touch" />
+
+    <ImageView
+        android:id="@+id/sun"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/sun_text"
+        android:layout_marginStart="@dimen/size_72"
+        android:src="@drawable/sun"
+        android:layout_width="@dimen/size_176"
+        android:layout_height="@dimen/size_176"
+        android:contentDescription="@string/sun" />
+
+    <TextView
+        android:id="@+id/sun_text"
+        app:layout_constraintTop_toTopOf="@id/sun"
+        app:layout_constraintBottom_toBottomOf="@id/sun"
+        app:layout_constraintStart_toEndOf="@id/sun"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/sun"
+        android:textColor="?attr/colorOnSecondary"
+        android:textSize="@dimen/text_16"
+        android:layout_marginEnd="@dimen/size_72"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:id="@+id/mercury"
+        app:layout_constraintTop_toBottomOf="@id/sun"
+        app:layout_constraintStart_toStartOf="@id/sun"
+        app:layout_constraintEnd_toEndOf="@id/sun"
+        android:layout_marginTop="@dimen/size_8"
+        android:src="@drawable/merkurij"
+        android:layout_width="@dimen/size_24"
+        android:layout_height="@dimen/size_24"
+        android:contentDescription="@string/menu_mercury" />
+
+    <TextView
+        android:id="@+id/mercury_text"
+        app:layout_constraintTop_toTopOf="@id/mercury"
+        app:layout_constraintBottom_toBottomOf="@id/mercury"
+        app:layout_constraintStart_toStartOf="@id/sun_text"
+        android:text="@string/menu_mercury"
+        android:textColor="?attr/colorOnSecondary"
+        android:textSize="@dimen/text_16"
+        android:layout_marginEnd="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:id="@+id/venus"
+        app:layout_constraintTop_toBottomOf="@id/mercury"
+        app:layout_constraintStart_toStartOf="@id/sun"
+        app:layout_constraintEnd_toEndOf="@id/sun"
+        android:layout_marginTop="@dimen/size_16"
+        android:src="@drawable/venus"
+        android:layout_width="@dimen/size_32"
+        android:layout_height="@dimen/size_32"
+        android:contentDescription="@string/menu_venus" />
+
+    <TextView
+        android:id="@+id/venus_text"
+        app:layout_constraintTop_toTopOf="@id/venus"
+        app:layout_constraintBottom_toBottomOf="@id/venus"
+        app:layout_constraintStart_toStartOf="@id/sun_text"
+        android:text="@string/menu_venus"
+        android:textColor="?attr/colorOnSecondary"
+        android:textSize="@dimen/text_16"
+        android:layout_marginEnd="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:id="@+id/earth"
+        app:layout_constraintTop_toBottomOf="@id/venus"
+        app:layout_constraintStart_toStartOf="@id/sun"
+        app:layout_constraintEnd_toEndOf="@id/sun"
+        android:layout_marginTop="@dimen/size_16"
+        android:src="@drawable/earth"
+        android:layout_width="@dimen/size_32"
+        android:layout_height="@dimen/size_32"
+        android:contentDescription="@string/menu_earth" />
+
+    <TextView
+        android:id="@+id/earth_text"
+        app:layout_constraintTop_toTopOf="@id/earth"
+        app:layout_constraintBottom_toBottomOf="@id/earth"
+        app:layout_constraintStart_toStartOf="@id/sun_text"
+        android:text="@string/menu_earth"
+        android:textColor="?attr/colorOnSecondary"
+        android:textSize="@dimen/text_16"
+        android:layout_marginEnd="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:id="@+id/mars"
+        app:layout_constraintTop_toBottomOf="@id/earth"
+        app:layout_constraintStart_toStartOf="@id/sun"
+        app:layout_constraintEnd_toEndOf="@id/sun"
+        android:layout_marginTop="@dimen/size_16"
+        android:src="@drawable/mars"
+        android:layout_width="@dimen/size_24"
+        android:layout_height="@dimen/size_24"
+        android:contentDescription="@string/menu_mars" />
+
+    <TextView
+        android:id="@+id/mars_text"
+        app:layout_constraintTop_toTopOf="@id/mars"
+        app:layout_constraintBottom_toBottomOf="@id/mars"
+        app:layout_constraintStart_toStartOf="@id/sun_text"
+        android:text="@string/menu_mars"
+        android:textColor="?attr/colorOnSecondary"
+        android:textSize="@dimen/text_16"
+        android:layout_marginEnd="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:id="@+id/jupiter"
+        app:layout_constraintTop_toBottomOf="@id/mars"
+        app:layout_constraintStart_toStartOf="@id/sun"
+        app:layout_constraintEnd_toEndOf="@id/sun"
+        android:layout_marginTop="@dimen/size_16"
+        android:src="@drawable/jupiter"
+        android:layout_width="@dimen/size_72"
+        android:layout_height="@dimen/size_72"
+        android:contentDescription="@string/menu_jupiter" />
+
+    <TextView
+        android:id="@+id/jupiter_text"
+        app:layout_constraintTop_toTopOf="@id/jupiter"
+        app:layout_constraintBottom_toBottomOf="@id/jupiter"
+        app:layout_constraintStart_toStartOf="@id/sun_text"
+        android:text="@string/menu_jupiter"
+        android:textColor="?attr/colorOnSecondary"
+        android:textSize="@dimen/text_16"
+        android:layout_marginEnd="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:id="@+id/saturn"
+        app:layout_constraintTop_toBottomOf="@id/jupiter"
+        app:layout_constraintStart_toStartOf="@id/sun"
+        app:layout_constraintEnd_toEndOf="@id/sun"
+        android:src="@drawable/saturn"
+        android:layout_width="@dimen/size_96"
+        android:layout_height="@dimen/size_96"
+        android:contentDescription="@string/menu_saturn" />
+
+    <TextView
+        android:id="@+id/saturn_text"
+        app:layout_constraintTop_toTopOf="@id/saturn"
+        app:layout_constraintBottom_toBottomOf="@id/saturn"
+        app:layout_constraintStart_toStartOf="@id/sun_text"
+        android:text="@string/menu_saturn"
+        android:textColor="?attr/colorOnSecondary"
+        android:textSize="@dimen/text_16"
+        android:layout_marginEnd="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:id="@+id/uranus"
+        app:layout_constraintTop_toBottomOf="@id/saturn"
+        app:layout_constraintStart_toStartOf="@id/sun"
+        app:layout_constraintEnd_toEndOf="@id/sun"
+        android:src="@drawable/uranus"
+        android:layout_width="@dimen/size_48"
+        android:layout_height="@dimen/size_48"
+        android:contentDescription="@string/menu_uranus" />
+
+    <TextView
+        android:id="@+id/uranus_text"
+        app:layout_constraintTop_toTopOf="@id/uranus"
+        app:layout_constraintBottom_toBottomOf="@id/uranus"
+        app:layout_constraintStart_toStartOf="@id/sun_text"
+        android:text="@string/menu_uranus"
+        android:textColor="?attr/colorOnSecondary"
+        android:textSize="@dimen/text_16"
+        android:layout_marginEnd="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:id="@+id/neptune"
+        app:layout_constraintTop_toBottomOf="@id/uranus"
+        app:layout_constraintStart_toStartOf="@id/sun"
+        app:layout_constraintEnd_toEndOf="@id/sun"
+        android:layout_marginTop="@dimen/size_16"
+        android:layout_marginStart="@dimen/size_4"
+        android:src="@drawable/neptun"
+        android:layout_width="@dimen/size_48"
+        android:layout_height="@dimen/size_48"
+        android:contentDescription="@string/menu_neptune" />
+
+    <TextView
+        android:id="@+id/neptune_text"
+        app:layout_constraintTop_toTopOf="@id/neptune"
+        app:layout_constraintBottom_toBottomOf="@id/neptune"
+        app:layout_constraintStart_toStartOf="@id/sun_text"
+        android:text="@string/menu_neptune"
+        android:textColor="?attr/colorOnSecondary"
+        android:textSize="@dimen/text_16"
+        android:layout_marginEnd="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
