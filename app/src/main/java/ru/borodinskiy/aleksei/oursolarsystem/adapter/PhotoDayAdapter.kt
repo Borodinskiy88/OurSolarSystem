@@ -4,18 +4,21 @@ import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.view.isVisible
+import android.widget.PopupMenu
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import ru.borodinskiy.aleksei.oursolarsystem.R
 import ru.borodinskiy.aleksei.oursolarsystem.databinding.CardPhotoDayBinding
 import ru.borodinskiy.aleksei.oursolarsystem.entity.PhotoDay
-import ru.borodinskiy.aleksei.oursolarsystem.entity.Satellite
 import ru.borodinskiy.aleksei.oursolarsystem.utils.ReformatValues.reformatDate
 import ru.borodinskiy.aleksei.oursolarsystem.utils.load
 
 interface PhotoListener {
     fun onShowSmall(photoDay: PhotoDay)
+    fun onDelete(photoDay: PhotoDay)
+    fun photoForMonth()
+    fun photoForTenDays()
 
 }
 class PhotoDayAdapter(
@@ -92,6 +95,31 @@ class PhotoDayAdapter(
                     photoListener.onShowSmall(photoDay)
                 }
 
+                menu.setOnClickListener {
+                    PopupMenu(it.context, it).apply {
+                        inflate(R.menu.photo_day_menu)
+                        setOnMenuItemClickListener { item ->
+                            when (item.itemId) {
+                                R.id.delete_photo -> {
+                                    photoListener.onDelete(photoDay)
+                                    true
+                                }
+
+                                R.id.add_photo_10 -> {
+                                    photoListener.photoForTenDays()
+                                    true
+                                }
+
+                                R.id.add_photo_30 -> {
+                                    photoListener.photoForMonth()
+                                    true
+                                }
+
+                                else -> false
+                            }
+                        }
+                    }.show()
+                }
             }
         }
     }

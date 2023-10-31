@@ -48,4 +48,8 @@
     <string name="expand">Раздвинуть</string>
     <string name="solar_system_scheme">Схема солнечной системы</string>
     <string name="solar_system">Солнечная система</string>
+
+    <string name="delete_photo">Удалить фото</string>
+    <string name="add_a_photo_in_30_days">Получить все фото за 30 дней</string>
+    <string name="add_a_photo_in_10_days">Получить все фото за 10 дней</string>
 </resources>

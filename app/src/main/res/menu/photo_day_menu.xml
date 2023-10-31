@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/delete_photo"
+        android:enabled="true"
+        android:title="@string/delete_photo" />
+    <item
+        android:id="@+id/add_photo_10"
+        android:enabled="true"
+        android:title="@string/add_a_photo_in_10_days" />
+    <item
+        android:id="@+id/add_photo_30"
+        android:enabled="true"
+        android:title="@string/add_a_photo_in_30_days" />
+</menu>

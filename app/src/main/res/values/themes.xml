@@ -11,6 +11,10 @@
         <item name="colorSecondary">@color/blue_light</item>
         <item name="colorSecondaryVariant">@color/blue</item>
         <item name="colorOnSecondary">@color/yellow</item>
+        <!-- ItemBackground -->
+        <item name="android:itemBackground">@color/yellow</item>
+        <!-- TextColor -->
+        <item name="android:textColor">@color/gray_dark</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimary</item>
         <!-- Navigation bar color. -->

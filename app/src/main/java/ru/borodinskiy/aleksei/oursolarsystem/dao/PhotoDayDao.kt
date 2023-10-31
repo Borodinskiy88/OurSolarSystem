@@ -1,6 +1,7 @@
 package ru.borodinskiy.aleksei.oursolarsystem.dao
 
 import androidx.room.Dao
+import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
@@ -18,4 +19,10 @@ interface PhotoDayDao {
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun insert(photoDay: PhotoDay)
+
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
+    suspend fun insertList(listPhotoDay: List<PhotoDay>)
+
+    @Delete
+    suspend fun delete(photoDay: PhotoDay)
 }

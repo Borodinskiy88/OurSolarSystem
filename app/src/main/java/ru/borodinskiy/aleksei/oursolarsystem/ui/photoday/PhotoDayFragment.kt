@@ -41,8 +41,21 @@ class PhotoDayFragment : Fragment() {
                     Pair("url", photoDay.url),
                     Pair("nameRus", "Фото дня")
                 )
-
                 findNavController().navigate(R.id.action_nav_photo_day_to_fullImageFragment, bundle)
+            }
+
+
+
+            override fun onDelete(photoDay: PhotoDay) {
+                viewModel.delete(photoDay)
+            }
+
+            override fun photoForMonth() {
+                viewModel.getListPhotoMonth().observe(viewLifecycleOwner) {}
+            }
+
+            override fun photoForTenDays() {
+                viewModel.getListPhotoTenDays().observe(viewLifecycleOwner) {}
             }
 
         })
