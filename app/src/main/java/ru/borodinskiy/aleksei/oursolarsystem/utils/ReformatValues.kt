@@ -40,7 +40,7 @@ object ReformatValues {
 
     fun reformatWebLink(url: String): String {
         val removeHttps = url.substringAfterLast("/")
-        return removeHttps.substringBeforeLast("?")
+        return removeHttps.substringBefore("?")
     }
 
 }
