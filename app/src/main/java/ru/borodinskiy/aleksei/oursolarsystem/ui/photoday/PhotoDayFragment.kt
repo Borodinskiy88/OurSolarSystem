@@ -44,8 +44,6 @@ class PhotoDayFragment : Fragment() {
                 findNavController().navigate(R.id.action_nav_photo_day_to_fullImageFragment, bundle)
             }
 
-
-
             override fun onDelete(photoDay: PhotoDay) {
                 viewModel.delete(photoDay)
             }
@@ -56,6 +54,13 @@ class PhotoDayFragment : Fragment() {
 
             override fun photoForTenDays() {
                 viewModel.getListPhotoTenDays().observe(viewLifecycleOwner) {}
+            }
+
+            override fun onVideo(photoDay: PhotoDay) {
+                val bundle = bundleOf(
+                    Pair("url", photoDay.url),
+                )
+                findNavController().navigate(R.id.action_nav_photo_day_to_videoFragment, bundle)
             }
 
         })
@@ -70,16 +75,6 @@ class PhotoDayFragment : Fragment() {
 
             adapter.submitList(it)
         }
-
-        //Скрыть тулбар при клике. Не работает
-//        recyclerView.setOnClickListener {
-//            activity?.actionBar?.hide()
-//        }
-//
-//        recyclerView.setOnClickListener {
-//            activity?.actionBar?.show()
-//        }
-
 
         return binding.root
     }

@@ -1,24 +1,23 @@
 package ru.borodinskiy.aleksei.oursolarsystem.ui.fullscreen
 
 
-import android.net.Uri
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.MediaController
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener
 import dagger.hilt.android.AndroidEntryPoint
-import ru.borodinskiy.aleksei.oursolarsystem.R
-import ru.borodinskiy.aleksei.oursolarsystem.databinding.FragmentGalleryBinding
 import ru.borodinskiy.aleksei.oursolarsystem.databinding.FragmentVideoBinding
-import ru.borodinskiy.aleksei.oursolarsystem.utils.ImageObject
+import ru.borodinskiy.aleksei.oursolarsystem.utils.ReformatValues.reformatWebLink
 
 @AndroidEntryPoint
 class VideoFragment : Fragment() {
 
     companion object {
+        const val RUS_NAME = "nameRus"
         const val URL = "url"
     }
 
@@ -29,16 +28,25 @@ class VideoFragment : Fragment() {
     ): View {
         val binding = FragmentVideoBinding.inflate(inflater, container, false)
 
-        val urlAttachment = arguments?.getString(URL)
+        val url = arguments?.getString(URL)
+        val rusName = arguments?.getString(FullImageFragment.RUS_NAME)
 
-        binding.apply {
-            video.setVideoURI(Uri.parse(urlAttachment))
-            val mediaController = MediaController(requireContext())
-            mediaController.setAnchorView(video)
-            mediaController.setMediaPlayer(video)
-            video.setMediaController(mediaController)
-            video.start()
-        }
+        (activity as AppCompatActivity).supportActionBar?.title = rusName
+
+        val youTubePlayerView = binding.videoPlayer
+
+        lifecycle.addObserver(youTubePlayerView)
+
+//        "https://www.youtube.com/embed/J3_88eyN44w?rel=0"
+
+        val videoId = reformatWebLink(url.toString())
+
+        youTubePlayerView.addYouTubePlayerListener(object : AbstractYouTubePlayerListener() {
+            override fun onReady(youTubePlayer: YouTubePlayer) {
+
+                youTubePlayer.loadVideo(videoId, 0f)
+            }
+        })
 
         return binding.root
     }

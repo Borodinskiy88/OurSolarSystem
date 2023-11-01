@@ -38,4 +38,9 @@ object ReformatValues {
         return reformatDate.toString()
     }
 
+    fun reformatWebLink(url: String): String {
+        val removeHttps = url.substringAfterLast("/")
+        return removeHttps.substringBeforeLast("?")
+    }
+
 }

@@ -1,6 +1,5 @@
 package ru.borodinskiy.aleksei.oursolarsystem.adapter
 
-import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,6 +7,8 @@ import android.widget.PopupMenu
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener
 import ru.borodinskiy.aleksei.oursolarsystem.R
 import ru.borodinskiy.aleksei.oursolarsystem.databinding.CardPhotoDayBinding
 import ru.borodinskiy.aleksei.oursolarsystem.entity.PhotoDay
@@ -19,8 +20,10 @@ interface PhotoListener {
     fun onDelete(photoDay: PhotoDay)
     fun photoForMonth()
     fun photoForTenDays()
+    fun onVideo(photoDay: PhotoDay)
 
 }
+
 class PhotoDayAdapter(
     private val photoListener: PhotoListener
 ) :
@@ -47,92 +50,71 @@ class PhotoDayAdapter(
 
             binding.apply {
 
-                if (photoDay.mediaType == "image") {
+                when (photoDay.mediaType) {
+                    "video" -> {
+                        image.visibility = View.INVISIBLE
+                        play.visibility = View.VISIBLE
+
+                        play.setOnClickListener {
+
+                            photoListener.onVideo(photoDay)
+                        }
+                    }
+                    "image" -> {
+                        image.visibility = View.VISIBLE
+                        play.visibility = View.INVISIBLE
                         photoDay.url.let { url ->
                             image.load(url)
-                    }
-                }
-
-                else if (photoDay.mediaType == "video") {
-                    image.visibility = View.INVISIBLE
-                    video.visibility = View.VISIBLE
-
-                    photoDay.url.let { url ->
-                        val uri = Uri.parse(url)
-                        video.setVideoURI(uri)
-                        video.setOnPreparedListener { mp ->
-                            mp?.setVolume(0F, 0F)
-                            mp?.isLooping = true
-                            video.start()
                         }
                     }
-
-                    //todo
-//                    favor.isChecked = photoDay.favorite
-
-//                    val uri = Uri.parse(photoDay.url)
-//                    video.setVideoURI(uri)
-//                    video.start()
-//                    video.setOnPreparedListener { mp ->
-//                        mp?.setVolume(0F, 0F)
-//                        mp?.isLooping = true
-//                        video.start()
-//                    }
-//
-//                    video.setVideoURI(Uri.parse(photoDay.url))
-//                    val mediaController = MediaController(requireContext())
-//                    mediaController.setAnchorView(video)
-//                    mediaController.setMediaPlayer(video)
-//                    video.setMediaController(mediaController)
-//                    video.start()
                 }
 
-                date.text = reformatDate(photoDay.date)
-                title.text = photoDay.title
+            date.text = reformatDate(photoDay.date)
+            title.text = photoDay.title
 
-                image.setOnClickListener {
+            image.setOnClickListener {
 
-                    photoListener.onShowSmall(photoDay)
-                }
+                photoListener.onShowSmall(photoDay)
+            }
 
-                menu.setOnClickListener {
-                    PopupMenu(it.context, it).apply {
-                        inflate(R.menu.photo_day_menu)
-                        setOnMenuItemClickListener { item ->
-                            when (item.itemId) {
-                                R.id.delete_photo -> {
-                                    photoListener.onDelete(photoDay)
-                                    true
-                                }
-
-                                R.id.add_photo_10 -> {
-                                    photoListener.photoForTenDays()
-                                    true
-                                }
-
-                                R.id.add_photo_30 -> {
-                                    photoListener.photoForMonth()
-                                    true
-                                }
-
-                                else -> false
+            menu.setOnClickListener {
+                PopupMenu(it.context, it).apply {
+                    inflate(R.menu.photo_day_menu)
+                    setOnMenuItemClickListener { item ->
+                        when (item.itemId) {
+                            R.id.delete_photo -> {
+                                photoListener.onDelete(photoDay)
+                                true
                             }
+
+                            R.id.add_photo_10 -> {
+                                photoListener.photoForTenDays()
+                                true
+                            }
+
+                            R.id.add_photo_30 -> {
+                                photoListener.photoForMonth()
+                                true
+                            }
+
+                            else -> false
                         }
-                    }.show()
-                }
+                    }
+                }.show()
             }
         }
     }
+}
 
-    companion object {
-        private val DiffCallback = object : DiffUtil.ItemCallback<PhotoDay>() {
-            override fun areItemsTheSame(oldItem: PhotoDay, newItem: PhotoDay): Boolean {
-                return oldItem == newItem
-            }
+companion object {
+    private val DiffCallback = object : DiffUtil.ItemCallback<PhotoDay>() {
+        override fun areItemsTheSame(oldItem: PhotoDay, newItem: PhotoDay): Boolean {
+            return oldItem == newItem
+        }
 
-            override fun areContentsTheSame(oldItem: PhotoDay, newItem: PhotoDay): Boolean {
-                return oldItem == newItem
-            }
+        override fun areContentsTheSame(oldItem: PhotoDay, newItem: PhotoDay): Boolean {
+            return oldItem == newItem
         }
     }
+}
 }

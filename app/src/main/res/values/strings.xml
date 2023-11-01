@@ -56,5 +56,6 @@
     <string name="delete_photo">Delete photo</string>
     <string name="add_a_photo_in_30_days">Add a photo in 30 days</string>
     <string name="add_a_photo_in_10_days">Add a photo in 10 days</string>
+    <string name="video_of_the_day">Video of the day</string>
 
 </resources>
