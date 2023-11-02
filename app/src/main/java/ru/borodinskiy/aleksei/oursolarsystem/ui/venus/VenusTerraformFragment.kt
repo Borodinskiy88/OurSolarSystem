@@ -42,12 +42,6 @@ class VenusTerraformFragment : Fragment() {
             }
         }
 
-//        viewModel.getPlanetFromLatinName("Venus").observe(this.viewLifecycleOwner) { planets ->
-//            planets.let {
-//                adapter.submitList(it)
-//            }
-//        }
-
         return binding.root
     }
 }

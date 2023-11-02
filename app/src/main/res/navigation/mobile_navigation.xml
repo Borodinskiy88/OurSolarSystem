@@ -117,7 +117,7 @@
         android:id="@+id/mercury_gallery"
         android:name="ru.borodinskiy.aleksei.oursolarsystem.ui.mercury.MercuryGalleryFragment"
         android:label="@string/menu_mercury"
-        tools:layout="@layout/fragment_gallery" />
+        tools:layout="@layout/fragment_full_image" />
     <fragment
         android:id="@+id/mercury_info"
         android:name="ru.borodinskiy.aleksei.oursolarsystem.ui.mercury.MercuryInfoFragment"

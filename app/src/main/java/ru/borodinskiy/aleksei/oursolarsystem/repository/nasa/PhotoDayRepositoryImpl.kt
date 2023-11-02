@@ -27,17 +27,10 @@ class PhotoDayRepositoryImpl @Inject constructor(
         }
     }.flowOn(Dispatchers.IO)
 
-    //TODO игнорить видео
-
-//        fun getListPhotoMonth(photoDay: PhotoDay): Flow<List<PhotoDay>> = flow {
     fun getListPhotoMonth(): Flow<List<PhotoDay>> = flow {
         try {
             val response = photoDayRepository.getListPhotoMonth()
             emit(response)
-            //TODO игнорить видео
-//            if (photoDay.mediaType == "image") {
-//                dao.insertList(response)
-//            }
             dao.insertList(response)
         } catch (e: Exception) {
             return@flow

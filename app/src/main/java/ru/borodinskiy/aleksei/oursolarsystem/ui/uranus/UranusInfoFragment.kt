@@ -58,12 +58,6 @@ class UranusInfoFragment : Fragment() {
             }
         }
 
-//        viewModel.getPlanetFromLatinName("Uranus").observe(this.viewLifecycleOwner) { planets ->
-//            planets.let {
-//                adapter.submitList(it)
-//            }
-//        }
-
         return binding.root
     }
 }

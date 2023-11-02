@@ -42,12 +42,6 @@ class MarsTerraformFragment : Fragment() {
             }
         }
 
-//        viewModel.getPlanetFromLatinName("Mars").observe(this.viewLifecycleOwner) { planets ->
-//            planets.let {
-//                adapter.submitList(it)
-//            }
-//        }
-
         return binding.root
     }
 }

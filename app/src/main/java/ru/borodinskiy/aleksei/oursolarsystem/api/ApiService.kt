@@ -5,8 +5,8 @@ import retrofit2.http.Query
 import retrofit2.http.Url
 import ru.borodinskiy.aleksei.oursolarsystem.api.ApiModule.Companion.API_KEY
 import ru.borodinskiy.aleksei.oursolarsystem.entity.PhotoDay
-import ru.borodinskiy.aleksei.oursolarsystem.utils.CurrentDate.requestDateMonth
-import ru.borodinskiy.aleksei.oursolarsystem.utils.CurrentDate.requestDateTenDays
+import ru.borodinskiy.aleksei.oursolarsystem.utils.CurrentDate.requestMonth
+import ru.borodinskiy.aleksei.oursolarsystem.utils.CurrentDate.requestTenDays
 
 interface ApiService {
 
@@ -16,22 +16,16 @@ interface ApiService {
     ): PhotoDay
 
     @GET("planetary/apod")
-    suspend fun getListPhotoMonth(
+    suspend fun getListPhotoTenDays(
         @Query("api_key") apiKey: String = API_KEY,
-
-        //todo запрос с определенной даты. Запрос случайного количества фотографий
-        @Query("start_date") date: String = requestDateMonth,
-//        @Query("count") count: Int = 30,
-
+        @Query("start_date") date: String = requestTenDays,
     ): List<PhotoDay>
 
     @GET("planetary/apod")
-    suspend fun getListPhotoTenDays(
+    suspend fun getListPhotoMonth(
         @Query("api_key") apiKey: String = API_KEY,
-        @Query("start_date") date: String = requestDateTenDays,
+        @Query("start_date") date: String = requestMonth,
     ): List<PhotoDay>
-
-
 
     //TODO API_KEY не нужен для библиотеки изображений, BUILD_URL другой
     @GET

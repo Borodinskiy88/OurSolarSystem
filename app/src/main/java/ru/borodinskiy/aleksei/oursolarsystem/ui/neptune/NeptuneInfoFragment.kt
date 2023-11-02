@@ -58,12 +58,6 @@ class NeptuneInfoFragment : Fragment() {
             }
         }
 
-//        viewModel.getPlanetFromLatinName("Neptunus").observe(this.viewLifecycleOwner) { planets ->
-//            planets.let {
-//                adapter.submitList(it)
-//            }
-//        }
-
         return binding.root
     }
 }

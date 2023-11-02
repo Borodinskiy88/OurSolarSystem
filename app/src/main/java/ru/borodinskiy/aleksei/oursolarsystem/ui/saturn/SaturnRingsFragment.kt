@@ -42,12 +42,6 @@ class SaturnRingsFragment : Fragment() {
             }
         }
 
-//        viewModel.getPlanetFromLatinName("Saturnus").observe(this.viewLifecycleOwner) { planets ->
-//            planets.let {
-//                adapter.submitList(it)
-//            }
-//        }
-
         return binding.root
     }
 }

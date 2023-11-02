@@ -2,23 +2,23 @@
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="?attr/colorPrimary"
-    app:cardCornerRadius="0dp"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="?attr/colorPrimary"
+    app:cardCornerRadius="0dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:background="?attr/colorPrimary"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="?attr/colorPrimary">
 
         <ImageView
             android:id="@+id/image"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:contentDescription="@string/photo_day"
             android:scaleType="centerCrop"
             android:visibility="visible"
-            android:contentDescription="@string/photo_day"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -37,72 +37,74 @@
 
         <ImageView
             android:id="@+id/menu"
-            app:layout_constraintTop_toTopOf="@id/touch"
-            app:layout_constraintBottom_toBottomOf="@id/touch"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_margin="@dimen/size_8"
-            android:src="@drawable/ic_more_vert_24"
-            app:tint="@color/yellow_transparent_60"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:contentDescription="@string/touch" />
+            android:layout_margin="@dimen/size_8"
+            android:contentDescription="@string/touch"
+            android:src="@drawable/ic_more_vert_24"
+            app:layout_constraintBottom_toBottomOf="@id/touch"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/touch"
+            app:tint="@color/yellow_transparent_60" />
 
         <ImageView
             android:id="@+id/touch"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/leaf"
-            android:layout_margin="@dimen/size_8"
-            android:src="@drawable/ic_touch_24"
-            app:tint="@color/yellow_transparent_40"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:contentDescription="@string/touch" />
+            android:layout_margin="@dimen/size_8"
+            android:contentDescription="@string/touch"
+            android:src="@drawable/ic_touch_24"
+            app:layout_constraintEnd_toStartOf="@id/leaf"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/yellow_transparent_40" />
 
         <ImageView
             android:id="@+id/leaf"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/menu"
-            android:layout_marginTop="@dimen/size_8"
-            android:layout_marginEnd="@dimen/size_16"
-            android:src="@drawable/ic_leaf_24"
-            app:tint="@color/yellow_transparent_40"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:contentDescription="@string/leaf" />
+            android:layout_marginTop="@dimen/size_8"
+            android:layout_marginEnd="@dimen/size_16"
+            android:contentDescription="@string/leaf"
+            android:src="@drawable/ic_leaf_24"
+            app:layout_constraintEnd_toStartOf="@id/menu"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/yellow_transparent_40" />
 
         <ImageView
             android:id="@+id/play"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:src="@drawable/ic_youtube_48"
-            android:visibility="gone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:contentDescription="@string/leaf" />
+            android:contentDescription="@string/leaf"
+            android:src="@drawable/ic_youtube_48"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/date"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            tools:text="23.01.04"
-            android:textSize="@dimen/text_14"
-            android:textColor="@color/yellow_transparent_60"
-            android:layout_margin="@dimen/size_8"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/size_8"
+            android:textColor="@color/yellow_transparent_60"
+            android:textSize="@dimen/text_14"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="23.01.04" />
 
         <TextView
             android:id="@+id/title"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/date"
-            tools:text="Комета Галлея"
-            android:textSize="@dimen/text_14"
-            android:textColor="@color/yellow_transparent_60"
-            android:layout_margin="@dimen/size_8"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/size_8"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/yellow_transparent_60"
+            android:textSize="@dimen/text_14"
+            app:layout_constraintBottom_toTopOf="@id/date"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="Комета Галлея" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

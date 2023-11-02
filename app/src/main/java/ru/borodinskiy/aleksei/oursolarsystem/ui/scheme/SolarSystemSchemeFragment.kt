@@ -1,15 +1,14 @@
 package ru.borodinskiy.aleksei.oursolarsystem.ui.scheme
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import dagger.hilt.android.AndroidEntryPoint
 import ru.borodinskiy.aleksei.oursolarsystem.R
 import ru.borodinskiy.aleksei.oursolarsystem.databinding.FragmentSolarSystemSchemeBinding
-import ru.borodinskiy.aleksei.oursolarsystem.databinding.FragmentVenusBinding
 
 @AndroidEntryPoint
 class SolarSystemSchemeFragment : Fragment() {
@@ -93,7 +92,6 @@ class SolarSystemSchemeFragment : Fragment() {
             neptuneText.setOnClickListener {
                 findNavController().navigate(R.id.action_nav_system_scheme_to_nav_neptune)
             }
-
 
         }
 

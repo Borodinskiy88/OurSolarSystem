@@ -57,12 +57,6 @@ class MercuryInfoFragment : Fragment() {
             }
         }
 
-//        viewModel.getPlanetFromLatinName("Mercurius").observe(this.viewLifecycleOwner) { planets ->
-//            planets.let {
-//                adapter.submitList(it)
-//            }
-//        }
-
         return binding.root
     }
 

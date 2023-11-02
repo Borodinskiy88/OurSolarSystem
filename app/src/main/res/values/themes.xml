@@ -11,13 +11,13 @@
         <item name="colorSecondary">@color/blue_light</item>
         <item name="colorSecondaryVariant">@color/blue</item>
         <item name="colorOnSecondary">@color/yellow</item>
-        <!-- ItemBackground -->
+        <!-- Фон всплывающих меню -->
         <item name="android:itemBackground">@color/yellow</item>
         <!-- TextColor -->
         <item name="android:textColor">@color/gray_dark</item>
-        <!-- Status bar color. -->
+        <!-- Верхняя панель. -->
         <item name="android:statusBarColor">?attr/colorPrimary</item>
-        <!-- Navigation bar color. -->
+        <!-- Нижняя панель. -->
         <item name="android:navigationBarColor">?attr/colorPrimary</item>
         <!-- Splash screen -->
         <item name="android:windowSplashScreenBackground" tools:targetApi="s" tools:ignore="NewApi">

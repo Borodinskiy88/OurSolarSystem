@@ -8,8 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import dagger.hilt.android.AndroidEntryPoint
 import ru.borodinskiy.aleksei.oursolarsystem.R
-import ru.borodinskiy.aleksei.oursolarsystem.databinding.FragmentGalleryBinding
-import ru.borodinskiy.aleksei.oursolarsystem.viewmodel.PhotoDayViewModel
+import ru.borodinskiy.aleksei.oursolarsystem.databinding.FragmentFullImageBinding
 import ru.borodinskiy.aleksei.oursolarsystem.viewmodel.PlanetImageViewModel
 
 @AndroidEntryPoint
@@ -22,7 +21,7 @@ class SunGalleryFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val binding = FragmentGalleryBinding.inflate(inflater, container, false)
+        val binding = FragmentFullImageBinding.inflate(inflater, container, false)
 
         viewModel.getPhotoPlanet("Sun").observe(viewLifecycleOwner) {}
 

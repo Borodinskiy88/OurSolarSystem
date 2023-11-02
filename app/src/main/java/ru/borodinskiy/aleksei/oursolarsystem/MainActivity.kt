@@ -1,9 +1,7 @@
 package ru.borodinskiy.aleksei.oursolarsystem
 
 import android.os.Bundle
-import android.view.Menu
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
@@ -40,13 +38,10 @@ class MainActivity : AppCompatActivity() {
         )
         //Цветные иконки в меню
         navView.itemIconTintList = null
+
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
 
-        //Цвет нижней панели
-        window.navigationBarColor = ContextCompat.getColor(this, R.color.black)
-        //Цвет верхней панели
-//        window.statusBarColor = ContextCompat.getColor(this, R.color.black)
     }
 
 //    override fun onCreateOptionsMenu(menu: Menu): Boolean {

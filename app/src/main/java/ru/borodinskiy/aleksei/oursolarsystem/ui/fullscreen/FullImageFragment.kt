@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import dagger.hilt.android.AndroidEntryPoint
-import ru.borodinskiy.aleksei.oursolarsystem.databinding.FragmentGalleryBinding
+import ru.borodinskiy.aleksei.oursolarsystem.databinding.FragmentFullImageBinding
 import ru.borodinskiy.aleksei.oursolarsystem.utils.ImageObject.imagePlanetSatellite
 import ru.borodinskiy.aleksei.oursolarsystem.utils.load
 
@@ -25,7 +25,7 @@ class FullImageFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val binding = FragmentGalleryBinding.inflate(inflater, container, false)
+        val binding = FragmentFullImageBinding.inflate(inflater, container, false)
 
         val image = arguments?.getString(NAME)
         val rusName = arguments?.getString(RUS_NAME)

@@ -6,10 +6,10 @@ object CurrentDate {
 
     val date: LocalDate = LocalDate.now()
     //Месяц
-    private val previousDateMonth: LocalDate = date.minusMonths(1)
-    val requestDateMonth = previousDateMonth.toString()
+    private val previousMonth: LocalDate = date.minusMonths(1)
+    val requestMonth = previousMonth.toString()
     //10 дней
-    private val previousDateTenDays: LocalDate = date.minusDays(10)
-    val requestDateTenDays = previousDateTenDays.toString()
+    private val previousTenDays: LocalDate = date.minusDays(10)
+    val requestTenDays = previousTenDays.toString()
 
 }
