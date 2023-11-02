@@ -295,4 +295,16 @@
         android:id="@+id/videoFragment"
         android:name="ru.borodinskiy.aleksei.oursolarsystem.ui.fullscreen.VideoFragment"
         android:label="Video of the day" />
+    <fragment
+        android:id="@+id/nav_dwarf_planets"
+        android:name="ru.borodinskiy.aleksei.oursolarsystem.ui.dwarfplanets.DwarfPlanetsFragment"
+        android:label="@string/dwarf_planets"
+        tools:layout="@layout/fragment_dwarf_planets" >
+        <action
+            android:id="@+id/action_nav_dwarf_planets_to_fullImageFragment"
+            app:destination="@id/fullImageFragment" />
+        <action
+            android:id="@+id/action_nav_dwarf_planets_to_singleSatelliteFragment"
+            app:destination="@id/singleSatelliteFragment" />
+    </fragment>
 </navigation>

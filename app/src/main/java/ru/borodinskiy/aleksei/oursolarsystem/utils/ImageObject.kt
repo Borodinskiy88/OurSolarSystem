@@ -1,13 +1,15 @@
 package ru.borodinskiy.aleksei.oursolarsystem.utils
 
 import android.widget.ImageView
+import ru.borodinskiy.aleksei.oursolarsystem.enumeration.DwarfPlanetImage
 import ru.borodinskiy.aleksei.oursolarsystem.enumeration.PlanetImage
 import ru.borodinskiy.aleksei.oursolarsystem.enumeration.SatelliteImage
 
 object ImageObject {
 
     fun imagePlanetSatellite(name: String, image: ImageView) {
-        when(name) {
+        when (name) {
+
             "Mercurius" -> image.setImageResource(PlanetImage.MERCURY.image)
             "Venus" -> image.setImageResource(PlanetImage.VENUS.image)
             "Terra" -> image.setImageResource(PlanetImage.EARTH.image)
@@ -35,6 +37,11 @@ object ImageObject {
             "Umbriel" -> image.setImageResource(SatelliteImage.UMBRIEL.image)
             "Miranda" -> image.setImageResource(SatelliteImage.MIRANDA.image)
             "Triton" -> image.setImageResource(SatelliteImage.TRITON.image)
+            "Ceres" -> image.setImageResource(DwarfPlanetImage.CERES.image)
+            "Pluto" -> image.setImageResource(DwarfPlanetImage.PLUTO.image)
+            "Haumea" -> image.setImageResource(DwarfPlanetImage.HAUMEA.image)
+            "Makemake" -> image.setImageResource(DwarfPlanetImage.MAKEMAKE.image)
+            "Eris" -> image.setImageResource(DwarfPlanetImage.ERIS.image)
         }
     }
 }

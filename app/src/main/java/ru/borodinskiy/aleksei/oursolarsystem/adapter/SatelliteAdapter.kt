@@ -68,6 +68,7 @@ class SatelliteAdapter(
 
                 satelliteImage.setOnClickListener {
                     satelliteListener.onFullImage(satellite)
+                    flag = true
                 }
 
                 imagePlanetSatellite(satellite.engName, satelliteImage)

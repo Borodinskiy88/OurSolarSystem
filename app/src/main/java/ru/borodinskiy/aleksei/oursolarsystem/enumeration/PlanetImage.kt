@@ -3,6 +3,7 @@ package ru.borodinskiy.aleksei.oursolarsystem.enumeration
 import ru.borodinskiy.aleksei.oursolarsystem.R
 
 enum class PlanetImage(val image: Int) {
+
     SUN(R.drawable.sun),
     MERCURY(R.drawable.merkurij),
     VENUS(R.drawable.venus),

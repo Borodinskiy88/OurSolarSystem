@@ -7,8 +7,6 @@ import android.widget.PopupMenu
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer
-import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener
 import ru.borodinskiy.aleksei.oursolarsystem.R
 import ru.borodinskiy.aleksei.oursolarsystem.databinding.CardPhotoDayBinding
 import ru.borodinskiy.aleksei.oursolarsystem.entity.PhotoDay
@@ -19,6 +17,7 @@ interface PhotoListener {
     fun onShowSmall(photoDay: PhotoDay)
     fun onDelete(photoDay: PhotoDay)
     fun photoForMonth()
+    fun photoForTwoMonth()
     fun photoForTenDays()
     fun onVideo(photoDay: PhotoDay)
 
@@ -94,6 +93,11 @@ class PhotoDayAdapter(
 
                             R.id.add_photo_30 -> {
                                 photoListener.photoForMonth()
+                                true
+                            }
+
+                            R.id.add_photo_60 -> {
+                                photoListener.photoForTwoMonth()
                                 true
                             }
 

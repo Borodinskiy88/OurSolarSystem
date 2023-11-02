@@ -37,6 +37,16 @@ class PhotoDayRepositoryImpl @Inject constructor(
         }
     }.flowOn(Dispatchers.IO)
 
+    fun getListPhotoTwoMonth(): Flow<List<PhotoDay>> = flow {
+        try {
+            val response = photoDayRepository.getListPhotoTwoMonth()
+            emit(response)
+            dao.insertList(response)
+        } catch (e: Exception) {
+            return@flow
+        }
+    }.flowOn(Dispatchers.IO)
+
     fun getListPhotoTenDays(): Flow<List<PhotoDay>> = flow {
         try {
             val response = photoDayRepository.getListPhotoTenDays()

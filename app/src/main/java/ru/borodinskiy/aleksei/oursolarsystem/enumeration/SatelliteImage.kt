@@ -3,6 +3,7 @@ package ru.borodinskiy.aleksei.oursolarsystem.enumeration
 import ru.borodinskiy.aleksei.oursolarsystem.R
 
 enum class SatelliteImage(val image: Int) {
+
     MOON(R.drawable.satell_moon),
     PHOBOS(R.drawable.satell_mars),
     IO(R.drawable.satell_jup_io),
@@ -20,5 +21,5 @@ enum class SatelliteImage(val image: Int) {
     ARIEL(R.drawable.satell_uran_ariel),
     UMBRIEL(R.drawable.satell_uran_umbriel),
     MIRANDA(R.drawable.satell_uran_miranda),
-    TRITON(R.drawable.satell_nep_triton)
+    TRITON(R.drawable.satell_nep_triton),
 }

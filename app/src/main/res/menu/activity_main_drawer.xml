@@ -48,5 +48,9 @@
             android:id="@+id/nav_neptune"
             android:icon="@drawable/ic_neptune"
             android:title="@string/menu_neptune" />
+        <item
+            android:id="@+id/nav_dwarf_planets"
+            android:icon="@drawable/ic_dwarf_planets"
+            android:title="@string/dwarf_planets" />
     </group>
 </menu>

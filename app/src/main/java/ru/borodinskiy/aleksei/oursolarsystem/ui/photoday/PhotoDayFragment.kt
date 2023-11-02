@@ -52,6 +52,10 @@ class PhotoDayFragment : Fragment() {
                 viewModel.getListPhotoMonth().observe(viewLifecycleOwner) {}
             }
 
+            override fun photoForTwoMonth() {
+                viewModel.getListPhotoTwoMonth().observe(viewLifecycleOwner) {}
+            }
+
             override fun photoForTenDays() {
                 viewModel.getListPhotoTenDays().observe(viewLifecycleOwner) {}
             }

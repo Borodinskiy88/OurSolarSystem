@@ -32,6 +32,7 @@
     <string name="image_planet">Изображение планеты</string>
     <string name="yes">Да</string>
     <string name="no">Нет</string>
+    <string name="add_a_photo_in_60_days">Получить все фото за 60 дней</string>
     <string name="astronautics">Космонавтика</string>
     <string name="gallery">Галерея</string>
     <string name="information">Информация</string>
@@ -53,4 +54,5 @@
     <string name="add_a_photo_in_30_days">Получить все фото за 30 дней</string>
     <string name="add_a_photo_in_10_days">Получить все фото за 10 дней</string>
     <string name="video_of_the_day">Видео дня</string>
+    <string name="dwarf_planets">Карликовые планеты</string>
 </resources>

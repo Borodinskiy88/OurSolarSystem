@@ -5,12 +5,14 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
     <!-- Planet name -->
+    <string name="dwarf_planets">Dwarf Planets</string>
     <string name="menu_earth">Earth</string>
     <string name="menu_jupiter">Jupiter</string>
     <string name="menu_mars">Mars</string>
     <string name="menu_mercury">Mercury</string>
     <string name="menu_neptune">Neptune</string>
     <string name="menu_saturn">Saturn</string>
+    <string name="photo_day">Photo of the day</string>
     <string name="sun">Sun</string>
     <string name="menu_venus">Venus</string>
     <string name="menu_uranus">Uranus</string>
@@ -30,6 +32,7 @@
     <string name="solar_system">Solar system</string>
     <string name="solid_surface">Solid surface:</string>
     <string name="surface_gravity">Gravity (g), (1g = 9.81 m/s2):</string>
+    <string name="video_of_the_day">Video of the day</string>
     <string name="was_opened">Was opened:</string>
     <!-- Description -->
     <string name="expand">Expand</string>
@@ -40,22 +43,19 @@
     <string name="yes">Yes</string>
     <string name="video">Video</string>
     <!-- Menu -->
+    <string name="add_a_photo_in_10_days">Add a photo in 10 days</string>
+    <string name="add_a_photo_in_30_days">Add a photo in 30 days</string>
+    <string name="add_a_photo_in_60_days">Add a photo in 60 days</string>
     <string name="astronautics">Astronautics</string>
+    <string name="delete_photo">Delete photo</string>
     <string name="gallery">Gallery</string>
     <string name="information">Information</string>
     <string name="mars_rover">Mars rover</string>
     <string name="moon">Moon</string>
-    <string name="photo_day">Photo of the day</string>
     <string name="rings">Rings</string>
     <string name="satellites">Satellites</string>
     <string name="solar_system_scheme">Solar system scheme</string>
     <string name="show_more"><u>Show more</u></string>
     <string name="terraform">Terraform</string>
-
-
-    <string name="delete_photo">Delete photo</string>
-    <string name="add_a_photo_in_30_days">Add a photo in 30 days</string>
-    <string name="add_a_photo_in_10_days">Add a photo in 10 days</string>
-    <string name="video_of_the_day">Video of the day</string>
 
 </resources>

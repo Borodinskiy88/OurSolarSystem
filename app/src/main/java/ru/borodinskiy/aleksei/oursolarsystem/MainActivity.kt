@@ -2,6 +2,7 @@ package ru.borodinskiy.aleksei.oursolarsystem
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
@@ -31,13 +32,16 @@ class MainActivity : AppCompatActivity() {
         // меню следует рассматривать как пункты назначения верхнего уровня.
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.nav_photo_day, R.id.nav_system_scheme,
-                R.id.nav_sun, R.id.nav_mercury, R.id.nav_venus, R.id.nav_earth, R.id.nav_mars,
-                R.id.nav_jupiter, R.id.nav_saturn, R.id.nav_uranus, R.id.nav_neptune
+                R.id.nav_photo_day, R.id.nav_system_scheme, R.id.nav_sun,
+                R.id.nav_mercury, R.id.nav_venus, R.id.nav_earth, R.id.nav_mars,
+                R.id.nav_jupiter, R.id.nav_saturn, R.id.nav_uranus, R.id.nav_neptune, R.id.nav_dwarf_planets
             ), drawerLayout
         )
         //Цветные иконки в меню
         navView.itemIconTintList = null
+
+        //Цвет нижней панели
+        window.navigationBarColor = ContextCompat.getColor(this, R.color.black)
 
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)

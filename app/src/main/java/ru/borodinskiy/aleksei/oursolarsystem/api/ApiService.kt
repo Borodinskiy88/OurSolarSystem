@@ -7,6 +7,7 @@ import ru.borodinskiy.aleksei.oursolarsystem.api.ApiModule.Companion.API_KEY
 import ru.borodinskiy.aleksei.oursolarsystem.entity.PhotoDay
 import ru.borodinskiy.aleksei.oursolarsystem.utils.CurrentDate.requestMonth
 import ru.borodinskiy.aleksei.oursolarsystem.utils.CurrentDate.requestTenDays
+import ru.borodinskiy.aleksei.oursolarsystem.utils.CurrentDate.requestTwoMonth
 
 interface ApiService {
 
@@ -25,6 +26,12 @@ interface ApiService {
     suspend fun getListPhotoMonth(
         @Query("api_key") apiKey: String = API_KEY,
         @Query("start_date") date: String = requestMonth,
+    ): List<PhotoDay>
+
+    @GET("planetary/apod")
+    suspend fun getListPhotoTwoMonth(
+        @Query("api_key") apiKey: String = API_KEY,
+        @Query("start_date") date: String = requestTwoMonth,
     ): List<PhotoDay>
 
     //TODO API_KEY не нужен для библиотеки изображений, BUILD_URL другой
