@@ -8,7 +8,7 @@ class PhotoDayRepository @Inject constructor(private val apiServices: ApiService
 
     suspend fun getPhotoDay() : PhotoDay = apiServices.getPhotoDay()
     suspend fun getListPhotoMonth() : List<PhotoDay> = apiServices.getListPhotoMonth()
-    suspend fun getListPhotoTwoMonth() : List<PhotoDay> = apiServices.getListPhotoTwoMonth()
+    suspend fun getListPhotoTreeMonth() : List<PhotoDay> = apiServices.getListPhotoTreeMonth()
     suspend fun getListPhotoTenDays() : List<PhotoDay> = apiServices.getListPhotoTenDays()
 
 }

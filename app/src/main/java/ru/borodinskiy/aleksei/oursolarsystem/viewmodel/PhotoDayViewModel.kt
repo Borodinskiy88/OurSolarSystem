@@ -18,12 +18,18 @@ class PhotoDayViewModel @Inject constructor(
     fun getPhotoByDate(date : String) = photoDayRepositoryImpl.getPhotoDayById(date).asLiveData()
     fun getPhotoDay() = photoDayRepositoryImpl.getPhotoDay().asLiveData()
     fun getListPhotoMonth() = photoDayRepositoryImpl.getListPhotoMonth().asLiveData()
-    fun getListPhotoTwoMonth() = photoDayRepositoryImpl.getListPhotoTwoMonth().asLiveData()
+    fun getListPhotoTreeMonth() = photoDayRepositoryImpl.getListPhotoTreeMonth().asLiveData()
     fun getListPhotoTenDays() = photoDayRepositoryImpl.getListPhotoTenDays().asLiveData()
 
     fun delete(photoDay : PhotoDay) {
         viewModelScope.launch {
             photoDayRepositoryImpl.delete(photoDay)
+        }
+    }
+
+    fun deleteAll() {
+        viewModelScope.launch {
+            photoDayRepositoryImpl.deleteAll()
         }
     }
     

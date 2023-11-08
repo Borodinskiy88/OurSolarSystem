@@ -52,8 +52,8 @@ class PhotoDayArchiveFragment : Fragment() {
                 viewModel.getListPhotoMonth().observe(viewLifecycleOwner) {}
             }
 
-            override fun photoForTwoMonth() {
-                viewModel.getListPhotoTwoMonth().observe(viewLifecycleOwner) {}
+            override fun photoForTreeMonth() {
+                viewModel.getListPhotoTreeMonth().observe(viewLifecycleOwner) {}
             }
 
             override fun photoForTenDays() {
@@ -67,10 +67,26 @@ class PhotoDayArchiveFragment : Fragment() {
                 findNavController().navigate(R.id.action_nav_photo_day_to_videoFragment, bundle)
             }
 
+            override fun deleteAll() {
+                viewModel.deleteAll()
+            }
+
         })
 
         recyclerView.adapter = adapter
 
+
+        binding.apply {
+
+            refresh.setOnRefreshListener {
+
+                viewModel.getListPhotoTenDays().observe(viewLifecycleOwner) {}
+                refresh.isRefreshing = false
+            }
+
+            refresh.setProgressBackgroundColorSchemeColor(resources.getColor(R.color.transparent, null))
+            refresh.setColorSchemeColors(resources.getColor(R.color.yellow, null))
+        }
 
         viewModel.allPhotoDay.observe(viewLifecycleOwner) {
 

@@ -18,9 +18,10 @@ interface PhotoListener {
     fun onShowSmall(photoDay: PhotoDay)
     fun onDelete(photoDay: PhotoDay)
     fun photoForMonth()
-    fun photoForTwoMonth()
+    fun photoForTreeMonth()
     fun photoForTenDays()
     fun onVideo(photoDay: PhotoDay)
+    fun deleteAll()
 
 }
 
@@ -104,8 +105,13 @@ class PhotoDayAdapter(
                                     true
                                 }
 
-                                R.id.add_photo_60 -> {
-                                    photoListener.photoForTwoMonth()
+                                R.id.add_photo_90 -> {
+                                    photoListener.photoForTreeMonth()
+                                    true
+                                }
+
+                                R.id.delete_all -> {
+                                    photoListener.deleteAll()
                                     true
                                 }
 

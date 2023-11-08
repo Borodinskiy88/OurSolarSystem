@@ -52,8 +52,8 @@ class PhotoDayTodayFragment : Fragment() {
                 viewModel.getListPhotoMonth().observe(viewLifecycleOwner) {}
             }
 
-            override fun photoForTwoMonth() {
-                viewModel.getListPhotoTwoMonth().observe(viewLifecycleOwner) {}
+            override fun photoForTreeMonth() {
+                viewModel.getListPhotoTreeMonth().observe(viewLifecycleOwner) {}
             }
 
             override fun photoForTenDays() {
@@ -65,6 +65,10 @@ class PhotoDayTodayFragment : Fragment() {
                     Pair("url", photoDay.url),
                 )
                 findNavController().navigate(R.id.action_nav_photo_day_to_videoFragment, bundle)
+            }
+
+            override fun deleteAll() {
+                viewModel.deleteAll()
             }
 
         })

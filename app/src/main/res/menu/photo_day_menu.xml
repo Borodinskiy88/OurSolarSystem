@@ -13,7 +13,12 @@
         android:enabled="true"
         android:title="@string/add_a_photo_in_30_days" />
     <item
-        android:id="@+id/add_photo_60"
+        android:id="@+id/add_photo_90"
         android:enabled="true"
-        android:title="@string/add_a_photo_in_60_days" />
+        android:title="@string/add_a_photo_in_90_days" />
+    <item
+        android:id="@+id/delete_all"
+        android:enabled="true"
+        android:title="@string/clear_the_archive" />
+
 </menu>

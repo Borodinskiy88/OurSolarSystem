@@ -25,4 +25,7 @@ interface PhotoDayDao {
 
     @Delete
     suspend fun delete(photoDay: PhotoDay)
+
+    @Query("DELETE FROM Photoday")
+    suspend fun deleteAll()
 }

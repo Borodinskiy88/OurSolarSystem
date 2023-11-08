@@ -36,6 +36,7 @@
     <string name="was_opened">Was opened:</string>
     <!-- Description -->
     <string name="expand">Expand</string>
+    <string name="flip">Flip</string>
     <string name="image_planet">Image planet</string>
     <string name="leaf">Leaf</string>
     <string name="touch">Touch</string>
@@ -45,9 +46,10 @@
     <!-- Menu -->
     <string name="add_a_photo_in_10_days">Add a photo in 10 days</string>
     <string name="add_a_photo_in_30_days">Add a photo in 30 days</string>
-    <string name="add_a_photo_in_60_days">Add a photo in 60 days</string>
+    <string name="add_a_photo_in_90_days">Add a photo in 90 days</string>
     <string name="archive">Archive</string>
     <string name="astronautics">Astronautics</string>
+    <string name="clear_the_archive">Clear the archive</string>
     <string name="delete_photo">Delete photo</string>
     <string name="gallery">Gallery</string>
     <string name="information">Information</string>
@@ -59,6 +61,5 @@
     <string name="show_more"><u>Show more</u></string>
     <string name="terraform">Terraform</string>
     <string name="today">Today</string>
-    <string name="flip">Flip</string>
 
 </resources>

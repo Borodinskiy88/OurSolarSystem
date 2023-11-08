@@ -37,9 +37,9 @@ class PhotoDayRepositoryImpl @Inject constructor(
         }
     }.flowOn(Dispatchers.IO)
 
-    fun getListPhotoTwoMonth(): Flow<List<PhotoDay>> = flow {
+    fun getListPhotoTreeMonth(): Flow<List<PhotoDay>> = flow {
         try {
-            val response = photoDayRepository.getListPhotoTwoMonth()
+            val response = photoDayRepository.getListPhotoTreeMonth()
             emit(response)
             dao.insertList(response)
         } catch (e: Exception) {
@@ -58,5 +58,6 @@ class PhotoDayRepositoryImpl @Inject constructor(
     }.flowOn(Dispatchers.IO)
 
     suspend fun delete(photoDay: PhotoDay) = dao.delete(photoDay)
+    suspend fun deleteAll() = dao.deleteAll()
 
 }
