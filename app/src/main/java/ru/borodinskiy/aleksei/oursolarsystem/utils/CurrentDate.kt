@@ -5,6 +5,7 @@ import java.time.LocalDate
 object CurrentDate {
 
     val date: LocalDate = LocalDate.now()
+    val currentDate = date.toString()
     //Месяц
     private val previousMonth: LocalDate = date.minusMonths(1)
     val requestMonth = previousMonth.toString()

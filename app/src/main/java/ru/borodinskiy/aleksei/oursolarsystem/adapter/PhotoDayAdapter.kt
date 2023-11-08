@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import ru.borodinskiy.aleksei.oursolarsystem.R
 import ru.borodinskiy.aleksei.oursolarsystem.databinding.CardPhotoDayBinding
 import ru.borodinskiy.aleksei.oursolarsystem.entity.PhotoDay
+import ru.borodinskiy.aleksei.oursolarsystem.utils.CurrentDate.currentDate
 import ru.borodinskiy.aleksei.oursolarsystem.utils.ReformatValues.reformatDate
 import ru.borodinskiy.aleksei.oursolarsystem.utils.load
 
@@ -67,6 +68,12 @@ class PhotoDayAdapter(
                             image.load(url)
                         }
                     }
+                }
+
+                if (photoDay.date == currentDate) {
+
+                    menu.visibility = View.INVISIBLE
+                    flip.visibility = View.VISIBLE
                 }
 
                 date.text = reformatDate(photoDay.date)

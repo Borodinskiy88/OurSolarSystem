@@ -55,4 +55,6 @@
     <string name="add_a_photo_in_10_days">Получить все фото за 10 дней</string>
     <string name="video_of_the_day">Видео дня</string>
     <string name="dwarf_planets">Карликовые планеты</string>
+    <string name="today">Сегодня</string>
+    <string name="archive">Архив</string>
 </resources>

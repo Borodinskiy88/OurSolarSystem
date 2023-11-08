@@ -7,7 +7,7 @@ import com.google.gson.annotations.SerializedName
 @Entity
 data class PhotoDay(
     @SerializedName("copyright")
-    val copyright: String,
+    val copyright: String?,
     @SerializedName("date")
     @PrimaryKey
     val date: String,
@@ -22,6 +22,4 @@ data class PhotoDay(
     @SerializedName("url")
     val url: String,
 
-    //todo
-//    val favorite: Boolean
 )

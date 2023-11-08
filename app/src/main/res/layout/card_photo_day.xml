@@ -48,10 +48,24 @@
             app:tint="@color/yellow_transparent_60" />
 
         <ImageView
-            android:id="@+id/touch"
+            android:id="@+id/flip"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/size_8"
+            android:contentDescription="@string/flip"
+            android:src="@drawable/ic_flip_24"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/touch"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/touch"
+            app:tint="@color/yellow_transparent_40" />
+
+        <ImageView
+            android:id="@+id/touch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_8"
+            android:layout_marginEnd="@dimen/size_16"
             android:contentDescription="@string/touch"
             android:src="@drawable/ic_touch_24"
             app:layout_constraintEnd_toStartOf="@id/leaf"

@@ -7,15 +7,30 @@
     android:background="?attr/colorPrimary"
     tools:context=".ui.photoday.PhotoDayFragment">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/vertical_recycler_view"
-        android:background="?attr/colorPrimary"
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:listitem="@layout/card_photo_day"
-        android:orientation="horizontal"
-        android:scrollbars="horizontal"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        android:layout_gravity="center"/>
+        android:layout_height="@dimen/size_24"
+        android:backgroundTint="@color/transparent"
+        app:tabIndicatorColor="@color/yellow_transparent_60"
+        app:tabSelectedTextColor="@color/yellow_transparent_60">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/today" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/archive" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/view_pager"
+            android:layout_marginTop="@dimen/size_24"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
