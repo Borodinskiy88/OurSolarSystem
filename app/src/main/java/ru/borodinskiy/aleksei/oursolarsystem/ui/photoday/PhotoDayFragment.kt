@@ -80,6 +80,16 @@ class PhotoDayFragment : Fragment() {
             adapter.submitList(it)
         }
 
+//        viewModel.getPhotoDay().observe(viewLifecycleOwner) {
+//
+//            adapter.submitList(listOf(it))
+//        }
+
+//        viewModel.getListPhotoTenDays().observe(viewLifecycleOwner) {
+//
+//            adapter.submitList(it.reversed())
+//        }
+
         return binding.root
     }
 

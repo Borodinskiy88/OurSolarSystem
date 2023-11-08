@@ -59,6 +59,7 @@ class PhotoDayAdapter(
                             photoListener.onVideo(photoDay)
                         }
                     }
+
                     "image" -> {
                         image.visibility = View.VISIBLE
                         play.visibility = View.INVISIBLE
@@ -68,57 +69,57 @@ class PhotoDayAdapter(
                     }
                 }
 
-            date.text = reformatDate(photoDay.date)
-            title.text = photoDay.title
+                date.text = reformatDate(photoDay.date)
+                title.text = photoDay.title
 
-            image.setOnClickListener {
+                image.setOnClickListener {
 
-                photoListener.onShowSmall(photoDay)
-            }
+                    photoListener.onShowSmall(photoDay)
+                }
 
-            menu.setOnClickListener {
-                PopupMenu(it.context, it).apply {
-                    inflate(R.menu.photo_day_menu)
-                    setOnMenuItemClickListener { item ->
-                        when (item.itemId) {
-                            R.id.delete_photo -> {
-                                photoListener.onDelete(photoDay)
-                                true
+                menu.setOnClickListener {
+                    PopupMenu(it.context, it).apply {
+                        inflate(R.menu.photo_day_menu)
+                        setOnMenuItemClickListener { item ->
+                            when (item.itemId) {
+                                R.id.delete_photo -> {
+                                    photoListener.onDelete(photoDay)
+                                    true
+                                }
+
+                                R.id.add_photo_10 -> {
+                                    photoListener.photoForTenDays()
+                                    true
+                                }
+
+                                R.id.add_photo_30 -> {
+                                    photoListener.photoForMonth()
+                                    true
+                                }
+
+                                R.id.add_photo_60 -> {
+                                    photoListener.photoForTwoMonth()
+                                    true
+                                }
+
+                                else -> false
                             }
-
-                            R.id.add_photo_10 -> {
-                                photoListener.photoForTenDays()
-                                true
-                            }
-
-                            R.id.add_photo_30 -> {
-                                photoListener.photoForMonth()
-                                true
-                            }
-
-                            R.id.add_photo_60 -> {
-                                photoListener.photoForTwoMonth()
-                                true
-                            }
-
-                            else -> false
                         }
-                    }
-                }.show()
+                    }.show()
+                }
             }
         }
     }
-}
 
-companion object {
-    private val DiffCallback = object : DiffUtil.ItemCallback<PhotoDay>() {
-        override fun areItemsTheSame(oldItem: PhotoDay, newItem: PhotoDay): Boolean {
-            return oldItem == newItem
-        }
+    companion object {
+        private val DiffCallback = object : DiffUtil.ItemCallback<PhotoDay>() {
+            override fun areItemsTheSame(oldItem: PhotoDay, newItem: PhotoDay): Boolean {
+                return oldItem == newItem
+            }
 
-        override fun areContentsTheSame(oldItem: PhotoDay, newItem: PhotoDay): Boolean {
-            return oldItem == newItem
+            override fun areContentsTheSame(oldItem: PhotoDay, newItem: PhotoDay): Boolean {
+                return oldItem == newItem
+            }
         }
     }
-}
 }
