@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
@@ -16,6 +17,7 @@ import ru.borodinskiy.aleksei.oursolarsystem.adapter.PhotoDayAdapter
 import ru.borodinskiy.aleksei.oursolarsystem.adapter.PhotoListener
 import ru.borodinskiy.aleksei.oursolarsystem.databinding.FragmentPhotoDayTodayBinding
 import ru.borodinskiy.aleksei.oursolarsystem.entity.PhotoDay
+import ru.borodinskiy.aleksei.oursolarsystem.utils.CheckForInternet.checkForInternet
 import ru.borodinskiy.aleksei.oursolarsystem.viewmodel.PhotoDayViewModel
 
 @AndroidEntryPoint
@@ -53,7 +55,7 @@ class PhotoDayTodayFragment : Fragment() {
             }
 
             override fun photoForTreeMonth() {
-                viewModel.getListPhotoTreeMonth().observe(viewLifecycleOwner) {}
+                viewModel.getListPhotoThreeMonth().observe(viewLifecycleOwner) {}
             }
 
             override fun photoForTenDays() {
@@ -75,9 +77,19 @@ class PhotoDayTodayFragment : Fragment() {
 
         recyclerView.adapter = adapter
 
-        viewModel.getPhotoDay().observe(viewLifecycleOwner) {
+        if (checkForInternet(requireContext())) {
 
-            adapter.submitList(listOf(it))
+            viewModel.getPhotoDay().observe(viewLifecycleOwner) {
+
+                adapter.submitList(listOf(it))
+            }
+        } else {
+
+            Toast.makeText(
+                requireContext(),
+                getString(R.string.need_internet),
+                Toast.LENGTH_LONG
+            ).show()
         }
 
         return binding.root

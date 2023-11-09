@@ -1,4 +1,4 @@
-package ru.borodinskiy.aleksei.oursolarsystem.repository.nasa
+package ru.borodinskiy.aleksei.oursolarsystem.repository.nasa.photoday
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
@@ -37,9 +37,9 @@ class PhotoDayRepositoryImpl @Inject constructor(
         }
     }.flowOn(Dispatchers.IO)
 
-    fun getListPhotoTreeMonth(): Flow<List<PhotoDay>> = flow {
+    fun getListPhotoThreeMonth(): Flow<List<PhotoDay>> = flow {
         try {
-            val response = photoDayRepository.getListPhotoTreeMonth()
+            val response = photoDayRepository.getListPhotoThreeMonth()
             emit(response)
             dao.insertList(response)
         } catch (e: Exception) {

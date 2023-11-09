@@ -6,7 +6,7 @@ import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import ru.borodinskiy.aleksei.oursolarsystem.entity.PhotoDay
-import ru.borodinskiy.aleksei.oursolarsystem.repository.nasa.PhotoDayRepositoryImpl
+import ru.borodinskiy.aleksei.oursolarsystem.repository.nasa.photoday.PhotoDayRepositoryImpl
 import javax.inject.Inject
 
 @HiltViewModel
@@ -18,7 +18,7 @@ class PhotoDayViewModel @Inject constructor(
     fun getPhotoByDate(date : String) = photoDayRepositoryImpl.getPhotoDayById(date).asLiveData()
     fun getPhotoDay() = photoDayRepositoryImpl.getPhotoDay().asLiveData()
     fun getListPhotoMonth() = photoDayRepositoryImpl.getListPhotoMonth().asLiveData()
-    fun getListPhotoTreeMonth() = photoDayRepositoryImpl.getListPhotoTreeMonth().asLiveData()
+    fun getListPhotoThreeMonth() = photoDayRepositoryImpl.getListPhotoThreeMonth().asLiveData()
     fun getListPhotoTenDays() = photoDayRepositoryImpl.getListPhotoTenDays().asLiveData()
 
     fun delete(photoDay : PhotoDay) {

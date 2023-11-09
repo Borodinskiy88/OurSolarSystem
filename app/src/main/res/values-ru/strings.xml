@@ -32,7 +32,7 @@
     <string name="image_planet">Изображение планеты</string>
     <string name="yes">Да</string>
     <string name="no">Нет</string>
-    <string name="add_a_photo_in_90_days">Получить все фото за 90 дней</string>
+    <string name="add_a_photo_in_90_days">Добавить фото за 90 дней</string>
     <string name="astronautics">Космонавтика</string>
     <string name="gallery">Галерея</string>
     <string name="information">Информация</string>
@@ -50,12 +50,14 @@
     <string name="solar_system_scheme">Схема солнечной системы</string>
     <string name="solar_system">Солнечная система</string>
     <string name="delete_photo">Удалить фото</string>
-    <string name="add_a_photo_in_30_days">Получить все фото за 30 дней</string>
-    <string name="add_a_photo_in_10_days">Получить все фото за 10 дней</string>
+    <string name="add_a_photo_in_30_days">Добавить фото за 30 дней</string>
+    <string name="add_a_photo_in_10_days">Добавить фото за 10 дней</string>
     <string name="video_of_the_day">Видео дня</string>
     <string name="dwarf_planets">Карликовые планеты</string>
     <string name="today">Сегодня</string>
     <string name="archive">Архив</string>
     <string name="flip">Листать</string>
     <string name="clear_the_archive">Очистить архив</string>
+    <string name="need_internet">Для просмотра фото дня нужно подключение к интернету. Но пока можно посмотреть архивные фото</string>
+    <string name="need_internet_video">Для просмотра видео нужно подключение к интернету. Но пока можно посмотреть архивные фото</string>
 </resources>

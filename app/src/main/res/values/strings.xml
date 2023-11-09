@@ -62,4 +62,8 @@
     <string name="terraform">Terraform</string>
     <string name="today">Today</string>
 
+
+    <string name="need_internet">To view the photos of the day, you need an Internet connection. But for now you can see the archive photos</string>
+    <string name="need_internet_video">To view the video, you need an Internet connection. But for now you can see the archive photos</string>
+
 </resources>

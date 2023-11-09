@@ -23,7 +23,7 @@ class SunGalleryFragment : Fragment() {
     ): View {
         val binding = FragmentFullImageBinding.inflate(inflater, container, false)
 
-        viewModel.getPhotoPlanet("Sun").observe(viewLifecycleOwner) {}
+//        viewModel.getPhotoPlanet("Solar Dynamics Observatory SDO").observe(viewLifecycleOwner) {}
 
         //TODO заглушка
         binding.fullscreenImage.setImageResource(R.drawable.sun)
