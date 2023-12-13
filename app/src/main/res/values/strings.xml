@@ -37,6 +37,7 @@
     <!-- Description -->
     <string name="expand">Expand</string>
     <string name="flip">Flip</string>
+    <string name="hide_info"><u>Hide info</u></string>
     <string name="image_planet">Image planet</string>
     <string name="leaf">Leaf</string>
     <string name="touch">Touch</string>
@@ -53,16 +54,20 @@
     <string name="delete_photo">Delete photo</string>
     <string name="gallery">Gallery</string>
     <string name="information">Information</string>
+    <string name="jupiter_satellites">Jupiter satellites</string>
     <string name="mars_rover">Mars rover</string>
+    <string name="mars_satellites">Mars satellites</string>
     <string name="moon">Moon</string>
+    <string name="neptunus_satellites">Neptunus satellites</string>
     <string name="rings">Rings</string>
     <string name="satellites">Satellites</string>
+    <string name="saturn_satellites">Saturn satellites</string>
     <string name="solar_system_scheme">Solar system scheme</string>
     <string name="show_more"><u>Show more</u></string>
     <string name="terraform">Terraform</string>
     <string name="today">Today</string>
-
-
+    <string name="uranus_satellite">Uranus satellite</string>
+    <!-- Check for Internet -->
     <string name="need_internet">To view the photos of the day, you need an Internet connection. But for now you can see the archive photos</string>
     <string name="need_internet_video">To view the video, you need an Internet connection. But for now you can see the archive photos</string>
 

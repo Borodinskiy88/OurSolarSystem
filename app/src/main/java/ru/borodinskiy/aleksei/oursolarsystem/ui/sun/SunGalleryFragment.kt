@@ -4,29 +4,61 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.launch
 import ru.borodinskiy.aleksei.oursolarsystem.R
-import ru.borodinskiy.aleksei.oursolarsystem.databinding.FragmentFullImageBinding
-import ru.borodinskiy.aleksei.oursolarsystem.viewmodel.PlanetImageViewModel
+import ru.borodinskiy.aleksei.oursolarsystem.adapter.GalleryAdapter
+import ru.borodinskiy.aleksei.oursolarsystem.adapter.GalleryListener
+import ru.borodinskiy.aleksei.oursolarsystem.databinding.FragmentPlanetGalleryBinding
+import ru.borodinskiy.aleksei.oursolarsystem.entity.Image
+import ru.borodinskiy.aleksei.oursolarsystem.viewmodel.GalleryViewModel
 
 @AndroidEntryPoint
 class SunGalleryFragment : Fragment() {
 
-    private val viewModel: PlanetImageViewModel by activityViewModels()
+    private lateinit var recyclerView: RecyclerView
+    private val viewModel: GalleryViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val binding = FragmentFullImageBinding.inflate(inflater, container, false)
+        val binding = FragmentPlanetGalleryBinding.inflate(inflater, container, false)
 
-//        viewModel.getPhotoPlanet("Solar Dynamics Observatory SDO").observe(viewLifecycleOwner) {}
+        recyclerView = binding.verticalRecyclerView
+        recyclerView.layoutManager = LinearLayoutManager(requireContext())
 
-        //TODO заглушка
-        binding.fullscreenImage.setImageResource(R.drawable.sun)
+        val adapter = GalleryAdapter(object : GalleryListener {
+
+            override fun onFullImage(image: Image) {
+                val bundle = bundleOf(
+                    Pair("url", "https://" + image.url),
+                    Pair("nameRus", getString(R.string.sun))
+                )
+                findNavController().navigate(R.id.action_nav_sun_to_fullImageFragment, bundle)
+            }
+
+        })
+
+        recyclerView.adapter = adapter
+
+        viewLifecycleOwner.lifecycleScope.launch {
+
+            viewModel.getImagesFromKeyWord("Sol").observe(viewLifecycleOwner) { images ->
+                images.let {
+                    adapter.submitList(it)
+                }
+            }
+        }
+
 
         return binding.root
     }

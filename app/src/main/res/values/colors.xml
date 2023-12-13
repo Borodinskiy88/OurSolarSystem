@@ -12,4 +12,35 @@
     <color name="black">#FF000000</color>
     <color name="transparent">#00000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="white_transparent_30">#33FFFFFF</color>
+
+    <!--Pantone-->
+    <color name="peach_fuzz_2024">#ffc197</color>
+    <color name="viva_magenta_2023">#BB2649</color>
+    <color name="very_peri_2022">#6667AB</color>
+    <color name="illuminating_2021">#F5DF4D</color>
+    <color name="ultimate_ray_2021">#939597</color>
+    <color name="classic_blue_2020">#0F4C81</color>
+    <color name="living_coral_2019">#FF6F61</color>
+    <color name="ultra_violet_2018">#5F4B8B</color>
+    <color name="greenery_2017">#88B04B</color>
+    <color name="serenity_2016">#92A8D1</color>
+    <color name="rose_quartz_2016">#F7CAC9</color>
+    <color name="marsala_2015">#955251</color>
+    <color name="radiant_orchid_2014">#B163A3</color>
+    <color name="emerald_2013">#009473</color>
+    <color name="tangerine_tango_2012">#DD4124</color>
+    <color name="honeysuckle_2011">#D94F70</color>
+    <color name="turquoise_2010">#45B5AA</color>
+    <color name="mimosa_2009">#F0C05A</color>
+    <color name="blue_iris_2008">#5A5B9F</color>
+    <color name="chili_pepper_2007">#9B1B30</color>
+    <color name="sand_dollar_2006">#DECDBE</color>
+    <color name="blue_turquoise_2005">#53B0AE</color>
+    <color name="tigerlily_2004">#E2583E</color>
+    <color name="aqua_sky_2003">#7BC4C4</color>
+    <color name="true_red_2002">#BF1932</color>
+    <color name="fuchsia_rose_2001">#C74375</color>
+    <color name="cerulean_2000">#9BB7D4</color>
+
 </resources>

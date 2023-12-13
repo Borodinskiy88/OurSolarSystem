@@ -37,6 +37,7 @@ object ImageObject {
             "Umbriel" -> image.setImageResource(SatelliteImage.UMBRIEL.image)
             "Miranda" -> image.setImageResource(SatelliteImage.MIRANDA.image)
             "Triton" -> image.setImageResource(SatelliteImage.TRITON.image)
+            "Mimas" -> image.setImageResource(SatelliteImage.MIMAS.image)
             "Ceres" -> image.setImageResource(DwarfPlanetImage.CERES.image)
             "Pluto" -> image.setImageResource(DwarfPlanetImage.PLUTO.image)
             "Haumea" -> image.setImageResource(DwarfPlanetImage.HAUMEA.image)

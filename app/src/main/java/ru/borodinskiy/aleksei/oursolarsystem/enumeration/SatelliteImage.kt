@@ -22,4 +22,5 @@ enum class SatelliteImage(val image: Int) {
     UMBRIEL(R.drawable.satell_uran_umbriel),
     MIRANDA(R.drawable.satell_uran_miranda),
     TRITON(R.drawable.satell_nep_triton),
+    MIMAS(R.drawable.satell_sat_mimas)
 }

@@ -9,6 +9,7 @@ import androidx.fragment.app.commit
 import dagger.hilt.android.AndroidEntryPoint
 import ru.borodinskiy.aleksei.oursolarsystem.R
 import ru.borodinskiy.aleksei.oursolarsystem.databinding.FragmentUranusBinding
+import ru.borodinskiy.aleksei.oursolarsystem.ui.uranus.gallery.UranusGalleryFragment
 
 @AndroidEntryPoint
 class UranusFragment : Fragment() {

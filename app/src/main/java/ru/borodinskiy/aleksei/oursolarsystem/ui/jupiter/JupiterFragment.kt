@@ -9,6 +9,7 @@ import androidx.fragment.app.commit
 import dagger.hilt.android.AndroidEntryPoint
 import ru.borodinskiy.aleksei.oursolarsystem.R
 import ru.borodinskiy.aleksei.oursolarsystem.databinding.FragmentJupiterBinding
+import ru.borodinskiy.aleksei.oursolarsystem.ui.jupiter.gallery.JupiterGalleryFragment
 
 @AndroidEntryPoint
 class JupiterFragment : Fragment() {

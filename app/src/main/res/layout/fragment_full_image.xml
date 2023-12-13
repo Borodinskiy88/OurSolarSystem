@@ -15,16 +15,16 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:src="@drawable/merkurij" />
 
-            <ImageView
-                android:id="@+id/swipe"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:layout_margin="@dimen/size_8"
-                android:src="@drawable/ic_expand_24"
-                app:tint="@color/yellow_transparent_40"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:contentDescription="@string/expand" />
+    <ImageView
+        android:id="@+id/swipe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/size_8"
+        android:contentDescription="@string/expand"
+        android:src="@drawable/ic_expand_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/yellow_transparent_40" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -9,6 +9,7 @@ import androidx.fragment.app.commit
 import dagger.hilt.android.AndroidEntryPoint
 import ru.borodinskiy.aleksei.oursolarsystem.R
 import ru.borodinskiy.aleksei.oursolarsystem.databinding.FragmentEarthBinding
+import ru.borodinskiy.aleksei.oursolarsystem.ui.earth.gallery.EarthGalleryFragment
 
 @AndroidEntryPoint
 class EarthFragment : Fragment() {

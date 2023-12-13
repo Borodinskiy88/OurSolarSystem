@@ -9,6 +9,7 @@ import androidx.fragment.app.commit
 import dagger.hilt.android.AndroidEntryPoint
 import ru.borodinskiy.aleksei.oursolarsystem.R
 import ru.borodinskiy.aleksei.oursolarsystem.databinding.FragmentMarsBinding
+import ru.borodinskiy.aleksei.oursolarsystem.ui.mars.gallery.MarsGalleryFragment
 
 @AndroidEntryPoint
 class MarsFragment : Fragment() {

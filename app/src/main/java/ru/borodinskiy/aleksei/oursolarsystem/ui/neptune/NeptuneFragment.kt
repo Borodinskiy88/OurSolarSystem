@@ -9,6 +9,7 @@ import androidx.fragment.app.commit
 import dagger.hilt.android.AndroidEntryPoint
 import ru.borodinskiy.aleksei.oursolarsystem.R
 import ru.borodinskiy.aleksei.oursolarsystem.databinding.FragmentNeptuneBinding
+import ru.borodinskiy.aleksei.oursolarsystem.ui.neptune.gallery.NeptuneGalleryFragment
 
 @AndroidEntryPoint
 class NeptuneFragment : Fragment() {

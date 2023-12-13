@@ -9,7 +9,7 @@ object CurrentDate {
     //Месяц
     private val previousMonth: LocalDate = date.minusMonths(1)
     val requestMonth = previousMonth.toString()
-    //2 месяца
+    //3 месяца
     private val previousThreeMonth: LocalDate = date.minusMonths(3)
     val requestThreeMonth = previousThreeMonth.toString()
     //10 дней

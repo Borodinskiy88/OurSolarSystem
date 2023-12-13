@@ -124,7 +124,7 @@
         android:label="@string/menu_mercury"/>
     <fragment
         android:id="@+id/earthGalleryFragment"
-        android:name="ru.borodinskiy.aleksei.oursolarsystem.ui.earth.EarthGalleryFragment"
+        android:name="ru.borodinskiy.aleksei.oursolarsystem.ui.earth.gallery.EarthGalleryFragment"
         android:label="EarthGalleryFragment" />
     <fragment
         android:id="@+id/earthInfoFragment"
@@ -141,7 +141,7 @@
         android:label="fragment_earth_moon" />
     <fragment
         android:id="@+id/jupiterGalleryFragment"
-        android:name="ru.borodinskiy.aleksei.oursolarsystem.ui.jupiter.JupiterGalleryFragment"
+        android:name="ru.borodinskiy.aleksei.oursolarsystem.ui.jupiter.gallery.JupiterGalleryFragment"
         android:label="JupiterGalleryFragment" />
     <fragment
         android:id="@+id/jupiterInfoFragment"
@@ -153,8 +153,12 @@
         android:label="JupiterSatellitesFragment" />
     <fragment
         android:id="@+id/marsGalleryFragment"
-        android:name="ru.borodinskiy.aleksei.oursolarsystem.ui.mars.MarsGalleryFragment"
-        android:label="MarsGalleryFragment" />
+        android:name="ru.borodinskiy.aleksei.oursolarsystem.ui.mars.gallery.MarsGalleryFragment"
+        android:label="MarsGalleryFragment" >
+        <action
+            android:id="@+id/action_marsGalleryFragment_to_fullImageFragment"
+            app:destination="@id/fullImageFragment" />
+    </fragment>
     <fragment
         android:id="@+id/marsInfoFragment"
         android:name="ru.borodinskiy.aleksei.oursolarsystem.ui.mars.MarsInfoFragment"
@@ -195,7 +199,7 @@
         android:label="SunInfoFragment" />
     <fragment
         android:id="@+id/neptuneGalleryFragment"
-        android:name="ru.borodinskiy.aleksei.oursolarsystem.ui.neptune.NeptuneGalleryFragment"
+        android:name="ru.borodinskiy.aleksei.oursolarsystem.ui.neptune.gallery.NeptuneGalleryFragment"
         android:label="NeptuneGalleryFragment" />
     <fragment
         android:id="@+id/neptuneInfoFragment"
@@ -207,7 +211,7 @@
         android:label="NeptuneSatellitesFragment" />
     <fragment
         android:id="@+id/saturnGalleryFragment"
-        android:name="ru.borodinskiy.aleksei.oursolarsystem.ui.saturn.SaturnGalleryFragment"
+        android:name="ru.borodinskiy.aleksei.oursolarsystem.ui.saturn.gallery.SaturnGalleryFragment"
         android:label="SaturnGalleryFragment" />
     <fragment
         android:id="@+id/saturnInfoFragment"
@@ -219,7 +223,7 @@
         android:label="SaturnSatellitesFragment" />
     <fragment
         android:id="@+id/uranusGalleryFragment"
-        android:name="ru.borodinskiy.aleksei.oursolarsystem.ui.uranus.UranusGalleryFragment"
+        android:name="ru.borodinskiy.aleksei.oursolarsystem.ui.uranus.gallery.UranusGalleryFragment"
         android:label="UranusGalleryFragment" />
     <fragment
         android:id="@+id/uranusInfoFragment"
@@ -298,8 +302,7 @@
     <fragment
         android:id="@+id/nav_dwarf_planets"
         android:name="ru.borodinskiy.aleksei.oursolarsystem.ui.dwarfplanets.DwarfPlanetsFragment"
-        android:label="@string/dwarf_planets"
-        tools:layout="@layout/fragment_dwarf_planets" >
+        android:label="@string/dwarf_planets">
         <action
             android:id="@+id/action_nav_dwarf_planets_to_fullImageFragment"
             app:destination="@id/fullImageFragment" />

@@ -13,6 +13,7 @@
         android:layout_height="@dimen/size_24"
         android:backgroundTint="@color/transparent"
         app:tabIndicatorColor="@color/yellow_transparent_60"
+        app:tabTextColor="@color/white_transparent_30"
         app:tabSelectedTextColor="@color/yellow_transparent_60">
 
         <com.google.android.material.tabs.TabItem

@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import com.google.android.material.tabs.TabLayoutMediator
 import dagger.hilt.android.AndroidEntryPoint
 import ru.borodinskiy.aleksei.oursolarsystem.R
-import ru.borodinskiy.aleksei.oursolarsystem.adapter.ViewPagerPhotoDayAdapter
+import ru.borodinskiy.aleksei.oursolarsystem.adapter.viewpager.PhotoDayViewPagerAdapter
 import ru.borodinskiy.aleksei.oursolarsystem.databinding.FragmentPhotoDayBinding
 
 @AndroidEntryPoint
@@ -21,7 +21,7 @@ class PhotoDayFragment : Fragment() {
     ): View {
         val binding = FragmentPhotoDayBinding.inflate(inflater, container, false)
 
-        binding.viewPager.adapter = ViewPagerPhotoDayAdapter(childFragmentManager, lifecycle)
+        binding.viewPager.adapter = PhotoDayViewPagerAdapter(childFragmentManager, lifecycle)
         TabLayoutMediator(binding.tabLayout, binding.viewPager) { tab, position ->
             val feedList = listOf(
                 getString(R.string.today),

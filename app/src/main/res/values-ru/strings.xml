@@ -60,4 +60,10 @@
     <string name="clear_the_archive">Очистить архив</string>
     <string name="need_internet">Для просмотра фото дня нужно подключение к интернету. Но пока можно посмотреть архивные фото</string>
     <string name="need_internet_video">Для просмотра видео нужно подключение к интернету. Но пока можно посмотреть архивные фото</string>
+    <string name="hide_info"><u>Скрыть информацию</u></string>
+    <string name="mars_satellites">Спутники Марса</string>
+    <string name="jupiter_satellites">Спутники Юпитера</string>
+    <string name="neptunus_satellites">Спутники Нептуна</string>
+    <string name="saturn_satellites">Спутники Сатурна</string>
+    <string name="uranus_satellite">Спутники Урана</string>
 </resources>
