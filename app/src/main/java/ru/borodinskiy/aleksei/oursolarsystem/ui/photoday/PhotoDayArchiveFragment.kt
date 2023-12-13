@@ -41,7 +41,7 @@ class PhotoDayArchiveFragment : Fragment() {
             override fun onShowSmall(photoDay: PhotoDay) {
                 val bundle = bundleOf(
                     Pair("url", photoDay.url),
-                    Pair("nameRus", "Фото дня")
+                    Pair("nameRus", getString(R.string.photo_day))
                 )
                 findNavController().navigate(R.id.action_nav_photo_day_to_fullImageFragment, bundle)
             }
