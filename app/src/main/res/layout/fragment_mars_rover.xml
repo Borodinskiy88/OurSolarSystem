@@ -5,7 +5,18 @@
     android:layout_height="match_parent"
     android:background="?attr/colorPrimary"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.planets.earth.mars.MarsRoverFragment">
+    tools:context=".ui.mars.MarsRoverFragment">
+
+    <TextView
+        android:id="@+id/section_development"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/size_32"
+        android:textColor="?attr/colorOnSecondary"
+        android:textSize="@dimen/text_24"
+        android:text="@string/section_development"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/rover_image"

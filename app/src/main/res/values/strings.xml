@@ -70,5 +70,6 @@
     <!-- Check for Internet -->
     <string name="need_internet">To view the photos of the day, you need an Internet connection. But for now you can see the archive photos</string>
     <string name="need_internet_video">To view the video, you need an Internet connection. But for now you can see the archive photos</string>
+    <string name="section_development">Раздел в разработке</string>
 
 </resources>

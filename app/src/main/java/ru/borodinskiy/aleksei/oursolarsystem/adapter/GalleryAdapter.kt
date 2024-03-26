@@ -8,22 +8,16 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import ru.borodinskiy.aleksei.oursolarsystem.databinding.CardGalleryBinding
 import ru.borodinskiy.aleksei.oursolarsystem.entity.Image
+import ru.borodinskiy.aleksei.oursolarsystem.utils.ReformatValues.reformatDate
 import ru.borodinskiy.aleksei.oursolarsystem.utils.loadHttps
 
-interface GalleryListener {
-
-    fun onFullImage(image: Image)
-}
-class GalleryAdapter(
-    private val galleryListener: GalleryListener
-) :
+class GalleryAdapter :
     ListAdapter<Image, GalleryAdapter.GalleryViewHolder>(DiffCallback) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GalleryViewHolder {
 
         return GalleryViewHolder(
             CardGalleryBinding.inflate(LayoutInflater.from(parent.context), parent, false),
-            galleryListener
         )
     }
 
@@ -33,14 +27,13 @@ class GalleryAdapter(
 
     class GalleryViewHolder(
         private val binding: CardGalleryBinding,
-        private val galleryListener: GalleryListener
     ) : RecyclerView.ViewHolder(binding.root) {
         fun bind(image: Image) {
 
             binding.apply {
 
                 photo.loadHttps(image.url)
-                date.text = image.date
+                date.text = reformatDate(image.date)
                 title.text = image.title
                 info.text = image.info
 
@@ -48,19 +41,15 @@ class GalleryAdapter(
 
                     info.visibility = View.VISIBLE
                     hideInfo.visibility = View.VISIBLE
+
                 }
+
 
                 hideInfo.setOnClickListener {
 
                     info.visibility = View.GONE
                     hideInfo.visibility = View.GONE
                 }
-
-                photo.setOnClickListener {
-
-                    galleryListener.onFullImage(image)
-                }
-
             }
         }
     }
