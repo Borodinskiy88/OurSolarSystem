@@ -22,6 +22,7 @@ interface PhotoListener {
     fun photoForTenDays()
     fun onVideo(photoDay: PhotoDay)
     fun deleteAll()
+    fun onShare(photoDay: PhotoDay)
 
 }
 
@@ -83,6 +84,11 @@ class PhotoDayAdapter(
                 image.setOnClickListener {
 
                     photoListener.onShowSmall(photoDay)
+                }
+
+                share.setOnClickListener {
+
+                    photoListener.onShare(photoDay)
                 }
 
                 menu.setOnClickListener {

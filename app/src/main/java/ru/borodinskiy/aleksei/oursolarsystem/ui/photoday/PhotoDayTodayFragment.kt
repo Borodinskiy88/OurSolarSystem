@@ -11,6 +11,8 @@ import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.esmaeel.shareitlib.SharableItem
+import com.esmaeel.shareitlib.Share
 import dagger.hilt.android.AndroidEntryPoint
 import ru.borodinskiy.aleksei.oursolarsystem.R
 import ru.borodinskiy.aleksei.oursolarsystem.adapter.PhotoDayAdapter
@@ -71,6 +73,27 @@ class PhotoDayTodayFragment : Fragment() {
 
             override fun deleteAll() {
                 viewModel.deleteAll()
+            }
+
+            override fun onShare(photoDay: PhotoDay) {
+//                val intent = Intent().apply {
+//                    action = Intent.ACTION_SEND
+//                    putExtra(Intent.EXTRA_TEXT, photoDay.url)
+//                    type = "text/plain"
+//                }
+//
+//                val shareIntent =
+//                    Intent.createChooser(intent, getString(R.string.chooser_share_image))
+//                startActivity(shareIntent)
+
+                context?.let {
+                    Share.with(context = it)
+                        .item(
+                            SharableItem(pictureUrl = photoDay.url),
+                            onStart = {},
+                            onFinish = { _, _ -> }
+                        )
+                }
             }
 
         })

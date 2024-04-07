@@ -66,4 +66,6 @@
     <string name="neptunus_satellites">Спутники Нептуна</string>
     <string name="saturn_satellites">Спутники Сатурна</string>
     <string name="uranus_satellite">Спутники Урана</string>
+    <string name="section_development">Раздел в разработке</string>
+    <string name="chooser_share_image">Поделиться картинкой</string>
 </resources>
