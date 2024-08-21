@@ -76,6 +76,7 @@ class PhotoDayTodayFragment : Fragment() {
             }
 
             override fun onShare(photoDay: PhotoDay) {
+
 //                val intent = Intent().apply {
 //                    action = Intent.ACTION_SEND
 //                    putExtra(Intent.EXTRA_TEXT, photoDay.url)
